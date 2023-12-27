@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Jakub Nowakowski",
+      "job": "Logo Designer",
+      "character": "Protagonist",
+      "profile_path": "Ala"
+    },
+    {
+      "id": 2,
+      "name": "Miłosz Nowakowski",
+      "job": "Web Designer",
+      "character": "Supporting Role",
+      "profile_path": "Ala"
+    },
+    {
+      "id": 3,
+      "name": "Alice Johnson",
+      "job": "SEO",
+      "character": "Antagonist",
+      "profile_path": "Ala"
+    },
+    {
+        "id": 4,
+        "name": "John Doe",
+        "job": "Media",
+        "character": "Antagonist",
+        "profile_path": "Ala"
+      },
+      {
+        "id": 5,
+        "name": "Jane Smith",
+        "job": "Social Media",
+        "character": "Antagonist",
+        "profile_path": "Ala"
+      }
+  ]
+  
