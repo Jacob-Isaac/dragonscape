@@ -69,7 +69,7 @@ export const ContactUs = () => {
         <input disabled={!capVal} type="submit" value="Send" />
         <StyledReCAPTCHA
           ref={recaptchaRef} 
-          sitekey="6Lc1JBIpAAAAALdAHI1JDGErBDUkfU85kv63879P"
+          sitekey="6Lc5IRIpAAAAAGSeFukxW9DzLxPprZDl2xVxA8jY"
           onChange={(val) => setCapVal(val)}
         />
       </form>
