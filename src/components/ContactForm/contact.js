@@ -69,7 +69,7 @@ export const ContactUs = () => {
         <input disabled={!capVal} type="submit" value="Send" />
         <StyledReCAPTCHA
           ref={recaptchaRef} 
-          sitekey="6Lc5IRIpAAAAAGSeFukxW9DzLxPprZDl2xVxA8jY"
+          sitekey="6Lc1JBIpAAAAALdAHI1JDGErBDUkfU85kv63879P"
           onChange={(val) => setCapVal(val)}
         />
       </form>
@@ -77,7 +77,7 @@ export const ContactUs = () => {
         <SuccessMessage  hide={hideMessage}>
           <p>Success! Your form has been submitted.</p>
           </SuccessMessage>
-      )}
+      )} 
     </StyledContactForm>
   );
 };
