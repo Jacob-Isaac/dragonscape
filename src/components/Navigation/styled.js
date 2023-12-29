@@ -181,6 +181,7 @@ transition: all 0.5s ease;
 export const NavigationLogo = styled.div`
   font-weight: ${({ theme }) => theme.fontSize.medium};
   /* font-size: 23px; */
+ 
   display: flex;
   flex-wrap: nowrap;
   /* align-items: center; */

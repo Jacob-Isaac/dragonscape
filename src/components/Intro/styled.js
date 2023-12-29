@@ -46,7 +46,7 @@ ${({ $themes }) => $themes && css`
     `;
 
 export const IntroBlock = styled.div`
-  margin-top: 220px;
+  margin-top: 72px;
   max-height: 604px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -79,7 +79,7 @@ export const MyPhoto = styled.img`
   border-radius: 50%;
   margin-right: 66px;
   animation: ${oscillateAnimation} 4s ease-in-out infinite;
-margin-bottom: 40px;
+margin-bottom: 60px;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     width: 70%;
     min-width: 202px;
@@ -95,6 +95,7 @@ margin-bottom: 40px;
 export const Text = styled.div`
   grid-area: txt;
   align-self: end;
+   font-family: "Inter";
   color:  ${({ theme }) => theme.color.text};
   font-weight: 700;
   font-size: 12px;
@@ -106,9 +107,10 @@ export const Text = styled.div`
 `;
 
 export const Name = styled.img`
-max-width: 398px;
+max-width: 390px;
   grid-area: myName;
   align-self: end;
+  padding-bottom:20px;
   color: ${({ theme }) => theme.color.titleAndIcons};
   /* font-weight: 900; */
   /* letter-spacing: 0.05em; */
@@ -140,12 +142,13 @@ export const Article = styled.article`
   align-self: center;
   max-width: 630px;
   font-family: "Inter";
+  
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 140%;
   letter-spacing: 0.05em;
-  color: ${({ theme }) => theme.color.text};
+   ${({theme}) => theme.color.DragonBlack};
   text-align: justify;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 16px;
@@ -255,7 +258,7 @@ export const ArrowDown = styled.img`
   max-width: 68px;
   
   margin-bottom: 115px;
-  margin-top: 100px; 
+  margin-top: 70px; 
   cursor: pointer;
   animation: ${oscillateAnimationSecond} 4s ease-in-out infinite;
   transition: transform 0.3s ease; /* Add a transition for a smoother effect */

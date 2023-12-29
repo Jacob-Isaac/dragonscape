@@ -14,11 +14,12 @@ const slideInFromLeft = keyframes`
 `;
 
 export const Block = styled.div`
-  padding-top: 10px;
+  /* padding-top: 10px;
+  margin-left: 100px;
   padding-bottom: 15px;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 72px;
-  border-radius: 4px;
+  border-radius: 4px; */
 `;
 
 
@@ -63,21 +64,24 @@ margin-top: 330px;
      }
 }
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-  font-size: 18px;
+  font-size: 38px;
     }
 `;
 
 export const Div = styled.div`
- display: flex;
- flex-direction: column;
- justify-content: flex-start; 
-width: 380px;
+text-align: center;
+ /* display: flex;
+ flex-direction: column; */
+ /* justify-content: flex-start;  */
+max-width: 380px;
 height: 290px;
-border: 1px solid ${({ theme }) => theme.color.dragonRed};
+margin: 0 auto;
+border: 1px solid ${({ theme }) => theme.color.dragonBlack};
 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 /* transition: color 0.2s; */
 &:hover {
     background-color: ${({ theme }) => theme.color.dragonRed};
+    border: 1px solid ${({ theme }) => theme.color.dragonRed};
      h1 {
     color: #f7f5f0;
    }
@@ -86,8 +90,8 @@ transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   } 
 }
 text-align: left;
-padding-top: 20%;
-padding: 15% 60px 60px 60px;
+padding-top: 30%;
+padding: 60px 60px 60px 60px;
 
 `;
 
@@ -96,11 +100,16 @@ overflow: hidden;
 `;
 
 export const H1 = styled.h1`
+margin: 0 auto;
+margin-top: 10px;
 margin-bottom: -2px;
 font-family: "Inter";
   font-style: normal;
   font-weight: 600;
    color: ${({ theme }) => theme.color.dragonRed};
+      @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+       font-size: 25px;
+    }
 `;
 
 export const P = styled.p`
@@ -111,6 +120,10 @@ font-family: "Inter";
   font-size: 13px;
   line-height: 160%;
   letter-spacing: 0.05em;
+      @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+        margin-top: 28px;
+       font-size: 11px;
+    }
 `;
 
 export const H12 = styled.h1`

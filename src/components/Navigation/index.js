@@ -32,7 +32,7 @@ import {
   StyledFlagIcon,
   StyledEnglishIcon,
   Flag,
-} from "../AboutMe/styled.js";
+} from "../Intro/styled.js";
 import { ReactComponent as EnglishIcon } from "../../images/english.svg";
 import { ReactComponent as FlagIcon } from "../../images/FlagIcon.svg";
 import FlagToggle from "../../features/Hooks/FlagToggle.js";

@@ -2,12 +2,12 @@ import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Container } from "./components/Container/styled";
-import SkillsBlock from "./components/SkillsBlock/index";
-import AboutMe from "./components/AboutMe";
+import WhyUs from "./components/WhyUs/index";
+import Intro from "./components/Intro";
 import {
   skillsList,
   toLearnList,
-} from "../src/components/SkillsBlock/List/contents.js";
+} from "../src/components/WhyUs/List/contents.js";
 import MainPage from "./features/MainPage";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "styled-components";
@@ -19,11 +19,11 @@ import NavigationBar from "./components/Navigation/index.js";
 import NoResult from "./components/NoResult/index.js";
 import { ContactUs } from "./components/ContactForm/contact.js";
 import { Element } from "react-scroll";
-import { H12 } from "./components/SkillsBlock/styled.js";
+import { H12 } from "./components/WhyUs/styled.js";
 import Cast from "./components/Cast/index.js";
 import cast from "./cast.json";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
-import { Block, Title } from "./components/SkillsBlock/styled.js";
+import { Block, Title } from "./components/WhyUs/styled.js";
 import Daylight from "./images/noClouds.svg";
 import RealFooter from "./components/RealFooter2/index.js";
 import {
@@ -61,7 +61,7 @@ function App() {
               >
                 <Container>
                   <Element name="AboutMeSection" className="element">
-                    <AboutMe isLight={lightMode} />
+                    <Intro isLight={lightMode} />
                   </Element>
                   <Element name="WhyUsSection" className="element">
                     <AnimatedOnScroll
@@ -76,7 +76,7 @@ function App() {
                       screenOffset="300"
                       animationInDuration="1500"
                     >
-                      <SkillsBlock
+                      <WhyUs
                         children="slideInLeft"
                         title={"Dowiedz się, co możemy dla Ciebie zrobić ! 🛠️"}
                         content={skillsList}
@@ -162,7 +162,7 @@ function App() {
             element={
               <Container>
                 {" "}
-                <SkillsBlock
+                <WhyUs
                   title={"Dowiedz się, co możemy dla Ciebie zrobić ! 🛠️"}
                   content={skillsList}
                 />
