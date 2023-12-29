@@ -137,7 +137,7 @@ function App() {
             path="/seo"
             element={
               <Container>
-                <H12>S E O bitch!</H12>
+                <H12>S E O my dare friend!</H12>
               </Container>
             }
           />
