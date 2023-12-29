@@ -1,12 +1,10 @@
-
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchGithubData, selectPortfolioList, selectLoadingState } from "../DataSlice/githubSlice";
-import Projects from "./Projects";
-import Offer from "./Offer";
-import LoadingPage from "../../components/LoadingPage";
-import ErrorPage from "../../components/ErrorPage";
-import OfferList from "../../../src/project.json"
+import { fetchGithubData, selectPortfolioList, selectLoadingState } from "../../features/DataSlice/githubSlice";
+import OfferTiles from "./OfferTiles/OfferTiles";
+import LoadingPage from "../LoadingPage";
+import ErrorPage from "../ErrorPage";
+import OfferList from "../../project.json"
 
 const MainPage = () => {
 
@@ -30,8 +28,7 @@ const MainPage = () => {
     case "success":
       returned = (
         <>
-         <Offer projects={OfferList}/>
-     {/* <Projects projects={portfolioList}/> */}
+         <OfferTiles projects={OfferList}/>
      </>
       );
       break;

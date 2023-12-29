@@ -1,7 +1,7 @@
 import { Container } from "../Container/styled";
 import Content from "../Content";
 import { StyledLoading, Wrapper, Message } from "./styled";
-import { StyledGithubLogo } from "../../features/MainPage/Projects/styled";
+import { StyledGithubLogo } from "../Offer/OfferTiles/styled";
 
 
 

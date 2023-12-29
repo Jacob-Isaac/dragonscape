@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import firstBckgrnd from "../../images/111.png";
-import secondBckgrnd from "../../images/websiteDragon-01.svg";
-import thirdBckgrnd from "../../images/2.png";
-import fourthBckgrnd from "../../images/3.png";
+import firstBckgrnd from "../../images/icodragon.svg";
+import secondBckgrnd from "../../images/icodragon.svg";
+import thirdBckgrnd from "../../images/icodragon.svg";
+import fourthBckgrnd from "../../images/icodragon.svg";
 
 const getImageUrl = (image) => {
   switch (image) {
@@ -24,13 +24,14 @@ const getImageUrl = (image) => {
 
 export const Tiles = styled.div`
   max-width: 586px;
-  background: url(${(props) => getImageUrl(props.image)});
+  max-height: 350px;
+  /* background: url(${(props) => getImageUrl(props.image)}); */
    background-size: cover;
-  /* background-color: ${({ theme }) => theme.color.tilesBackground}; */
-  border: 6px solid rgb(241, 163, 85);
-  box-shadow: 0px 0px 10px rgba(9, 10, 51, 0.02),
-    0px 16px 58px rgba(9, 10, 51, 0.03);
-  border-radius: 4px;
+  background-color: ${({ theme }) => theme.color.dragonWhite};
+  /* border: 1px solid rgb(241, 163, 85); */
+  box-shadow: 10px 10px 10px rgba(9, 10, 51, 0.05),
+    0px 16px 58px rgba(9, 10, 51, 0.05);
+  border-radius: 8px;
   transition: background-color 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
   &:hover {
     transition: border-color 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
@@ -39,6 +40,17 @@ export const Tiles = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     width: 100%;
   }
+`;
+
+export const Badge = styled.div`
+
+ /* position: absolute;  */
+margin-left: 43%;
+margin-top: -50px;
+width: 80px;
+height: 80px;
+  background: url(${(props) => getImageUrl(props.image)}); 
+   background-size: cover;
 `;
 
 export const StyledUl = styled.ul`
@@ -63,7 +75,7 @@ export const Name = styled.li`
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 0.05em;
-  color: ${({ theme }) => theme.color.dragonWhite};
+  color: ${({ theme }) => theme.color.dragonBlack};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 16px;
   }
@@ -77,7 +89,7 @@ export const Description = styled.li`
   line-height: 140%;
   letter-spacing: 0.05em;
   text-align: justify;
-  color: ${({ theme }) => theme.color.dragonRed};
+  color: ${({ theme }) => theme.color.text};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 14px;
     padding-right: 10px;
@@ -112,16 +124,30 @@ export const Code = styled.span`
 `;
 
 export const Link = styled(NavLink)`
-  color: ${({ theme }) => theme.color.mainBlue};
+  /* color: ${({ theme }) => theme.color.mainBlue}; */
   text-decoration: none;
-  border-bottom: 1px solid ${({ theme }) => theme.color.linkBorder};
-  padding-bottom: 1px;
-  &:hover {
-    border-bottom: 1px solid ${({ theme }) => theme.color.blue};
-  }
+  /* border-bottom: 1px solid ${({ theme }) => theme.color.linkBorder}; */
+  /* padding-bottom: 1px; */
+ 
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 14px;
+  }
+    padding: 10px 20px;
+     text-align: center;
+  border: none;
+  border-radius: 10px;
+  background-color: ${({ theme }) => theme.color.dragonRed};
+  color: ${({ theme }) => theme.color.dragonWhite};
+  cursor: pointer;
+  width: 150px;
+  margin: 0 auto;
+  transition: 0.6s ease-in-out;
+  &:hover {
+    box-shadow: 2px -2px 0px #F1A355, -2px 2px 0px #F1A355, 2px 2px 0px #F1A355,
+      -2px -2px 0px #F1A355;
+    cursor: pointer;
+   
   }
 `;
 export const Button = styled.button`

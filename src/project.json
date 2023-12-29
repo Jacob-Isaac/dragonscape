@@ -1,34 +1,34 @@
 [
-    {
-      "name": "Identyfikacja wizualna",
-      "description": "Projektujemy indywidualne loga, wizytówki, banery oraz inne materiały reklamowe.",
-      "homepage": "https://www.example.com/project-two",
-      "html_url": "https://github.com/example/project-two",
-      "routePath": "/design",
-      "imagePath": "one"
-    },
-    {
-      "name": "Projektowanie stron internetowych",
-      "description": "Tworzymy szybkie i przejrzyste witryny internetowe. Posiadanie strony jest dziś jednym z najskuteczniejszych sposobów na dotarcie do nowych klientów.",
-      "homepage": "https://www.example.com/project-one",
-      "html_url": "https://github.com/example/project-one",
-      "routePath": "/webDev",
-      "imagePath": "two"
-    },
-    {
-        "name": "Pakiet: Pozycjonowanie stron www, rozwój social mediów",
-        "description": "Na bieżąco dbamy o to, by potencjalni klienci mogli łatwo odnaleźć Twoją stronę w sieci. Aktualizujemy i prowadzimy social media.",
-        "homepage": "https://www.example.com/project-three",
-        "html_url": "https://github.com/example/project-three",
-        "routePath": "/seo",
-        "imagePath": "three"
-      },
-      {
-        "name": "Pakiet: Strona WWW, domena, hosting, Social Media",
-        "description": "Nie wiesz jak zacząć ? Mamy dla Ciebie pakiet all-in-one. Otrzymasz od nas nie tylko stronę internetową, ale także zadbamy o domenę i hosting, oraz stworzymy social media (Facebook, Instagram, LinkedIn), następnie zoptymalizujemy witrynę pod kątem SEO. Ty po prostu zajmij się swoim biznesem ! ",
-        "homepage": "https://www.example.com/project-four",
-        "html_url": "https://github.com/example/project-four",
-        "routePath": "/socialMedia",
-        "imagePath": "four"
-      }
-  ]
+  {
+    "name": "Identyfikacja wizualna",
+    "description": "Projektujemy indywidualne loga, wizytówki, banery oraz inne materiały reklamowe.",
+    "homepage": "https://www.example.com/project-two",
+    "html_url": "https://github.com/example/project-two",
+    "routePath": "/design",
+    "imagePath": "one"
+  },
+  {
+    "name": "Projektowanie stron internetowych",
+    "description": "Tworzymy szybkie i przejrzyste witryny internetowe. Posiadanie strony jest dziś jednym z najskuteczniejszych sposobów na dotarcie do nowych klientów.",
+    "homepage": "https://www.example.com/project-one",
+    "html_url": "https://github.com/example/project-one",
+    "routePath": "/webDev",
+    "imagePath": "two"
+  },
+  {
+    "name": "Pakiet: Pozycjonowanie stron www, rozwój social mediów",
+    "description": "Na bieżąco dbamy o to, by potencjalni klienci mogli łatwo odnaleźć Twoją stronę w sieci. Aktualizujemy i prowadzimy social media.",
+    "homepage": "https://www.example.com/project-three",
+    "html_url": "https://github.com/example/project-three",
+    "routePath": "/seo",
+    "imagePath": "three"
+  },
+  {
+    "name": "Pakiet: Strona WWW, domena, hosting, Social Media",
+    "description": "Nie wiesz jak zacząć ? Mamy dla Ciebie pakiet all-in-one: stronę www, domenę, hosting i social media (Facebook, Instagram, etc.), oraz optymalizację witryny pod kątem SEO. Ty po prostu zajmij się swoim biznesem ! ",
+    "homepage": "https://www.example.com/project-four",
+    "html_url": "https://github.com/example/project-four",
+    "routePath": "/socialMedia",
+    "imagePath": "four"
+  }
+]

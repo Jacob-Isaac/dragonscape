@@ -16,6 +16,7 @@ margin-top: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 32px;
+  row-gap: 120px;
   max-width: 1216px;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     ${FlexCenter}

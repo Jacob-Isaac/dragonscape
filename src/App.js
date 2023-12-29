@@ -8,7 +8,7 @@ import {
   skillsList,
   toLearnList,
 } from "../src/components/WhyUs/List/contents.js";
-import MainPage from "./features/MainPage";
+import Offer from "./components/Offer";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
@@ -85,11 +85,11 @@ function App() {
                   </Element>
                   <Element name="OfferSection" className="element">
                     <AnimatedOnScroll
-                      animationIn="lightSpeedIn"
+                      animationIn="slideInRight"
                       screenOffset="300"
                       animationInDuration="1000"
                     >
-                      <MainPage />
+                      <Offer />
                     </AnimatedOnScroll>
                   </Element>
                 </Container>
@@ -153,7 +153,7 @@ function App() {
             path="/offer"
             element={
               <Container>
-                <MainPage />
+                <Offer />
               </Container>
             }
           />

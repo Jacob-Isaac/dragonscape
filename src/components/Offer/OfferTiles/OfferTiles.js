@@ -1,16 +1,16 @@
-import Tile from "../../../components/Tiles/index"
-import {Wrapper} from "../../../components/Wrapper/styled";
-import Content from "../../../components/Content";
+import Tile from "../../Tiles/index"
+import {Wrapper} from "../../Wrapper/styled";
+import Content from "../../Content";
 import { StyledMarker, StyledGithubLogo } from "./styled";
 
-const Projects = ({projects}) => {
+const OfferTiles = ({projects}) => {
 
     return (
 
         <Content 
         icon = {<StyledGithubLogo/>} 
-        title= {"Portfolio"}
-        subtitle = {"My recent projects"  + " (" + projects.length + ")"} 
+        title= {"Oferta"}
+        subtitle = {"Wszystko jest możliwe, a my to... umożliwimy."} 
         body={
             <>
               <Wrapper>
@@ -26,4 +26,4 @@ const Projects = ({projects}) => {
     );
 };
 
-export default Projects;
+export default OfferTiles;
