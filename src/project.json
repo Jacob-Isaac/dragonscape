@@ -14,21 +14,5 @@
     "html_url": "https://github.com/example/project-one",
     "routePath": "/webDev",
     "imagePath": "two"
-  },
-  {
-    "name": "Pakiet: Pozycjonowanie stron www, rozwój social mediów",
-    "description": "Na bieżąco dbamy o to, by potencjalni klienci mogli łatwo odnaleźć Twoją stronę w sieci. Aktualizujemy i prowadzimy social media.",
-    "homepage": "https://www.example.com/project-three",
-    "html_url": "https://github.com/example/project-three",
-    "routePath": "/seo",
-    "imagePath": "three"
-  },
-  {
-    "name": "Pakiet: Strona WWW, domena, hosting, Social Media",
-    "description": "Nie wiesz jak zacząć ? Mamy dla Ciebie pakiet all-in-one: stronę www, domenę, hosting i social media (Facebook, Instagram, etc.), oraz optymalizację witryny pod kątem SEO. Ty po prostu zajmij się swoim biznesem ! ",
-    "homepage": "https://www.example.com/project-four",
-    "html_url": "https://github.com/example/project-four",
-    "routePath": "/socialMedia",
-    "imagePath": "four"
   }
 ]

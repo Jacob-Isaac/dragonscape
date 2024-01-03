@@ -1,5 +1,5 @@
 import Tile from "../../Tiles/index"
-import {Wrapper} from "../../Wrapper/styled";
+import {Wrapper} from "../../../features/Wrapper/styled";
 import Content from "../../Content";
 import { StyledMarker, StyledGithubLogo } from "./styled";
 

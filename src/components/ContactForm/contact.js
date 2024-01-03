@@ -55,18 +55,19 @@ export const ContactUs = () => {
   return (
     <StyledContactForm>
       <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
+        <label>Imię</label>
         <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
+        <label>Email*</label>
+        <input type="email" name="user_email" required />
+        <label>Treść wiadomości*</label>
         <textarea
           maxlength={charLimit}
-          placeholder={`Enter text (limited to ${charLimit} characters)`}
+          placeholder={`Napisz do nas :) (limitowane do ${charLimit} znaków)`}
           name="message"
+          required
         />
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-        <input disabled={!capVal} type="submit" value="Send" />
+        <input disabled={!capVal} type="submit" value="Porozmawiajmy" />
         <StyledReCAPTCHA
           ref={recaptchaRef} 
           sitekey="6Lc1JBIpAAAAALdAHI1JDGErBDUkfU85kv63879P"
@@ -75,7 +76,7 @@ export const ContactUs = () => {
       </form>
       {showSuccess && (
         <SuccessMessage  hide={hideMessage}>
-          <p>Success! Your form has been submitted.</p>
+          <p>Sukces! Formularz został wysłany.</p>
           </SuccessMessage>
       )} 
     </StyledContactForm>
@@ -88,6 +89,7 @@ const StyledReCAPTCHA = styled(ReCAPTCHA)`
 `;
 const StyledContactForm = styled.div`
   width: 400px;
+  margin-top: 10px;
 
   form {
     display: flex;
@@ -127,6 +129,7 @@ const StyledContactForm = styled.div`
 
     label {
       margin-top: 1rem;
+      margin-bottom: 5px;
     }
 
     input[type="submit"] {

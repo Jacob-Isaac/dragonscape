@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Container } from "./components/Container/styled";
@@ -9,7 +9,7 @@ import {
   toLearnList,
 } from "../src/components/WhyUs/List/contents.js";
 import Offer from "./components/Offer";
-import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm/index.js";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
 import { selectIsLightMode } from "../src/features/DataSlice/githubSlice";
@@ -31,6 +31,10 @@ import {
   selectPortfolioList,
   selectLoadingState,
 } from "./features/DataSlice/githubSlice.js";
+import WebPosition from "./components/Offer/OfferList/WebPosition/index.js";
+import Package from "./components/Offer/OfferList/Package/index.js";
+import Web from "./components/Offer/OfferList/Web/index.js";
+import Design from "./components/Offer/OfferList/Design/index.js";
 
 const Page = (props) => {
   const { children, ...rest } = props;
@@ -48,7 +52,7 @@ function App() {
     <ThemeProvider theme={lightMode === true ? lightTheme : darkTheme}>
       <GlobalStyle isLight={lightMode} />
 
-      <HashRouter>
+      <BrowserRouter>
         <NavigationBar />
         <Routes>
           <Route
@@ -109,7 +113,7 @@ function App() {
                         backgroundRepeat: "no-repeat",
                       }}
                     >
-                      <Footer />
+                      <ContactForm/>
                     </div>
                   </AnimatedOnScroll>
                 </Element>
@@ -120,33 +124,25 @@ function App() {
           <Route
             path="/design"
             element={
-              <Container>
-                <H12>LOGO DESIGN </H12>
-              </Container>
+            <Design/>
             }
           />
           <Route
             path="/webDev"
             element={
-              <Container>
-                <H12>WEB DEVELOPMENT</H12>
-              </Container>
+              <Web/>
             }
           />
           <Route
-            path="/seo"
+            path="/webPosition"
             element={
-              <Container>
-                <H12>S E O my dare friend!</H12>
-              </Container>
+              <WebPosition/>
+             
             }
           />
           <Route
-            path="/socialMedia"
-            element={
-              <Container>
-                <H12>Social Media</H12>
-              </Container>
+            path="/fullPackage"
+            element={ <Package/>
             }
           />
           <Route
@@ -174,7 +170,7 @@ function App() {
             element={
               <Container>
                 <div style={{ marginTop: "200px" }}>
-                  <Footer />
+                  <ContactForm />
                 </div>
               </Container>
             }
@@ -190,7 +186,7 @@ function App() {
             }
           />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

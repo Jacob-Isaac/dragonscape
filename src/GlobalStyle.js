@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import darkBckgrnd from "../src/images/dark.svg";
-import lightBckgrnd from "../src/images/daylight.svg";
+import lightBckgrnd from "../src/images/noClouds.svg";
 import { useSelector } from "react-redux";
 import {selectIsLightMode } from "./features/DataSlice/githubSlice"
 

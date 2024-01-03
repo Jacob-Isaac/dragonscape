@@ -15,6 +15,7 @@ max-height: 404px;
 max-width: 700px;
 display:flex;
 flex-direction: column;
+
 `;
 
 
@@ -57,6 +58,29 @@ transition: all 1s ease;
     font-size: 14px;
   }
 `;
+export const Phone = styled.a`
+margin-top: 20px;
+color:  ${({theme}) => theme.color.titleAndIcons};
+text-decoration: none;
+font-weight: 900;
+font-size: 28px;
+line-height: 46px;
+letter-spacing: 0.05em;       
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-ms-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+&:hover{
+        color: ${({theme}) => theme.color.mainBlue};
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 20px;
+  }
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+`;
 
 export const Article = styled.article`
 font-weight: 400;
@@ -72,7 +96,8 @@ margin-top: 16px;
 `;
 
 export const SocialMedia = styled.div`
-margin-top:44px;
+margin-top:24px;
+margin-bottom:24px;
 display: flex;
 flex-direction: row;
 cursor: default;
@@ -81,7 +106,7 @@ cursor: default;
 export const SocialLink = styled.a`
 text-decoration: none;
 list-style-type: none;
-cursor: default;
+cursor: pointer;
 margin-right: 40px;
 `;
 

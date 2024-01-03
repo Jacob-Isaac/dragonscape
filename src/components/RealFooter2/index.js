@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { ContainerFooter } from '../Container/styled';
 import logo from "../../images/logo.png";
-import { StyledGithubLogo, StyledInstagramLogo, StyledLinkedInLogo } from "../StyledLogos/styled";
+import { StyledGithubLogo, StyledInstagramLogo, StyledLinkedInLogo } from "../../features/StyledLogos/styled";
 
 const FooterContainer = styled.footer`
- /* background-color: #f0f0f0; */
-  margin-top: 60px;
+ background-color: #f0f0f0;
+   margin-top: 60px;
   margin-bottom: 60px;
-  margin: 60px auto 60px;
+  margin: 60px auto 60px; 
   /* padding: 20px; */
   /* display: flex;
   justify-content: center;
