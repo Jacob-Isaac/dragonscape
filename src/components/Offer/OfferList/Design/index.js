@@ -1,10 +1,10 @@
 import { Container } from "../../../Container/styled";
 import { H12 } from "../../../WhyUs/styled";
 import styled from "styled-components";
-import Image1 from "../../../../images/111.png";
-import Image2 from "../../../../images/111.png";
+import Image1 from "../../../../images/dragonScape.svg";
+import Image2 from "../../../../images/dragonsCape.jpg";
 import Advertise from "../../../../images/advertise.svg";
-import Pricing from "../../Pricing";
+import Price from "../../Pricing";
 
 // Your existing Container and H12 styled components...
 
@@ -20,7 +20,8 @@ const TextWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 40%; /* Adjust the width of the image */
+  min-width: 450px; 
+  max-width: 450px; 
 `;
 const AdvertiseImg = styled.img`
   /* Adjust the width of the image */
@@ -103,12 +104,23 @@ const Design = () => (
         </p>
         <Button>Napisz do nas!</Button>
       </TextWrapper>
-      <Image src={Image1} alt="Image 1" />
+      <figure>
+      <Image src={Image1} alt="Dragons Cape" />
+  <figcaption>"Dragons Cape"</figcaption>
+</figure>
+    
+ 
+
+     
     </ImageTextWrapper>
 
     {/* Second scenario: Image on the left */}
     <ImageTextWrapper>
-      <Image src={Image2} alt="Image 2" />
+    <figure>
+    <Image src={Image2} alt="Dragon Scape" />
+  <figcaption>"Dragon Scape"</figcaption>
+</figure>
+    
       <TextWrapper>
         <h2>Zwiększ Wyrazistość Marki: Profesjonalna Identyfikacja Wizualna</h2>
         <div style={{ display: "flex", flexDirection: "row" }}>
@@ -177,7 +189,7 @@ const Design = () => (
       </TextWrapper>
     </ImageTextWrapper>
     <AdvertiseImg src={Advertise} />
-    <Pricing />
+    <Price />
 
     {/* Remaining content */}
     {/* ... */}
