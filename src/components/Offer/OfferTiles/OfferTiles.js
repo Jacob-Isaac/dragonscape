@@ -1,6 +1,6 @@
-import Tile from "../../Tiles/index"
-import {Wrapper} from "../../../features/Wrapper/styled";
-import Content from "../../Content";
+import Tile from "../../../styledComponents/Tiles/index"
+import {Wrapper} from "../../../styledComponents/Wrapper/styled";
+import Content from "../../../styledComponents/Content";
 import { StyledMarker, StyledGithubLogo } from "./styled";
 
 const OfferTiles = ({projects}) => {

@@ -45,7 +45,6 @@ export const Poster = styled.img`
     width: 100%;
     border-radius: 5px;
     aspect-ratio: 2/3;
-
 `;
 export const NoPoster = styled.div`
     grid-area: poster;
@@ -62,17 +61,14 @@ export const StyledPersonIcon = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px){
         width: 50px;
-
     }
 `;
 export const Destription = styled.section`
     grid-area: description;
     margin: 16px 0 8px;
     line-height: 130%;
-
 `;
 export const PersonNameStyle = styled.div`
-
     font-weight: ${({ theme }) => theme.fontSize.medium};
     display: flex;
     justify-content: center;
@@ -90,5 +86,4 @@ export const PersonRole = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px){
         font-size: 12px;
     }
-
 `;

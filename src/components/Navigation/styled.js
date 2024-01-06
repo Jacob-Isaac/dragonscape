@@ -3,6 +3,7 @@ import MovieIcon from "../../images/MovieIcon";
 import FlagToggle from "../../features/Hooks/FlagToggle.js";
 import styled, { css, keyframes } from "styled-components";
 import { Link, animateScroll as scroll  } from 'react-scroll';
+import { ReactComponent as SunIcon } from "../../images/SunIcon.svg";
 
 export const NavigationBackground = styled.div`
 z-index: 1000;
@@ -249,4 +250,73 @@ export const StyledMovieIcon = styled(MovieIcon)`
     margin-right: 6px;
     margin-bottom: 2px;
   }
+`;
+
+export const IconBody = styled.button`
+  width: 47px;
+  height: 27px;
+  padding: 2px;
+  border: 1px solid #6e7e91;
+  border-radius: 15px;
+  background: ${({ theme }) => theme.color.darkModeBackground};
+  transition: background-color 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const ModeChange = styled.div`
+  margin-right: -20px;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    align-self: center;
+    margin-bottom: -45px;
+  }
+`;
+
+export const FlagIconBody = styled.button`
+  width: 47px;
+  height: 27px;
+  padding: 2px;
+  border: 1px solid #6e7e91;
+  border-radius: 15px;
+  background: ${({ theme }) => theme.color.darkModeBackground};
+  transition: background-color 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+
+export const Body = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transition: all 1.3s ease;
+`;
+
+export const DarkMode = styled.div`
+  color: #6e7e91;
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 12px;
+  padding: 7px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    display: none;
+  }
+`;
+
+export const StyledSunIcon = styled(SunIcon)`
+  transition: transform 0.6s;
+  ${({ $themes }) => $themes && css`
+      transform: translateX(100%);
+    `};
 `;

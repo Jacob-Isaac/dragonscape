@@ -8,35 +8,23 @@ import {
   NavigationLogo,
   NavigationLogoLink,
   NavigationLogoScrollLink,
-  NavigationSearcher,
-  StyledMovieIcon,
   Dragon,
-  StyledFlagToggle
+  StyledFlagToggle,
+  IconBody,
+  ModeChange,
+  FlagIconBody,
+  Body,
+  DarkMode,
+  StyledSunIcon,
 } from "./styled";
 import logoTransparent from "../../images/logo.png"
 import logo from "../../images/logo2.png";
 import { useSelector, useDispatch } from "react-redux";
 import { changeTheme } from "../../features/DataSlice/githubSlice";
-import { changeFlag } from "../../features/DataSlice/githubSlice";
 import {
   selectIsLightMode,
   selectIsPolishMode,
 } from "../../features/DataSlice/githubSlice";
-import {
-  ModeChange,
-  IconBody,
-  FlagIconBody,
-  Body,
-  DarkMode,
-  StyledSunIcon,
-  StyledFlagIcon,
-  StyledEnglishIcon,
-  Flag,
-} from "../Intro/styled.js";
-import { ReactComponent as EnglishIcon } from "../../images/english.svg";
-import { ReactComponent as FlagIcon } from "../../images/FlagIcon.svg";
-import FlagToggle from "../../features/Hooks/FlagToggle.js";
-import { Link, animateScroll as scroll  } from 'react-scroll';
 import { useLocation } from 'react-router-dom';
 
 const NavigationBar = () => {

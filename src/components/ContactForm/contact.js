@@ -9,8 +9,7 @@ export const ContactUs = () => {
   const recaptchaRef = useRef();
   const [capVal, setCapVal] = useState(null);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [text, setText] = useState("");
-  const charLimit = 999; // Change this to your desired word limit
+  const charLimit = 999;
   const [errorMessage, setErrorMessage] = useState("");
   const [hideMessage, setHideMessage] = useState(false);
 
@@ -42,10 +41,6 @@ export const ContactUs = () => {
           setHideMessage(false);
         }, 500);
       }, 5000);
-    //   setFormData({
-    //     // Reset form fields to initial state
-    //   });
-    setText("");
     setErrorMessage("");
     setCapVal(null);
     form.current.reset();
@@ -144,8 +139,8 @@ const StyledContactForm = styled.div`
 
 const SuccessMessage = styled.div`
   position: fixed;
-  top: 20px; /* Adjust the distance from the top */
-  right: 20px; /* Adjust the distance from the right */
+  top: 20px; 
+  right: 20px; 
   background-color: #ffffff;
   border: 1px solid #ccc;
   padding: 10px;

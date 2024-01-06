@@ -87,7 +87,7 @@ export const Name = styled.li`
 `;
 
 export const Description = styled.li`
-  font-family: 'Montserrat', sans-serif;"Inter";
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -103,7 +103,7 @@ export const Description = styled.li`
 `;
 
 export const Links = styled.li`
-  font-family: 'Montserrat', sans-serif;"Inter";
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
