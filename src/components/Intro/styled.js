@@ -95,7 +95,7 @@ margin-bottom: 60px;
 export const Text = styled.div`
   grid-area: txt;
   align-self: end;
-   font-family: "Inter";
+   font-family: 'Montserrat', sans-serif;"Inter";
   color:  ${({ theme }) => theme.color.text};
   font-weight: 700;
   font-size: 12px;
@@ -141,7 +141,7 @@ export const Article = styled.article`
   grid-area: article;
   align-self: center;
   max-width: 630px;
-  font-family: "Inter";
+  font-family: 'Montserrat', sans-serif;"Inter";
   
   font-style: normal;
   font-weight: 400;

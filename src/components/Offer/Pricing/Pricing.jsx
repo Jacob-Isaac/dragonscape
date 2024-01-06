@@ -71,8 +71,8 @@ const Pricing = ({
 
 const MainContainer = styled.div`
   /* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
-  font-family: "Raleway", sans-serif; */
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;"Raleway", sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   padding: 5px;
   padding-bottom: 15px;
   width: 20rem;

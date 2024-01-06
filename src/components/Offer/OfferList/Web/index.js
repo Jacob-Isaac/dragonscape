@@ -1,9 +1,55 @@
 import { Container } from "../../../Container/styled";
 import { H12 } from "../../../WhyUs/styled";
+import styled from "styled-components";
+import Image1 from "../../../../images/webOfferDragon.svg";
+import Image2 from "../../../../images/webOfferDragonSecond.png";
+import Advertise from "../../../../images/advertise.svg";
+import Price from "../../Pricing";
+
+// Your existing Container and H12 styled components...
+
+const ImageTextWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px; /* Adjust margin as needed */
+`;
+
+const TextWrapper = styled.div`
+  max-width: 50%; /* Adjust the width of text */
+`;
+
+const Image = styled.img`
+margin-top: 100px;
+  min-width: 450px; 
+  max-width: 450px; 
+`;
+const AdvertiseImg = styled.img`
+  /* Adjust the width of the image */
+`;
+
+const Button = styled.button`
+  /* Adjust the width of the image */
+  width: 130px;
+  height: 50px;
+  border:none;
+ 
+  box-shadow: 0px 0px 20px rgba(9, 10, 51, 0.02), 0px 16px 20px rgba(9, 10, 51, 0.03);
+border-radius: 8px;
+  background-color: ${({ theme }) => theme.color.dragonOrange};
+color: ${({ theme }) => theme.color.dragonWhite};
+:hover {
+  color: ${({ theme }) => theme.color.dragonBlack};
+}
+
+`;
 
 const Web = () => (
   <Container>
-    <H12>Tworzenie stron internetowych</H12>
+    {/* First scenario: Image on the right */}
+    <ImageTextWrapper>
+      <TextWrapper>
+      <H12>Tworzenie stron internetowych</H12>
     <p>
       Niezwykła Obecność Online: Twoja Unikatowa Strona Internetowa. Czy chcesz
       wyróżnić się w gąszczu internetowej konkurencji? Marzysz o stronie, która
@@ -32,7 +78,22 @@ const Web = () => (
       strony. Nasz zespół oferuje wsparcie techniczne i pomoc w utrzymaniu strony
       w doskonałej kondycji.
     </p>
-    <p>
+        <Button>Napisz do nas!</Button>
+      </TextWrapper>
+      <Image src={Image1} alt="Dragons Cape" />
+
+    
+ 
+
+    </ImageTextWrapper>
+
+    {/* Second scenario: Image on the left */}
+    <ImageTextWrapper>
+    <Image src={Image2} alt="Dragon Scape" />
+
+    
+      <TextWrapper>
+      <p>
       <strong>Dlaczego My?</strong>
       <br />
       <strong>Doświadczenie i Pasja:</strong> Nasze doświadczenie w projektowaniu
@@ -55,6 +116,14 @@ const Web = () => (
       Z poważaniem, <br />
       [Zespół Twojej Firmy Projektowej Stron Internetowych]
     </p>
+      </TextWrapper>
+    </ImageTextWrapper>
+    {/* <AdvertiseImg src={Advertise} /> */}
+    <p>TO ZALEŻY...</p>
+    <Price />
+
+    {/* Remaining content */}
+    {/* ... */}
   </Container>
 );
 

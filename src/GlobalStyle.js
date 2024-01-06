@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import darkBckgrnd from "../src/images/dark.svg";
-import lightBckgrnd from "../src/images/noClouds.svg";
+import lightBckgrnd from "../src/images/daylight.svg";
 import { useSelector } from "react-redux";
 import {selectIsLightMode } from "./features/DataSlice/githubSlice"
 
@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     background-image: url(${darkBckgrnd});
     /* background-repeat: no-repeat; */
     /* background-position: center center; */
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     /* display: block; */
     transition: background-image 1s ease-in-out;
   }

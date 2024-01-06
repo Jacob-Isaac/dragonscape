@@ -19,7 +19,7 @@ min-width: 280px;
 `;
 
 export const Portfolio = styled.span`
-font-family: 'Inter';
+font-family: 'Montserrat', sans-serif;'Montserrat', sans-serif;;
 font-style: normal;
 font-weight: 600;
 font-size: 70px;
@@ -34,7 +34,7 @@ color: ${({ theme }) => theme.color.titleAndIcons};
 `;
 
 export const Subtitle = styled.span`
-font-family: 'Inter';
+font-family: 'Montserrat', sans-serif;'Montserrat', sans-serif;;
 font-style: normal;
 font-weight: 400;
 font-size: 20px;

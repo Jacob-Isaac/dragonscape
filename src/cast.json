@@ -3,36 +3,29 @@
       "id": 1,
       "name": "Jakub Nowakowski",
       "job": "Logo Designer",
-      "character": "Protagonist",
-      "profile_path": "Ala"
+      "character": "Logo Designer",
+      "profile_path": "Jakub"
     },
     {
       "id": 2,
       "name": "Miłosz Nowakowski",
       "job": "Web Designer",
-      "character": "Supporting Role",
-      "profile_path": "Ala"
+      "character": "Web Designer",
+      "profile_path": "Milosz"
     },
     {
       "id": 3,
-      "name": "Alice Johnson",
+      "name": "Robert Przybyszewski",
       "job": "SEO",
-      "character": "Antagonist",
-      "profile_path": "Ala"
+      "character": "Social Media",
+      "profile_path": "Robert"
     },
     {
         "id": 4,
-        "name": "John Doe",
+        "name": "Agnieszka Kamińska",
         "job": "Media",
-        "character": "Antagonist",
-        "profile_path": "Ala"
-      },
-      {
-        "id": 5,
-        "name": "Jane Smith",
-        "job": "Social Media",
-        "character": "Antagonist",
-        "profile_path": "Ala"
+        "character": "IT Specialist",
+        "profile_path": "Agnieszka"
       }
   ]
   

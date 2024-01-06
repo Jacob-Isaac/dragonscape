@@ -8,10 +8,11 @@ export const StyledMarker = styled(Marker)`
     }
 `;
 export const StyledGithubLogo = styled(githubLogo)`
-   width: 88px;
-        height: 88px;
+   width: 80px;
+        height: 80px;
+        margin-bottom: -20px;
     & path {
-        fill: ${({theme}) => theme.color.dragonGreen};
+        fill: ${({theme}) => theme.color.dragonBlack};
     }
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
         width: 38px;

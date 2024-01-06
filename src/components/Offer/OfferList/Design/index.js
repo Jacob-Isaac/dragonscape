@@ -5,6 +5,7 @@ import Image1 from "../../../../images/dragonScape.svg";
 import Image2 from "../../../../images/dragonsCape.jpg";
 import Advertise from "../../../../images/advertise.svg";
 import Price from "../../Pricing";
+import Portfolio from "./Portfolio/index";
 
 // Your existing Container and H12 styled components...
 

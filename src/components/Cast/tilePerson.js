@@ -1,8 +1,28 @@
 import PersonIcon from "../../images/PersonIcon";
 import { Destription, PersonNameStyle, NoPoster, Poster, StyledTilePerson, StyledPersonIcon, Wrapper, StyledNavLink, PersonRole } from "./personStyled";
-import Ala from "../../images/ala.jpg"
-const TilePerson = ({personRole, personName, personProfilePath, personId }) => {
+import Robert from "../../images/robert.webp"
+import Jakub from "../../images/jakub.webp"
+import Agnieszka from "../../images/agnieszka.webp"
+import Milosz from "../../images/milosz.webp"
 
+
+const TilePerson = ({personRole, personName, personProfilePath, personId }) => {
+    const getPosterSource = () => {
+        switch (personProfilePath) {
+            case 'Robert':
+                return Robert;
+            case 'Jakub':
+                return Jakub;
+            case 'Agnieszka':
+                return Agnieszka;
+            case 'Milosz':
+                return Milosz;
+            default:
+                return null; // You can return a default image or handle the case as needed
+        }
+    };
+
+    const selectedPoster = getPosterSource();    
     return (
         <Wrapper>
             <StyledNavLink to={`/personDetails/${personId}`}>
@@ -15,7 +35,7 @@ const TilePerson = ({personRole, personName, personProfilePath, personId }) => {
                             </StyledPersonIcon>
                         </NoPoster>
                         :
-                        <Poster src={Ala}/>
+                        <Poster src={selectedPoster}/>
                     }
                     <Destription>
                         <PersonNameStyle>{personName}</PersonNameStyle>

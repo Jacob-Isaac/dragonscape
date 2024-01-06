@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import firstBckgrnd from "../../images/icodragon.svg";
-import secondBckgrnd from "../../images/icodragon.svg";
+import firstBckgrnd from "../../images/designTopImage-01.webp";
+import secondBckgrnd from "../../images/webTopImage.png";
 import thirdBckgrnd from "../../images/icodragon.svg";
 import fourthBckgrnd from "../../images/icodragon.svg";
 
@@ -45,12 +45,17 @@ export const Tiles = styled.div`
 export const Badge = styled.div`
 
  /* position: absolute;  */
-margin-left: 43%;
-margin-top: -50px;
-width: 80px;
-height: 80px;
+margin-left: 40%;
+margin-top: -70px;
+max-width: 120px;
+height: 120px;
   background: url(${(props) => getImageUrl(props.image)}); 
    background-size: cover;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+      margin-left: auto;
+      margin-right: auto;
+
+  }
 `;
 
 export const StyledUl = styled.ul`
@@ -82,7 +87,7 @@ export const Name = styled.li`
 `;
 
 export const Description = styled.li`
-  font-family: "Inter";
+  font-family: 'Montserrat', sans-serif;"Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -98,7 +103,7 @@ export const Description = styled.li`
 `;
 
 export const Links = styled.li`
-  font-family: "Inter";
+  font-family: 'Montserrat', sans-serif;"Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

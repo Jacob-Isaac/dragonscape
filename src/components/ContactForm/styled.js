@@ -23,7 +23,7 @@ flex-direction: column;
 
 export const Text = styled.div`
 color:  ${({theme}) => theme.color.text};
-font-family: 'Inter';
+font-family: 'Montserrat', sans-serif;'Montserrat', sans-serif;;
 font-style: normal;
 font-weight: 700;
 font-size: 12px;

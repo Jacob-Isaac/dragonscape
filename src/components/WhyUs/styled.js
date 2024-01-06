@@ -103,7 +103,7 @@ export const H1 = styled.h1`
 margin: 0 auto;
 margin-top: 10px;
 margin-bottom: -2px;
-font-family: "Inter";
+font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 600;
    color: ${({ theme }) => theme.color.dragonRed};
@@ -114,7 +114,7 @@ font-family: "Inter";
 
 export const P = styled.p`
 color: ${({ theme }) => theme.color.text};
-font-family: "Inter";
+font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -128,7 +128,7 @@ font-family: "Inter";
 
 export const H12 = styled.h1`
 margin-top: 270px;
-font-family: "Inter";
+font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 600;
    color: ${({ theme }) => theme.color.dragonRed};
