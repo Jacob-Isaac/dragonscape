@@ -1,60 +1,25 @@
-import { Container } from "../../../Container/styled";
-import { H12 } from "../../../WhyUs/styled";
-import styled from "styled-components";
+import { Container } from "../../../../styledComponents/Container/styled";
+import { HeaderCustom } from "../../../../styled";
 import Image1 from "../../../../images/dragonScape.svg";
 import Image2 from "../../../../images/dragonsCape.jpg";
 import Advertise from "../../../../images/advertise.svg";
 import Price from "../../Pricing";
-import Portfolio from "./Portfolio/index";
+import { ImageTextWrapper, TextWrapper, Image, Button  } from "../styled";
 
-// Your existing Container and H12 styled components...
 
-const ImageTextWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px; /* Adjust margin as needed */
-`;
-
-const TextWrapper = styled.div`
-  max-width: 50%; /* Adjust the width of text */
-`;
-
-const Image = styled.img`
-  min-width: 450px; 
-  max-width: 450px; 
-`;
-const AdvertiseImg = styled.img`
-  /* Adjust the width of the image */
-`;
-
-const Button = styled.button`
-  /* Adjust the width of the image */
-  width: 130px;
-  height: 50px;
-  border:none;
- 
-  box-shadow: 0px 0px 20px rgba(9, 10, 51, 0.02), 0px 16px 20px rgba(9, 10, 51, 0.03);
-border-radius: 8px;
-  background-color: ${({ theme }) => theme.color.dragonOrange};
-color: ${({ theme }) => theme.color.dragonWhite};
-:hover {
-  color: ${({ theme }) => theme.color.dragonBlack};
-}
-
-`;
 
 const Design = () => (
   <Container>
-    {/* First scenario: Image on the right */}
     <ImageTextWrapper>
       <TextWrapper>
-        <H12>
+        <HeaderCustom>
           Identyfikacja wizualna: Logo, Banery, Grafiki, Obrazki, Personalizacja
           Graficzna Stron www
-        </H12>
+        </HeaderCustom>
         <p>
-          <h2>Dragon <b>s</b>cape czy Dragon<b>s</b> cape? </h2>
+          <h2>
+            Dragon <b>s</b>cape czy Dragon<b>s</b> cape?{" "}
+          </h2>
           <br />
           Gdy próbujesz zdecydować się na identyfikację wizualną Twojej marki
           musisz stanąć przed wieloma wyborami. Czasem drobne różnice mogą
@@ -106,22 +71,16 @@ const Design = () => (
         <Button>Napisz do nas!</Button>
       </TextWrapper>
       <figure>
-      <Image src={Image1} alt="Dragons Cape" />
-  <figcaption>"Dragons Cape"</figcaption>
-</figure>
-    
- 
-
-     
+        <Image src={Image1} alt="Dragons Cape" />
+        <figcaption>"Dragons Cape"</figcaption>
+      </figure>
     </ImageTextWrapper>
 
-    {/* Second scenario: Image on the left */}
     <ImageTextWrapper>
-    <figure>
-    <Image src={Image2} alt="Dragon Scape" />
-  <figcaption>"Dragon Scape"</figcaption>
-</figure>
-    
+      <figure>
+        <Image src={Image2} alt="Dragon Scape" />
+        <figcaption>"Dragon Scape"</figcaption>
+      </figure>
       <TextWrapper>
         <h2>Zwiększ Wyrazistość Marki: Profesjonalna Identyfikacja Wizualna</h2>
         <div style={{ display: "flex", flexDirection: "row" }}>
@@ -189,11 +148,8 @@ const Design = () => (
         </p>
       </TextWrapper>
     </ImageTextWrapper>
-    <AdvertiseImg src={Advertise} />
+    <img src={Advertise} />
     <Price />
-
-    {/* Remaining content */}
-    {/* ... */}
   </Container>
 );
 

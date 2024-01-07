@@ -9,7 +9,7 @@ import {
   Wrapper,
   StyledNavLink,
   PersonRole,
-} from "./personStyled";
+} from "./styled";
 import Robert from "../../images/robert.webp";
 import Jakub from "../../images/jakub.webp";
 import Agnieszka from "../../images/agnieszka.webp";

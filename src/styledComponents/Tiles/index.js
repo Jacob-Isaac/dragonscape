@@ -1,27 +1,26 @@
-import { Tiles, StyledUl, Name, Description, Links, Demo, Code, Link, Button, Badge} from "./styled";
+import {
+  Tiles,
+  StyledUl,
+  Name,
+  Description,
+  Links,
+  Link,
+  Badge,
+} from "./styled";
 
-
-
-const Tile = ({project}) => (
-    <>
-
-    <Tiles >
-    <Badge image={project.imagePath}/>
-        {/* image={project.imagePath} */}
-      
-        <StyledUl>
-       
+const Tile = ({ project }) => (
+  <>
+    <Tiles>
+      <Badge image={project.imagePath} />
+      <StyledUl>
         <Name>{project.name}</Name>
-       
         <Description>{project.description}</Description>
         <Links>
-        {/* <Demo>Demo: <Link rel="stylesheet" href={project.homepage} target="_blank">{project.homepage}</Link></Demo> */}
-        {/* <Button to={project.routePath}></Button> */}
-        <Link to={project.routePath}>Sprawdź</Link>
+          <Link to={project.routePath}>Sprawdź</Link>
         </Links>
-        </StyledUl>
+      </StyledUl>
     </Tiles>
-    </>
+  </>
 );
 
 export default Tile;

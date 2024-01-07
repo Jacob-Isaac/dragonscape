@@ -1,17 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchGithubData, selectPortfolioList, selectLoadingState } from "../../features/DataSlice/githubSlice";
+import {
+  fetchGithubData,
+  selectLoadingState,
+} from "../../features/DataSlice/githubSlice";
 import OfferTiles from "./OfferTiles/OfferTiles";
-import LoadingPage from "../LoadingPage";
-import ErrorPage from "../ErrorPage";
-import OfferList from "../../project.json"
+import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
+import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
+import OfferList from "../../features/Config/project.json";
 
 const MainPage = () => {
-
   const dispatch = useDispatch();
-  const portfolioList = useSelector(selectPortfolioList);
   const ifLoading = useSelector(selectLoadingState);
-
 
   useEffect(() => {
     dispatch(fetchGithubData());
@@ -21,30 +21,22 @@ const MainPage = () => {
 
   switch (ifLoading) {
     case "loading":
-      returned = (
-<LoadingPage/>
-      );
+      returned = <LoadingPage />;
       break;
     case "success":
       returned = (
         <>
-         <OfferTiles projects={OfferList}/>
-     </>
+          <OfferTiles projects={OfferList} />
+        </>
       );
       break;
-      case "error":
-        returned = (
-          <ErrorPage/>
-        );
-        break;
+    case "error":
+      returned = <ErrorPage />;
+      break;
     default:
-      returned = (
-        <LoadingPage/>
-      );
+      returned = <LoadingPage />;
   }
-
   return returned;
-
 };
 
 export default MainPage;

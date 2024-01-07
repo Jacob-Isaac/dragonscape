@@ -17,7 +17,7 @@ export const lightTheme = {
     mainBlue: "#0366D6",
     borderBottom: "#D1D5DA4D",
     blue: "#0366D6",
-    black: "#000", // nowe 
+    black: "#000", // nowe
     white: "#ffffff",
     grey: "#808080",
     whisper: "#F5F5FA",
@@ -26,7 +26,7 @@ export const lightTheme = {
     mystic: "#E4E6F0",
     pattensBlue: "#D6E4FF",
     scienceBlue: "#0044CC",
-    darkModeBackground: "#F9F4EA",// DRAGONOWE
+    darkModeBackground: "#F9F4EA", // DRAGONOWE
     dragonGreen: "#32937D",
     dragonBlue: "#8BC3C2",
     dragonWhite: "#FBF3E3",
@@ -65,7 +65,7 @@ export const darkTheme = {
     mainBlue: "#0366D6",
     borderBottom: "#D1D5DA4D",
     blue: "#5b96d9",
-    black: "#000", // nowe 
+    black: "#000", // nowe
     dragonWhite: "#F9F4EA",
     white: "#ffffff",
     grey: "#808080",

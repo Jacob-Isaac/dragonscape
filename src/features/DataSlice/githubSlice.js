@@ -13,39 +13,36 @@ const githubSlice = createSlice({
       state.ifLoading = "loading";
       console.log(state.ifLoading);
     },
-    setPortfolioList: (state, { payload: data}) => {
+    setPortfolioList: (state, { payload: data }) => {
       state.portfolioList = data;
       state.ifLoading = "success";
       console.log(state.portfolioList);
     },
     setError: (state) => {
       state.ifLoading = "error";
-   },
-   changeTheme: (state) => {
-    state.lightMode = !state.lightMode;
-    console.log(state.lightMode);
-   },
-   changeFlag: (state) => {
-    state.polishMode = !state.polishMode;
-    console.log(state.polishMode);
-   },
-  
+    },
+    changeTheme: (state) => {
+      state.lightMode = !state.lightMode;
+      console.log(state.lightMode);
+    },
+    changeFlag: (state) => {
+      state.polishMode = !state.polishMode;
+      console.log(state.polishMode);
+    },
   },
 });
 
 export const {
-fetchGithubData,
-setPortfolioList,
-setError,
-changeTheme,
-changeFlag
+  fetchGithubData,
+  setPortfolioList,
+  setError,
+  changeTheme,
+  changeFlag,
 } = githubSlice.actions;
 
 export const selectPortfolioList = (state) => state.portfolioList.portfolioList;
 export const selectLoadingState = (state) => state.portfolioList.ifLoading;
 export const selectIsLightMode = (state) => state.portfolioList.lightMode;
 export const selectIsPolishMode = (state) => state.portfolioList.polishMode;
-// export const getMovieById = (state, movieId) =>
-//   selectMoviesDetails(state).movieDetails.find(({ id }) => id === movieId);
 
 export default githubSlice.reducer;

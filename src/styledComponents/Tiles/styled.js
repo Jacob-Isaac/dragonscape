@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import firstBckgrnd from "../../images/designTopImage-01.webp";
+import firstBckgrnd from "../../images/designTopImage.webp";
 import secondBckgrnd from "../../images/webTopImage.png";
 import thirdBckgrnd from "../../images/icodragon.svg";
 import fourthBckgrnd from "../../images/icodragon.svg";
@@ -16,19 +16,15 @@ const getImageUrl = (image) => {
     case "four":
       return fourthBckgrnd;
     default:
-      return ""; // Default value or fallback URL
+      return "";
   }
 };
-
-
 
 export const Tiles = styled.div`
   max-width: 586px;
   max-height: 350px;
-  /* background: url(${(props) => getImageUrl(props.image)}); */
-   background-size: cover;
+  background-size: cover;
   background-color: ${({ theme }) => theme.color.dragonWhite};
-  /* border: 1px solid rgb(241, 163, 85); */
   box-shadow: 10px 10px 10px rgba(9, 10, 51, 0.05),
     0px 16px 58px rgba(9, 10, 51, 0.05);
   border-radius: 8px;
@@ -43,18 +39,15 @@ export const Tiles = styled.div`
 `;
 
 export const Badge = styled.div`
-
- /* position: absolute;  */
-margin-left: 40%;
-margin-top: -70px;
-max-width: 120px;
-height: 120px;
-  background: url(${(props) => getImageUrl(props.image)}); 
-   background-size: cover;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-      margin-left: auto;
-      margin-right: auto;
-
+  margin-left: 40%;
+  margin-top: -70px;
+  max-width: 120px;
+  height: 120px;
+  background: url(${(props) => getImageUrl(props.image)});
+  background-size: cover;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -87,7 +80,7 @@ export const Name = styled.li`
 `;
 
 export const Description = styled.li`
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -103,7 +96,7 @@ export const Description = styled.li`
 `;
 
 export const Links = styled.li`
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -115,48 +108,13 @@ export const Links = styled.li`
   gap: 8px;
 `;
 
-export const Demo = styled.span`
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    font-size: 14px;
-  }
-`;
-
-export const Code = styled.span`
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    font-size: 14px;
-    margin-right: 10px;
-  }
-`;
-
 export const Link = styled(NavLink)`
-  /* color: ${({ theme }) => theme.color.mainBlue}; */
   text-decoration: none;
-  /* border-bottom: 1px solid ${({ theme }) => theme.color.linkBorder}; */
-  /* padding-bottom: 1px; */
- 
-
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 14px;
   }
-    padding: 10px 20px;
-     text-align: center;
-  border: none;
-  border-radius: 10px;
-  background-color: ${({ theme }) => theme.color.dragonRed};
-  color: ${({ theme }) => theme.color.dragonWhite};
-  cursor: pointer;
-  width: 150px;
-  margin: 0 auto;
-  transition: 0.6s ease-in-out;
-  &:hover {
-    box-shadow: 2px -2px 0px #F1A355, -2px 2px 0px #F1A355, 2px 2px 0px #F1A355,
-      -2px -2px 0px #F1A355;
-    cursor: pointer;
-   
-  }
-`;
-export const Button = styled.button`
   padding: 10px 20px;
+  text-align: center;
   border: none;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.color.dragonRed};
@@ -166,9 +124,8 @@ export const Button = styled.button`
   margin: 0 auto;
   transition: 0.6s ease-in-out;
   &:hover {
-    box-shadow: 2px -2px 0px #F1A355, -2px 2px 0px #F1A355, 2px 2px 0px #F1A355,
-      -2px -2px 0px #F1A355;
+    box-shadow: 2px -2px 0px #f1a355, -2px 2px 0px #f1a355, 2px 2px 0px #f1a355,
+      -2px -2px 0px #f1a355;
     cursor: pointer;
-   
   }
 `;

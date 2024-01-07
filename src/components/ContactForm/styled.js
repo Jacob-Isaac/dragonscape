@@ -1,15 +1,5 @@
-import styled, { css } from "styled-components";
-
-// export const Block = styled.div`
-//   height: 404px;
-//   margin: auto;
-//   background-color: ${({ theme }) => theme.color.tilesBackground};
-//   margin-bottom: 72px;
-//   margin-top: 72px;
-//   box-shadow: 0px 0px 20px rgba(9, 10, 51, 0.02),
-//     0px 16px 20px rgba(9, 10, 51, 0.03);
-//   border-radius: 4px;
-// `;
+import styled from "styled-components";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const IntroBlock = styled.div`
   max-height: 404px;
@@ -107,62 +97,92 @@ export const SocialLink = styled.a`
   margin-right: 40px;
 `;
 
-// export const HireMeButton = styled.a`
-//   margin-top: 60px;
-//   grid-area: 4 / 3 / 5 / 4;
-//   width: 154px;
-//   height: 49px;
-//   &:hover {
-//     box-shadow: 2px -2px 0px #8cc2ff, -2px 2px 0px #8cc2ff, 2px 2px 0px #8cc2ff,
-//       -2px -2px 0px #8cc2ff;
-//     cursor: pointer;
-//     transition: 0.6s;
-//   }
-//   border-radius: 4px;
-// `;
+//contact
 
-// export const ModeChange = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: flex-end;
-// `;
-// export const DarkMode = styled.div`
-//   color: #6e7e91;
-//   font-weight: 700;
-//   font-size: 12px;
-//   display: flex;
-//   flex-direction: row-reverse;
-//   gap: 12px;
-//   padding: 7px;
-// `;
+export const StyledReCAPTCHA = styled(ReCAPTCHA)`
+  margin-top: 30px;
+  margin-bottom: 50px;
+`;
 
-// export const IconBody = styled.button`
-//   width: 47px;
-//   height: 27px;
-//   padding: 2px;
-//   border: 1px solid #6e7e91;
-//   border-radius: 15px;
-//   background: #e5e5e5;
-//   &:hover {
-//     cursor: pointer;
-//   }
-// `;
+export const StyledContactForm = styled.div`
+  width: 400px;
+  margin-top: 10px;
+  form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+    input {
+      width: 100%;
+      height: 35px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid rgb(220, 220, 220);
+      &:focus {
+        border: 2px solid rgba(0, 206, 158, 1);
+      }
+    }
+    textarea {
+      max-width: 100%;
+      min-width: 100%;
+      width: 100%;
+      max-height: 100px;
+      min-height: 100px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid rgb(220, 220, 220);
+      &:focus {
+        border: 2px solid rgba(0, 206, 158, 1);
+      }
+    }
+    label {
+      margin-top: 1rem;
+      margin-bottom: 5px;
+    }
+    input[type="submit"] {
+      margin-top: 2rem;
+      cursor: pointer;
+      background: rgb(249, 105, 14);
+      color: white;
+      border: none;
+    }
+  }
+`;
 
-// export const Body = styled.span`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 20px;
-//   height: 20px;
-//   border-radius: 50%;
-//   transition: transform 0.6s;
-//   background: ${({ theme }) => theme.color.SlateGray};
-//   ${({ iconTransition }) =>
-//     iconTransition &&
-//     css`
-//       transform: translateX(20px);
-//       & path {
-//         fill: ${({ theme }) => theme.color.SlateGray};
-//       }
-//     `};
-// `;
+export const SuccessMessage = styled.div`
+  position: fixed;
+  top: 20px; 
+  right: 20px; 
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  animation-name: ${({ hide }) => (hide ? 'slideOut' : 'slideIn')};
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  @keyframes slideOut {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+`;

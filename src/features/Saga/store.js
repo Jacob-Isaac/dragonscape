@@ -1,5 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit';
-import githubSliceReducer from '../DataSlice/githubSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import githubSliceReducer from "../DataSlice/githubSlice";
 import createSagaMiddleware from "@redux-saga/core";
 import rootSaga from "./rootSaga";
 

@@ -1,12 +1,6 @@
 import styled from "styled-components";
-import { ReactComponent as Marker } from "../../../images/marker.svg";
 import { ReactComponent as githubLogo } from "../../../images/icodragon.svg";
 
-export const StyledMarker = styled(Marker)`
-    & circle {
-        fill: #0366D6;
-    }
-`;
 export const StyledGithubLogo = styled(githubLogo)`
    width: 80px;
         height: 80px;

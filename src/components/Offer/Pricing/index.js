@@ -1,12 +1,8 @@
 import React from 'react';
-// import './style.css';
-import styled from 'styled-components';
 import Pricing from './Pricing';
-
+import { MainContainer } from './styled';
 
 const Price = () => {
-   
-
     return (
         <MainContainer>
           <div className="pricing-component">
@@ -39,7 +35,6 @@ const Price = () => {
               ]}
               price={800}
               background="linear-gradient(120deg, #8BC3C2 0%, #32937D 100%)"
-            //   shadow="#8BC3C2"
               currency="PLN"
               buttonContent="Skontaktuj się"
               subTitle="dla wymagających"
@@ -59,7 +54,6 @@ const Price = () => {
               ]}
               price={1300}
               background="linear-gradient(to left, #F1A355 0%, #D76460 100%);"
-            //   shadow="#D76460"
               currency="PLN"
               buttonContent="Skontaktuj się"
               subTitle="Pełna kreacja marki"
@@ -70,22 +64,5 @@ const Price = () => {
         </MainContainer>
       );
     };
-    
-    const MainContainer = styled.div`
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      /* background-color: #f5f1ff; */
-    
-      @media screen and (max-width: 970px) {
-        height: 100%;
-        flex-direction: column;
-        .pricing-component {
-          margin: 2rem 0;
-        }
-      }
-    `;
 
 export default Price;

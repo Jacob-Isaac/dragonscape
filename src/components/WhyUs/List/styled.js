@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledList = styled.div`
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* padding: 0px; */
      column-gap: 35px; 
-    /* list-style-type: none; */
- 
     @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
           display: flex;
           flex-direction: column;

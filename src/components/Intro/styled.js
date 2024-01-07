@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { ReactComponent as ButtonImg } from "../../images/hireMe2.svg";
+import { ReactComponent as ButtonImg } from "../../images/contactUs.svg";
 
 const oscillateAnimation = keyframes`
   0%, 100% {

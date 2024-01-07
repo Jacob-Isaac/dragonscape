@@ -8,10 +8,10 @@ import {
   StyledButtonImg,
   ArrowDown,
 } from "./styled";
-import dragonLight from "../../images/me2.svg";
-import dragonDark from "../../images/me.svg";
-import text from "../../images/logo-01.webp";
-import textDark from "../../images/logo2.png";
+import dragonLight from "../../images/meLight.svg";
+import dragonDark from "../../images/meDark.svg";
+import text from "../../images/logoWebp.webp";
+import textDark from "../../images/logoDark.png";
 import arrowDown from "../../images/arrowDown.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { selectIsLightMode } from "../../features/DataSlice/githubSlice";
@@ -21,7 +21,7 @@ import {
   fetchGithubData,
   selectLoadingState,
 } from "../../features/DataSlice/githubSlice";
-import LoadingPage from "../LoadingPage";
+import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
 
 function AboutMe() {

@@ -1,10 +1,10 @@
-import { Container } from "../../../Container/styled";
-import { H12 } from "../../../WhyUs/styled";
+import { Container } from "../../../../styledComponents/Container/styled";
+import { HeaderCustom } from "../../../../styled";
 
 
 const Package = () => (
     <Container>
-    <H12>Tworzenie stron internetowych, zakotwiczenie na hostingu, dobór domeny, stworzenie social mediów, optymalizacja witryny, pozycjonowanie</H12>
+    <HeaderCustom>Tworzenie stron internetowych, zakotwiczenie na hostingu, dobór domeny, stworzenie social mediów, optymalizacja witryny, pozycjonowanie</HeaderCustom>
   </Container>
 );
 

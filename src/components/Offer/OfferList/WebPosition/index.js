@@ -1,10 +1,10 @@
-import { Container } from "../../../Container/styled";
-import { H12 } from "../../../WhyUs/styled";
+import { Container } from "../../../../styledComponents/Container/styled";
+import { HeaderCustom } from "../../../../styled";
 
 
 const WebPosition = () => (
     <Container>
-    <H12>Website Positioning (SEO), Social Media growing</H12>
+    <HeaderCustom>Website Positioning (SEO), Social Media growing</HeaderCustom>
   </Container>
 );
 

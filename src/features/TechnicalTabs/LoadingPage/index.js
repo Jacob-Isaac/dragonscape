@@ -1,16 +1,10 @@
-import { Container } from "../Container/styled";
-import Content from "../Content";
-import { StyledLoading, Wrapper, Message } from "./styled";
-import { StyledGithubLogo } from "../Offer/OfferTiles/styled";
-
-
+import { Container } from "../../../styledComponents/Container/styled";
+import Content from "../../../styledComponents/Content";
+import { StyledLoading, Wrapper} from "./styled";
 
 const LoadingPage = () => (
     <Container>
-        <Content
-        //  icon = {<StyledGithubLogo/>} 
-        //  title= {"Portfolio"}
-        //  subtitle = {"My recent projects"}  
+        <Content 
         body={
             <Wrapper>
             <StyledLoading/>

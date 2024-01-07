@@ -10,6 +10,7 @@ export const ContainerFooter = styled.div`
   }
   margin-bottom: 230px;
 `;
+
 export const Container = styled.div`
   max-width: 1216px;
   margin: auto;
