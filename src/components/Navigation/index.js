@@ -18,7 +18,7 @@ import {
   StyledSunIcon,
 } from "./styled";
 import logoTransparent from "../../images/logo.png";
-import logo from "../../images/logoDark.png";
+import logo from "../../images/logodark.png";
 import { useSelector, useDispatch } from "react-redux";
 import { changeTheme } from "../../features/DataSlice/githubSlice";
 import {

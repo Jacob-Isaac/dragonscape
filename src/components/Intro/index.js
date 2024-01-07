@@ -11,7 +11,7 @@ import {
 import dragonLight from "../../images/meLight.svg";
 import dragonDark from "../../images/meDark.svg";
 import text from "../../images/logoWebp.webp";
-import textDark from "../../images/logoDark.png";
+import textDark from "../../images/logodark.png";
 import arrowDown from "../../images/arrowDown.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { selectIsLightMode } from "../../features/DataSlice/githubSlice";
