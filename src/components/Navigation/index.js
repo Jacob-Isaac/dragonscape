@@ -98,7 +98,7 @@ const NavigationBar = () => {
         )}
         {isInMain ? (
           <NavScrollLink
-            fontColor={getFontColor()}
+            fontcolor={getFontColor()}
             activeClass="active"
             to="AboutMeSection"
             spy={true}
@@ -109,13 +109,13 @@ const NavigationBar = () => {
             start
           </NavScrollLink>
         ) : (
-          <NavigationLink to="/" fontColor={getFontColor()}>
+          <NavigationLink to="/" fontcolor={getFontColor()}>
             start
           </NavigationLink>
         )}
         {isInMain ? (
           <NavScrollLink
-            fontColor={getFontColor()}
+            fontcolor={getFontColor()}
             activeClass="active"
             to="OfferSection"
             spy={true}
@@ -126,22 +126,22 @@ const NavigationBar = () => {
             oferta
           </NavScrollLink>
         ) : (
-          <NavigationLink fontColor={getFontColor()} to="/offer">
+          <NavigationLink fontcolor={getFontColor()} to="/offer">
             oferta
           </NavigationLink>
         )}
         <NavigationLinkRed
-          fontColor={getFontColor()}
+          fontcolor={getFontColor()}
           href="mailto:kontakt@dragonscape.pl"
         >
           wycena
         </NavigationLinkRed>
-        <NavigationLink fontColor={getFontColor()} to="/aboutUs">
+        <NavigationLink fontcolor={getFontColor()} to="/aboutUs">
           o nas
         </NavigationLink>
         {isInMain ? (
           <NavScrollLink
-            fontColor={getFontColor()}
+            fontcolor={getFontColor()}
             activeClass="active"
             to="contactSection"
             spy={true}
@@ -152,7 +152,7 @@ const NavigationBar = () => {
             kontakt
           </NavScrollLink>
         ) : (
-          <NavigationLink fontColor={getFontColor()} to="/contact">
+          <NavigationLink fontcolor={getFontColor()} to="/contact">
             kontakt
           </NavigationLink>
         )}

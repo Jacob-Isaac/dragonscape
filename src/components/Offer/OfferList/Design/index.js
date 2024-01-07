@@ -16,7 +16,6 @@ const Design = () => (
           Identyfikacja wizualna: Logo, Banery, Grafiki, Obrazki, Personalizacja
           Graficzna Stron www
         </HeaderCustom>
-        <p>
           <h2>
             Dragon <b>s</b>cape czy Dragon<b>s</b> cape?{" "}
           </h2>
@@ -25,31 +24,30 @@ const Design = () => (
           musisz stanąć przed wieloma wyborami. Czasem drobne różnice mogą
           zmienić wszystko o 180 stopni. Dlatego jesteśmy tutaj, by pomóc Ci w
           tym trudnym zadaniu i stworzyć design jakiego potrzebuje Twoja firma.
-        </p>
-        <p>
+       
           <h2>Niezapomniane Logo</h2>
           <br />
           Stwórzmy dla Ciebie unikalne logo, które będzie wizytówką Twojej
           marki. Nasz proces projektowy opiera się na głębokim zrozumieniu
           Twojej firmy, jej wartości i celów, aby stworzyć logo, które wyróżni
           Cię spośród konkurencji.
-        </p>
-        <p>
+      
+       
           <h2>Kreatywne Banery i Grafiki</h2>
           <br />
           Nasi utalentowani graficy mogą przygotować nie tylko banery, ale
           również grafiki, które przyciągną uwagę Twoich klientów. Dzięki
           kreatywności i zrozumieniu trendów projektowych, stworzymy materiały,
           które wyróżnią Twoją markę w każdym miejscu.
-        </p>
-        <p>
+      
+ 
           <h2>Pozwól Twojej Stronie WWW Wyrazić Tożsamość Twojej Marki</h2>
           <br />
           Nasze usługi personalizacji graficznej stron www pozwolą Twojej
           witrynie internetowej mówić za Ciebie. Tworzymy spersonalizowane
           rozwiązania, które nie tylko wyglądają atrakcyjnie, ale także
           zapewniają optymalne doświadczenia użytkownikom.
-        </p>
+    
         <p>
           <strong>Dlaczego My</strong>
           <br />

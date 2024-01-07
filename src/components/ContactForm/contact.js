@@ -53,7 +53,7 @@ export const ContactUs = () => {
         <input type="email" name="user_email" required />
         <label>Treść wiadomości*</label>
         <textarea
-          maxlength={charLimit}
+          maxLength={charLimit}
           placeholder={`Napisz do nas :) (limitowane do ${charLimit} znaków)`}
           name="message"
           required

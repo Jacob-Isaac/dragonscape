@@ -1,5 +1,6 @@
 [
   {
+    "id": 5,
     "name": "Identyfikacja wizualna",
     "description": "Projektujemy indywidualne loga, wizytówki, banery oraz inne materiały reklamowe.",
     "homepage": "https://www.example.com/project-two",
@@ -8,6 +9,7 @@
     "imagePath": "one"
   },
   {
+    "id": 6,
     "name": "Projektowanie stron internetowych",
     "description": "Tworzymy szybkie i przejrzyste witryny internetowe. Posiadanie strony jest dziś jednym z najskuteczniejszych sposobów na dotarcie do nowych klientów.",
     "homepage": "https://www.example.com/project-one",

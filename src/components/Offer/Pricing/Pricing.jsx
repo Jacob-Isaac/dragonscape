@@ -86,7 +86,7 @@ const Pricing = ({
 Pricing.propTypes = {
   data: PropTypes.array.isRequired,
   price: PropTypes.number.isRequired,
-  duration: PropTypes.oneOf(["y", "m"]).isRequired,
+  duration: PropTypes.oneOf(["y", "m"]),
   buttonContent: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,

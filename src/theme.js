@@ -13,7 +13,6 @@ export const lightTheme = {
     background: "#E5E5E5",
     // bodyBackground: "#FBFBFE",
     bodyBackground: "#F9F5EF",
-    dragonWhite: "#F9F4EA",
     mainBlue: "#0366D6",
     borderBottom: "#D1D5DA4D",
     blue: "#0366D6",

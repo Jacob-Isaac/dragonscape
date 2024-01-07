@@ -38,8 +38,8 @@ function App() {
             element={
               <AnimatedOnScroll
                 animationIn="slideInRight"
-                screenOffset="100"
-                animationInDuration="1200"
+                screenOffset={100}
+                animationInDuration={1200}
               >
                 <Container>
                   <Element name="AboutMeSection" className="element">
@@ -48,15 +48,15 @@ function App() {
                   <Element name="WhyUsSection" className="element">
                     <AnimatedOnScroll
                       animationIn="slideInRight"
-                      screenOffset="100"
-                      animationInDuration="1200"
+                      screenOffset={100}
+                      animationInDuration={1200}
                     >
                       <Title children="slideInRight">Dlaczego my ?</Title>
                     </AnimatedOnScroll>
                     <AnimatedOnScroll
                       animationIn="slideInLeft"
-                      screenOffset="300"
-                      animationInDuration="1500"
+                      screenOffset={300}
+                      animationInDuration={1500}
                     >
                       <WhyUs
                         children="slideInLeft"
@@ -68,8 +68,8 @@ function App() {
                   <Element name="OfferSection" className="element">
                     <AnimatedOnScroll
                       animationIn="slideInRight"
-                      screenOffset="300"
-                      animationInDuration="1000"
+                      screenOffset={300}
+                      animationInDuration={1000}
                     >
                       <Offer />
                     </AnimatedOnScroll>
@@ -78,7 +78,7 @@ function App() {
                 <Element name="contactSection" className="element">
                   <AnimatedOnScroll
                     animationIn="slideInLeft"
-                    animationInDuration="1500"
+                    animationInDuration={1500}
                   >
                    <ContactFormWrapper>
                       <ContactForm />
