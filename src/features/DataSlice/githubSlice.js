@@ -11,23 +11,21 @@ const githubSlice = createSlice({
   reducers: {
     fetchGithubData: (state) => {
       state.ifLoading = "loading";
-      console.log(state.ifLoading);
+ 
     },
     setPortfolioList: (state, { payload: data }) => {
       state.portfolioList = data;
       state.ifLoading = "success";
-      console.log(state.portfolioList);
+      
     },
     setError: (state) => {
       state.ifLoading = "error";
     },
     changeTheme: (state) => {
       state.lightMode = !state.lightMode;
-      console.log(state.lightMode);
     },
     changeFlag: (state) => {
       state.polishMode = !state.polishMode;
-      console.log(state.polishMode);
     },
   },
 });

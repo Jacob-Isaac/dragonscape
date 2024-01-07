@@ -138,7 +138,7 @@ export const StyledContactForm = styled.div`
         border: 2px solid rgba(0, 206, 158, 1);
       }
     }
-    label {
+    span {
       margin-top: 1rem;
       margin-bottom: 5px;
     }

@@ -24,7 +24,9 @@ export const ContactUs = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+           console.log(result.text);
+           console.log("Wiadomość Wysłana !");
+           console.log("Message Sent !");
           recaptchaRef.current.reset();
         },
         (error) => {
@@ -42,16 +44,16 @@ export const ContactUs = () => {
     setCapVal(null);
     form.current.reset();
     e.target.reset();
-    StyledReCAPTCHA.reset();
+    // StyledReCAPTCHA.reset();
   };
   return (
     <StyledContactForm>
       <form ref={form} onSubmit={sendEmail}>
-        <label>Imię</label>
+        <span>Imię</span>
         <input type="text" name="user_name" />
-        <label>Email*</label>
+        <span>Email*</span>
         <input type="email" name="user_email" required />
-        <label>Treść wiadomości*</label>
+        <span>Treść wiadomości*</span>
         <textarea
           maxLength={charLimit}
           placeholder={`Napisz do nas :) (limitowane do ${charLimit} znaków)`}
@@ -66,6 +68,7 @@ export const ContactUs = () => {
           onChange={(val) => setCapVal(val)}
         />
       </form>
+      
       {showSuccess && (
         <SuccessMessage hide={hideMessage}>
           <p>Sukces! Formularz został wysłany.</p>
