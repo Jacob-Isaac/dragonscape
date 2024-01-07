@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "Jakub Nowakowski",
+      "job": "Logo Designer",
+      "character": "Logo Designer",
+      "profile_path": "Jakub"
+    },
+    {
+      "id": 2,
+      "name": "Miłosz Nowakowski",
+      "job": "Web Designer",
+      "character": "Web Designer",
+      "profile_path": "Milosz"
+    },
+    {
+      "id": 3,
+      "name": "Robert Przybyszewski",
+      "job": "SEO",
+      "character": "Social Media",
+      "profile_path": "Robert"
+    },
+    {
+        "id": 4,
+        "name": "Agnieszka Kamińska",
+        "job": "Media",
+        "character": "IT Specialist",
+        "profile_path": "Agnieszka"
+      }
+  ]
+  
