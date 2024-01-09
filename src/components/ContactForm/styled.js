@@ -23,6 +23,7 @@ export const Text = styled.div`
 
 export const Mail = styled.a`
   margin-top: 20px;
+  margin-bottom: 20px;
   color: ${({ theme }) => theme.color.titleAndIcons};
   text-decoration: none;
   font-weight: 900;
@@ -45,12 +46,26 @@ export const Mail = styled.a`
   }
 `;
 
-export const Phone = styled.a`
-  margin-top: 20px;
+export const PhoneWrapper = styled.span`
+
   color: ${({ theme }) => theme.color.titleAndIcons};
-  text-decoration: none;
   font-weight: 900;
-  font-size: 28px;
+  font-size: 20px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 20px;
+  }
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+`; 
+
+export const Phone = styled.a`
+ text-decoration: none;
+  color: ${({ theme }) => theme.color.titleAndIcons};
+  font-weight: 900;
+  font-size: 24px;
   line-height: 46px;
   letter-spacing: 0.05em;
   -webkit-transition: all 1s ease;
@@ -58,15 +73,17 @@ export const Phone = styled.a`
   -ms-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
-  &:hover {
-    color: ${({ theme }) => theme.color.mainBlue};
-  }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 20px;
   }
   @media (max-width: 400px) {
     font-size: 14px;
   }
+  &:hover {
+    color: ${({ theme }) => theme.color.mainBlue};
+  }
+
+
 `;
 
 export const Article = styled.article`
@@ -83,7 +100,7 @@ export const Article = styled.article`
 `;
 
 export const SocialMedia = styled.div`
-  margin-top: 24px;
+  margin-top: 30px;
   margin-bottom: 24px;
   display: flex;
   flex-direction: row;

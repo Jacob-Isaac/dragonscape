@@ -5,22 +5,24 @@ export const TilesPersonSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 100px auto;
-  max-width: 1000px;
+  max-width: 1048px;
+  padding-left: 24px;
+  padding-right: 24px;
   gap: 24px;
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+    padding-left: 0px;
+  padding-right: 0px;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
-    max-width: 600px;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    max-width: 500px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.miniMobile}px) {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    max-width: 200px;
+    gap: 10px;
+    min-width: 290px;
     margin: 0 auto;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.galaxyFold}px) {
+    margin-left: 11px; 
   }
 `;
 
@@ -90,17 +92,13 @@ export const Destription = styled.section`
 `;
 export const PersonNameStyle = styled.div`
     font-weight: ${({ theme }) => theme.fontSize.medium};
-    display: flex;
-    justify-content: center;
+    text-align: center;
     line-height: 130%;
 `;
 export const PersonRole = styled.div`
     font-weight: ${({ theme }) => theme.fontSize.medium};
     color: ${({ theme }) => theme.color.darkerGrey};
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-self: center;
+    text-align: center;
     line-height: 130%;
     font-size: 15px;
     @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px){

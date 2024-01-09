@@ -45,7 +45,6 @@ const Cast = ({ selectedCast }) => {
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </p>
-      <Content/>
       <TilesPersonSection>
         {selectedCast.map((person) => (
           <TilePerson

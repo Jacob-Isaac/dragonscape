@@ -1,18 +1,18 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
-  background-color: #f0f0f0;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  margin: 60px auto 60px;
-  max-width: 1200px;
+  background-color: #F9F5EF;
 `;
 
 export const FooterContent = styled.div`
+  max-width: 1216px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
 `;
 
 export const LogoColumn = styled.div`
@@ -55,11 +55,9 @@ export const FooterLinksSocial = styled.span`
 export const Link = styled.li`
   color: #333;
   font-size: 14px;
-
   cursor: pointer;
   transition: color 0.3s ease;
   margin-bottom: 10px;
-
   &:hover {
     color: #555;
   }
@@ -76,7 +74,7 @@ export const LinkSocial = styled.a`
   }
 `;
 
-export const PrivacyPolicyLink = styled(Link)`
+export const PrivacyPolicyLink = styled(NavLink)`
   list-style: none;
   margin-left: 14px;
 `;

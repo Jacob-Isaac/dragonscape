@@ -39,6 +39,7 @@ export const lightTheme = {
     tablet: 1060,
     mobile: 800,
     miniMobile: 500,
+    galaxyFold: 315,
     extra: 878,
     tabletMax: 968, //tutaj nowe
     mobileMax: 650,

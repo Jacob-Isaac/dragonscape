@@ -44,7 +44,7 @@ const Footer = () => {
               <StyledLinkedInLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
           </FooterLinksSocial>
-          <PrivacyPolicyLink>polityka prywatności</PrivacyPolicyLink>
+          <PrivacyPolicyLink to="/privacyPolicy">polityka prywatności</PrivacyPolicyLink>
         </FooterLinksColumn>
         <LogoColumn>
           <Logo src={logo} alt="Your Logo" />

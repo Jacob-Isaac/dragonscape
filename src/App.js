@@ -22,6 +22,8 @@ import WebPosition from "./components/Offer/OfferList/WebPosition/index.js";
 import Package from "./components/Offer/OfferList/Package/index.js";
 import Web from "./components/Offer/OfferList/Web/index.js";
 import Design from "./components/Offer/OfferList/Design/index.js";
+import CookieBar from "./features/TechnicalTabs/CookieBar/index.js";
+import PrivacyPolicy from "./features/TechnicalTabs/PrivacyPolicy/index.js";
 
 function App() {
 
@@ -74,7 +76,7 @@ function App() {
                       <Offer />
                     </AnimatedOnScroll>
                   </Element>
-                </Container>
+                  </Container>
                 <Element name="contactSection" className="element">
                   <AnimatedOnScroll
                     animationIn="slideInLeft"
@@ -85,8 +87,8 @@ function App() {
                       </ContactFormWrapper>
                   </AnimatedOnScroll>
                 </Element>
-                <Footer />
               </AnimatedOnScroll>
+           
             }
           />
           <Route path="/design" element={<Design />} />
@@ -133,7 +135,15 @@ function App() {
               </Container>
             }
           />
+           <Route
+            path="/privacyPolicy"
+            element={
+              <PrivacyPolicy/>
+            }
+          />
         </Routes>
+        <Footer />
+        <CookieBar/>
       </BrowserRouter>
     </ThemeProvider>
   );
