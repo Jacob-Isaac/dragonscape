@@ -12,6 +12,7 @@ import { selectIsLightMode } from "../src/features/DataSlice/githubSlice";
 import { useSelector } from "react-redux";
 import { GlobalStyle } from "./GlobalStyle";
 import NavigationBar from "./components/Navigation/index.js";
+import NavigationBarMobile from "./components/Navigation/NavigationMobile/index.js";
 import { Element } from "react-scroll";
 import Cast from "./components/Cast/index.js";
 import cast from "./features/Config/cast.json";
@@ -24,16 +25,25 @@ import Web from "./components/Offer/OfferList/Web/index.js";
 import Design from "./components/Offer/OfferList/Design/index.js";
 import CookieBar from "./features/TechnicalTabs/CookieBar/index.js";
 import PrivacyPolicy from "./features/TechnicalTabs/PrivacyPolicy/index.js";
+import useWindowDimensions from "./features/Hooks/useWindowDimensions.js";
 
 function App() {
 
   const lightMode = useSelector(selectIsLightMode);
+  const dimensions = useWindowDimensions();
+  let navigationBar;
+  if (dimensions.width < 800) {
+    navigationBar = <NavigationBarMobile/>; 
+  } else {
+    navigationBar = <NavigationBar />;
+  }
+
 
   return (
     <ThemeProvider theme={lightMode === true ? lightTheme : darkTheme}>
       <GlobalStyle isLight={lightMode} />
       <BrowserRouter>
-        <NavigationBar />
+        {navigationBar}
         <Routes>
           <Route
             path="/"
