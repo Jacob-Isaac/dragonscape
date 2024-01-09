@@ -2,7 +2,7 @@
   "name": "projektowanie-stron-www",
   "version": "0.1.1",
   "private": true,
-  "homepage": "http://www.dragonscape.pl/",
+  "homepage": "https://www.dragonscape.pl/",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@reduxjs/toolkit": "^1.8.5",
