@@ -55,7 +55,7 @@ function AboutMe() {
             <Article>
               Design, logo, banery, wizytówki, a nawet projektowanie i tworzenie
               stron internetowych – to nasza specjalność! W smoczej krainie
-              tworzymy rozwiązania, które pomogą Tobie stać się smokiem biznesu!
+              tworzymy rozwiązania,  które pomogą Tobie stać się smokiem biznesu!
               Sprawdź co dla Ciebie przygotowaliśmy !
             </Article>
             <HireMeButton href="mailto:kontakt@dragonscape.pl">

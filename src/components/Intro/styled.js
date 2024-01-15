@@ -40,7 +40,7 @@ export const IntroBlock = styled.div`
     "photo txt"
     "photo myName"
     "photo article"
-    "photo hireButton";
+    "x hireButton";
   grid-row-gap: 10px;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     grid-template-columns: 1fr;
@@ -53,6 +53,17 @@ export const IntroBlock = styled.div`
       "article"
       "hireButton";
     margin-top: 0px;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 0fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "photo mode"
+    "photo txt"
+    "photo myName"
+    "photo article"
+    "photo hireButton";
+    margin-top: 72px;
   }
 `;
 
@@ -99,14 +110,14 @@ export const Name = styled.img`
   animation: fadeInAnimation ease 4s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    font-size: 24px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.miniMobile}px) {
+    max-width: 280px;
   }
-  @media (min-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    font-size: 30px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.galaxyFold}px) {
+    max-width: 240px;
   }
   @media (min-width: ${({ theme }) => theme.breakpoint.extra}px) {
-    font-size: 38px;
+    font-size: 100px;
   }
   @keyframes fadeInAnimation {
     0% {
@@ -125,15 +136,21 @@ export const Article = styled.article`
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 140%;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   ${({ theme }) => theme.color.DragonBlack};
   text-align: justify;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    font-size: 16px;
+    font-size: 15px;
     width: 90%;
     align-self: center;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+    font-size: 18px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.miniMobile}px) {
+    text-align: start;
   }
 `;
 
@@ -172,7 +189,9 @@ export const ArrowDown = styled.img`
   cursor: pointer;
   animation: ${oscillateAnimationSecond} 4s ease-in-out infinite;
   transition: transform 0.3s ease;
-
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    margin-top: 66px;
+  }
   &:hover {
     animation: ${shakeAnimation} 0.4s ease-in-out;
   }

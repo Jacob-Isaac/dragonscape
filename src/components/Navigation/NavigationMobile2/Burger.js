@@ -49,11 +49,16 @@ const Wrapper = styled.div`
   height: 2rem;
   position: fixed;
   top: 40px;
-  right: 30px;
   z-index: 10;
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
+    @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+      right: 37px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+      right: 30px;
+  }
 `;
 
 const Burger = () => {

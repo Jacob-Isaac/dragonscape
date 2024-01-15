@@ -9,13 +9,11 @@ export const NavigationBackground = styled.div`
   height: 104px;
   width: 100%;
   min-width: 320px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-    height: 152px;
-  }
   position: fixed;
   top: ${(props) => (props.visible ? "0" : "-120px")};
   transition: top 0.3s, background-color 0.4s ease;
 `;
+
 
 export const StyledFlagToggle = styled(FlagToggle)`
   transition: transform 0.6s;
@@ -34,20 +32,22 @@ export const NavigationList = styled.ul`
   padding: 24px 11px;
   grid-template-columns: 1fr auto auto auto auto auto 0.15fr auto;
   list-style-type: none;
-  @media (min-width: 1040px) {
     grid-gap: 30px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
+    grid-gap: 16px; 
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-    grid-template-columns: 1fr auto auto;
-    row-gap: 20px;
-    grid-gap: 16px;
+    grid-gap: 11px; 
   }
+
+
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     grid-template-columns: 1fr auto auto;
     row-gap: 20px;
     grid-gap: 6px;
     padding: 32px 12px;
   }
+  
 `;
 
 export const NavigationLink = styled(NavLink)`
@@ -69,11 +69,11 @@ export const NavigationLink = styled(NavLink)`
   &:hover {
     color: ${({ theme }) => theme.color.dragonOrange};
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    font-size: 12px;
-    padding: 0px 14px;
-    height: 34px;
-    margin-top: -1px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+   font-size: 15px;
+   /* padding: 0px 14px;
+   height: 34px;
+    margin-top: -1px; */
   }
 `;
 
@@ -96,11 +96,8 @@ export const NavigationLinkRed = styled.a`
   &:hover {
     color: ${({ theme }) => theme.color.dragonRed};
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    font-size: 12px;
-    padding: 0px 14px;
-    height: 34px;
-    margin-top: -1px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+   font-size: 15px;
   }
 `;
 
@@ -124,11 +121,8 @@ export const NavScrollLink = styled(Link)`
   &:hover {
     color: ${({ theme }) => theme.color.dragonOrange};
   }
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    font-size: 12px;
-    padding: 0px 14px;
-    height: 34px;
-    margin-top: -1px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+   font-size: 15px;
   }
 `;
 
@@ -140,7 +134,7 @@ export const NavigationLogo = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     margin-top: 8px;
     height: 17px;
-    font-size: 13px;
+    font-size: 15px;
   }
 `;
 
@@ -155,6 +149,9 @@ export const NavigationLogoLink = styled(NavLink)`
   text-decoration: none;
   @media (min-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     margin-right: 50px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+   font-size: 15px;
   }
 `;
 
@@ -186,10 +183,13 @@ export const ModeChange = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
     align-self: center;
     margin-bottom: -45px;
   }
+  /* @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+    margin-right: -22px;
+  } */
 `;
 
 export const FlagIconBody = styled.button`

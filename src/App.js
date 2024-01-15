@@ -12,7 +12,6 @@ import { selectIsLightMode } from "../src/features/DataSlice/githubSlice";
 import { useSelector } from "react-redux";
 import { GlobalStyle } from "./GlobalStyle";
 import NavigationBar from "./components/Navigation/index.js";
-import NavigationBarMobile from "./components/Navigation/NavigationMobile/index.js";
 import { Element } from "react-scroll";
 import Cast from "./components/Cast/index.js";
 import cast from "./features/Config/cast.json";
@@ -35,7 +34,7 @@ function App() {
   const lightMode = useSelector(selectIsLightMode);
   const dimensions = useWindowDimensions();
   let navigationBar;
-  if (dimensions.width < 800) {
+  if (dimensions.width < 970) {
     navigationBar = <Navbar isBodyOverflowHidden={isBodyOverflowHidden}/>; 
   } else {
     navigationBar = <NavigationBar />;
