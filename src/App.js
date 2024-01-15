@@ -53,11 +53,7 @@ function App() {
             path="/"
             element={<>
            
-              <AnimatedOnScroll
-                animationIn="slideInRight"
-                screenOffset={100}
-                animationInDuration={1200}
-              >
+           
                   
                 <Container>
                   <Element name="AboutMeSection" className="element">
@@ -65,19 +61,18 @@ function App() {
                   </Element>
                   <Element name="WhyUsSection" className="element">
                     <AnimatedOnScroll
-                      animationIn="slideInRight"
-                      screenOffset={100}
+                      animationIn={dimensions.width < 800 ? "zoomIn" : "slideInRight"}
+                      // screenOffset={100}
                       animationInDuration={1200}
                     >
-                      <Title children="slideInRight">Dlaczego my ?</Title>
+                      <Title>Dlaczego my ?</Title>
                     </AnimatedOnScroll>
                     <AnimatedOnScroll
-                      animationIn="slideInLeft"
-                      screenOffset={300}
+                      animationIn={dimensions.width < 800 ? "zoomIn" : "slideInLeft"}
+                      // screenOffset={300}
                       animationInDuration={1500}
                     >
                       <WhyUs
-                        children="slideInLeft"
                         title={"Dowiedz się, co możemy dla Ciebie zrobić ! 🛠️"}
                         content={skillsList}
                       />
@@ -85,7 +80,7 @@ function App() {
                   </Element>
                   <Element name="OfferSection" className="element">
                     <AnimatedOnScroll
-                      animationIn="slideInRight"
+                      animationIn={dimensions.width < 800 ? "zoomIn" : "slideInRight"}
                       screenOffset={300}
                       animationInDuration={1000}
                     >
@@ -95,7 +90,7 @@ function App() {
                   </Container>
                 <Element name="contactSection" className="element">
                   <AnimatedOnScroll
-                    animationIn="slideInLeft"
+                     animationIn={dimensions.width < 800 ? "zoomIn" : "slideInLeft"}
                     animationInDuration={1500}
                   >
                    <ContactFormWrapper>
@@ -103,7 +98,7 @@ function App() {
                       </ContactFormWrapper>
                   </AnimatedOnScroll>
                 </Element>
-              </AnimatedOnScroll>
+          
               </>
             }
           />
