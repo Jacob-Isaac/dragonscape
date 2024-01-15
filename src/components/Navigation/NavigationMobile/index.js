@@ -60,12 +60,12 @@ const HeaderMobile = ({ contentTitle, isBodyOverflowHidden }) => {
             <WrapperUl>
               <label htmlFor="active">
                 <li>
-                <NavLink exact to="/">
+                <NavLink to="/">
                 <Button Mobile>start</Button>
                    </NavLink> 
                 </li>
                 <li>
-                <NavLink exact to="/offer" >
+                <NavLink to="/offer" >
                   <Button Mobile>
                     <Span>oferta</Span>
                   </Button>
@@ -92,7 +92,7 @@ const HeaderMobile = ({ contentTitle, isBodyOverflowHidden }) => {
                   </Button>
                 </li>
                 <li>
-                  <NavLink exact to="/author">
+                  <NavLink to="/author">
                     <Button Mobile>Cośtam</Button>
                   </NavLink>
                 </li>

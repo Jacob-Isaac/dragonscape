@@ -29,8 +29,7 @@ z-index:11;
 const StyledNavLink = styled(NavLink)`
   padding-top: 18px ;
     padding-bottom:18px;
-
-   
+font-size: 30px;
     color: #fff;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -42,9 +41,7 @@ color: #fff;
 text-decoration: none;
 padding-top: 18px ;
     padding-bottom:18px;
-
-   
-
+    font-size: 30px;
     font-family: 'Montserrat', sans-serif;
 -webkit-transition: all 0.5s ease;
 -moz-transition: all 0.5s ease;
@@ -67,16 +64,16 @@ const RightNav = ({ open, setOpen }) => {
 
   return (
     <Ul open={open}>
-      <StyledNavLink exact to="/" onClick={() => setOpen(!open)}>start</StyledNavLink>
-      <StyledNavLink exact to="/offer"  onClick={() => setOpen(!open)}>oferta</StyledNavLink>
-      <StyledNavLink exact to="/aboutUs"  onClick={() => setOpen(!open)}>o nas</StyledNavLink>
+      <StyledNavLink to="/" onClick={() => setOpen(!open)}>start</StyledNavLink>
+      <StyledNavLink to="/offer"  onClick={() => setOpen(!open)}>oferta</StyledNavLink>
+      <StyledNavLink to="/aboutUs"  onClick={() => setOpen(!open)}>o nas</StyledNavLink>
       <NavigationLinkRed
           href="mailto:kontakt@dragonscape.pl"
           onClick={() => setOpen(!open)}
         >
           wycena
         </NavigationLinkRed>
-      <StyledNavLink exact to="/contact"  onClick={() => setOpen(!open)}>kontakt</StyledNavLink>
+      <StyledNavLink to="/contact"  onClick={() => setOpen(!open)}>kontakt</StyledNavLink>
     </Ul>
   )
 }
