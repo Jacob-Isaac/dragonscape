@@ -2,6 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import darkBckgrnd from "../src/images/dark.svg";
 import lightBckgrnd from "../src/images/daylight.svg";
 
+
+
+
 export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
@@ -19,6 +22,9 @@ export const GlobalStyle = createGlobalStyle`
     background-image: url(${darkBckgrnd});
     font-family: 'Montserrat', sans-serif;
     transition: background-image 1s ease-in-out;
+    ${({ isBodyOverflowHidden }) => isBodyOverflowHidden && `
+      overflow: hidden;
+    `}
   }
   ${({ isLight }) => isLight && `
     body {

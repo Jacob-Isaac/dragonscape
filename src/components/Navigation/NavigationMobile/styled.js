@@ -1,9 +1,13 @@
+import { NavLink } from "react-router-dom";
 import styled, { css } from "styled-components";
+
+export const StyledNavLink = styled(NavLink)`
+`;
 
 export const Wrapper = styled.div`
   z-index: 3;
   -webkit-tap-highlight-color: transparent;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   -webkit-overflow-scrolling: touch;
   ::-webkit-scrollbar {
     display: none;
@@ -11,11 +15,12 @@ export const Wrapper = styled.div`
   -ms-overflow-style: none;
   scrollbar-width: none;
   position: fixed;
-  top: -100%;
-  height: 100%;
+  top: -120%;
+  height: 120%;
   width: 100%;
   background-color: ${({ theme }) => theme.color.dragonBlack};
   transition: all 0.4s ease-in-out;
+
 `;
 
 export const WrapperUl = styled.ul`
@@ -29,7 +34,7 @@ export const WrapperUl = styled.ul`
     left: 49%;
   }
   @media (max-width: 475px) {
-    left: 48%;
+    left: 46%;
   }
   @media (max-width: 400px) {
     left: 47%;
@@ -37,6 +42,7 @@ export const WrapperUl = styled.ul`
   transform: translate(-54%, -50%);
   list-style: none;
   text-align: center;
+
 `;
 
 export const MenuButton = styled.label`
@@ -85,19 +91,19 @@ export const LabelSpan = styled.span`
   border-bottom: 3px solid #000;
   transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   ${({ checked }) =>
-    checked === true &&
+    checked &&
     css`
-      transform: scaleX(0);
-      border-bottom: 2px solid white;
+ transform: scaleX(0);
+ border-bottom: 2px solid white;
     `}
 `;
+
 
 export const Input = styled.input`
   display: none;
   &:checked ~ ${Wrapper} {
     top: 0;
   }
-
   &:checked + ${MenuButton} {
     &:before {
       transform: rotate(45deg);
