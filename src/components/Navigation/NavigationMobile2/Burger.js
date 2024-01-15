@@ -3,6 +3,12 @@ import styled from 'styled-components';
 import RightNav from './RightNav';
 import { useDispatch } from 'react-redux';
 import { toggleBodyOverflow } from '../../../features/DataSlice/githubSlice';
+import { FlagIconBody, ModeChange, DarkMode, Body, IconBody, StyledSunIcon } from '../styled';
+import { changeTheme } from "../../../features/DataSlice/githubSlice";
+import { useSelector } from 'react-redux';
+import {
+  selectIsLightMode,
+} from "../../../features/DataSlice/githubSlice";
 
 const StyledBurger = styled.div`
   -webkit-tap-highlight-color: transparent;
@@ -37,6 +43,18 @@ const StyledBurger = styled.div`
     }
   }
 `;
+const Wrapper = styled.div`
+ -webkit-tap-highlight-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  top: 40px;
+  right: 30px;
+  z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+`;
 
 const Burger = () => {
   const [open, setOpen] = useState(false)
@@ -45,16 +63,28 @@ const handleNavLinkClick = () => {
   dispatch(toggleBodyOverflow());
   setOpen(!open);
 };
-
+const siteTheme = useSelector(selectIsLightMode);
   
   return (
     <>
+   
       <StyledBurger open={open} onClick={handleNavLinkClick}>
         <div />
         <div />
         <div />
       </StyledBurger>
+      <Wrapper>
+      <ModeChange>
+          <DarkMode></DarkMode>
+          <IconBody onClick={() => dispatch(changeTheme())}>
+            <Body>
+              <StyledSunIcon $themes={siteTheme} />
+            </Body>
+          </IconBody>
+        </ModeChange>
+        </Wrapper>
       <RightNav open={open}/>
+   
     </>
   )
 }
