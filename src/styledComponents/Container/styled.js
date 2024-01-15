@@ -5,7 +5,8 @@ export const ContainerFooter = styled.div`
   /* padding-bottom: 1160px; */
   max-width: 1216px;
   margin: auto;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+ 
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
     width: 90%;
   }
   margin-bottom: 230px;
@@ -13,10 +14,14 @@ export const ContainerFooter = styled.div`
 
 export const Container = styled.div`
   max-width: 1216px;
-  margin: auto;
-  min-width: 280px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    width: 90%;
+  min-width: 310px;
+  margin-left: 20px;
+       margin-right: 20px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+width: 90%;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoint.maxContentSize}px) {
+    margin: auto;
   }
   margin-bottom: 230px;
 `;

@@ -61,7 +61,7 @@ export const ContactUs = () => {
           required
         />
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-        <input disabled={!capVal} type="submit" value="Porozmawiajmy" />
+        <input disabled={!capVal} type="submit" value={showSuccess ? "Sukces!" : "Porozmawiajmy"} />
         <StyledReCAPTCHA
           ref={recaptchaRef}
           sitekey="6Lc1JBIpAAAAALdAHI1JDGErBDUkfU85kv63879P"

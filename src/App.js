@@ -24,44 +24,54 @@ import Web from "./components/Offer/OfferList/Web/index.js";
 import Design from "./components/Offer/OfferList/Design/index.js";
 import CookieBar from "./features/TechnicalTabs/CookieBar/index.js";
 import PrivacyPolicy from "./features/TechnicalTabs/PrivacyPolicy/index.js";
+import useWindowDimensions from "./features/Hooks/useWindowDimensions.js";
+import { selectIsBodyOverflowHidden } from "./features/DataSlice/githubSlice";
+import Navbar from "./components/Navigation/NavigationMobile2/Navbar.js";
 
 function App() {
 
+  const isBodyOverflowHidden = useSelector(selectIsBodyOverflowHidden);
   const lightMode = useSelector(selectIsLightMode);
+  const dimensions = useWindowDimensions();
+  let navigationBar;
+  if (dimensions.width < 970) {
+    navigationBar = <Navbar isBodyOverflowHidden={isBodyOverflowHidden}/>; 
+  } else {
+    navigationBar = <NavigationBar />;
+  }
+
 
   return (
     <ThemeProvider theme={lightMode === true ? lightTheme : darkTheme}>
-      <GlobalStyle isLight={lightMode} />
+      <GlobalStyle isLight={lightMode} isBodyOverflowHidden={isBodyOverflowHidden} />
       <BrowserRouter>
-        <NavigationBar />
+      {navigationBar}
         <Routes>
+  
           <Route
             path="/"
-            element={
-              <AnimatedOnScroll
-                animationIn="slideInRight"
-                screenOffset={100}
-                animationInDuration={1200}
-              >
+            element={<>
+           
+           
+                  
                 <Container>
                   <Element name="AboutMeSection" className="element">
                     <Intro isLight={lightMode} />
                   </Element>
                   <Element name="WhyUsSection" className="element">
                     <AnimatedOnScroll
-                      animationIn="slideInRight"
-                      screenOffset={100}
+                      animationIn={dimensions.width < 800 ? "zoomIn" : "slideInRight"}
+                      // screenOffset={100}
                       animationInDuration={1200}
                     >
-                      <Title children="slideInRight">Dlaczego my ?</Title>
+                      <Title>Dlaczego my ?</Title>
                     </AnimatedOnScroll>
                     <AnimatedOnScroll
-                      animationIn="slideInLeft"
-                      screenOffset={300}
+                      animationIn={dimensions.width < 800 ? "zoomIn" : "slideInLeft"}
+                      // screenOffset={300}
                       animationInDuration={1500}
                     >
                       <WhyUs
-                        children="slideInLeft"
                         title={"Dowiedz się, co możemy dla Ciebie zrobić ! 🛠️"}
                         content={skillsList}
                       />
@@ -69,7 +79,7 @@ function App() {
                   </Element>
                   <Element name="OfferSection" className="element">
                     <AnimatedOnScroll
-                      animationIn="slideInRight"
+                      animationIn={dimensions.width < 800 ? "zoomIn" : "slideInRight"}
                       screenOffset={300}
                       animationInDuration={1000}
                     >
@@ -79,7 +89,7 @@ function App() {
                   </Container>
                 <Element name="contactSection" className="element">
                   <AnimatedOnScroll
-                    animationIn="slideInLeft"
+                     animationIn={dimensions.width < 800 ? "zoomIn" : "slideInLeft"}
                     animationInDuration={1500}
                   >
                    <ContactFormWrapper>
@@ -87,25 +97,30 @@ function App() {
                       </ContactFormWrapper>
                   </AnimatedOnScroll>
                 </Element>
-              </AnimatedOnScroll>
-           
+          
+              </>
             }
           />
-          <Route path="/design" element={<Design />} />
-          <Route path="/webDev" element={<Web />} />
-          <Route path="/webPosition" element={<WebPosition />} />
-          <Route path="/fullPackage" element={<Package />} />
+          <Route path="/design" element={ <><Design /></>} />
+          <Route path="/webDev" element={ <><Web /></>} />
+          <Route path="/webPosition" element={ <><WebPosition /></>} />
+          <Route path="/fullPackage" element={ <><Package /></>} />
           <Route
             path="/offer"
             element={
+         
+     
               <Container>
                 <Offer />
               </Container>
+           
             }
           />
           <Route
             path="/whyUs"
             element={
+              <> 
+          
               <Container>
                 {" "}
                 <WhyUs
@@ -113,32 +128,41 @@ function App() {
                   content={skillsList}
                 />
               </Container>
+              </> 
             }
           />
           <Route
             path="/contact"
             element={
+              <> 
+          
               <Container>
                 <SubpageWrapper>
                   <ContactForm />
                   </SubpageWrapper>
               </Container>
+              </> 
             }
           />
           <Route
             path="/aboutUs"
             element={
+              <> 
+           
               <Container>
                <SubpageWrapper>
                   <Cast selectedCast={cast} />
                   </SubpageWrapper>
               </Container>
+              </>
             }
           />
            <Route
             path="/privacyPolicy"
-            element={
+            element={<>
+        
               <PrivacyPolicy/>
+              </>
             }
           />
         </Routes>

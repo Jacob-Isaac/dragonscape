@@ -24,14 +24,19 @@ padding: 60px 60px 60px 60px;
 
 export const H1 = styled.h1`
 margin: 0 auto;
-margin-top: 10px;
 margin-bottom: -2px;
 font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 600;
+  margin-top: -18px;
    color: ${({ theme }) => theme.color.dragonRed};
       @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
        font-size: 25px;
+       margin-top: 0px;
+    }
+    
+    @media (min-width: ${({ theme }) => theme.breakpoint.maxContentSize}px) {
+        margin-top: 0px;
     }
 `;
 
@@ -43,9 +48,9 @@ font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   line-height: 160%;
   letter-spacing: 0.05em;
-      @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+      @media (max-width: ${({ theme }) => theme.breakpoint.maxContentSize}px) {
         margin-top: 28px;
-       font-size: 11px;
+       font-size: 12px;
     }
 `;
 

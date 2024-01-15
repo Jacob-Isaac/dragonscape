@@ -27,7 +27,7 @@ export const Portfolio = styled.span`
   letter-spacing: 0.05em;
   color: ${({ theme }) => theme.color.titleAndIcons};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    font-size: 18px;
+    font-size: 50px;
   }
   margin-top: 45px;
   margin-bottom: 45px;
@@ -40,6 +40,7 @@ export const Subtitle = styled.span`
   font-size: 20px;
   line-height: 140%;
   letter-spacing: 0.05em;
+  text-align: center;
   color: ${({ theme }) => theme.color.titleAndIcons};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 16px;

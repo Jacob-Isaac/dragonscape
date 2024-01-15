@@ -22,7 +22,7 @@ const getImageUrl = (image) => {
 
 export const Tiles = styled.div`
   max-width: 586px;
-  max-height: 350px;
+  /* max-height: 350px; */
   background-size: cover;
   background-color: ${({ theme }) => theme.color.dragonWhite};
   box-shadow: 10px 10px 10px rgba(9, 10, 51, 0.05),
@@ -86,7 +86,7 @@ export const Description = styled.li`
   font-size: 16px;
   line-height: 140%;
   letter-spacing: 0.05em;
-  text-align: justify;
+  /* text-align: justify; */
   color: ${({ theme }) => theme.color.text};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 14px;

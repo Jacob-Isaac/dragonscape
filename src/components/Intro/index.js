@@ -23,6 +23,7 @@ import {
 } from "../../features/DataSlice/githubSlice";
 import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
+import { toggleBodyOverflow2 } from "../../features/DataSlice/githubSlice";
 
 function AboutMe() {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function AboutMe() {
 
   useEffect(() => {
     dispatch(fetchGithubData());
+    dispatch(toggleBodyOverflow2());
   }, []);
 
   let returned = "";
@@ -53,7 +55,7 @@ function AboutMe() {
             <Article>
               Design, logo, banery, wizytówki, a nawet projektowanie i tworzenie
               stron internetowych – to nasza specjalność! W smoczej krainie
-              tworzymy rozwiązania, które pomogą Tobie stać się smokiem biznesu!
+              tworzymy rozwiązania,  które pomogą Tobie stać się smokiem biznesu!
               Sprawdź co dla Ciebie przygotowaliśmy !
             </Article>
             <HireMeButton href="mailto:kontakt@dragonscape.pl">

@@ -3,9 +3,9 @@ import { Wrapper, Title, Portfolio, Subtitle } from "./styled.js";
 const Content = ({ icon, title, subtitle, body }) => (
   <Wrapper>
     <Title>
-      {icon}
+      {/* {icon} */}
       <Portfolio>{title}</Portfolio>
-      <Subtitle>{subtitle}</Subtitle>
+      {/* <Subtitle>{subtitle}</Subtitle> */}
     </Title>
     {body}
   </Wrapper>
