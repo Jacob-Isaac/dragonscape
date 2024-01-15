@@ -35,11 +35,12 @@ export const lightTheme = {
   },
 
   breakpoint: {
-    maxContentSize: 1368,
+    maxContentSize: 1260,
     tablet: 1060,
     mobile: 799,
     miniMobile: 500,
     galaxyFold: 315,
+    galaxyFoldPlus: 348,
     extra: 878,
     tabletMax: 969, //tutaj nowe
     mobileMax: 650,

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
   /* background-color: #F9F5EF; */
+
 `;
 
 export const FooterContent = styled.div`
@@ -13,6 +14,12 @@ export const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 `;
 
 export const LogoColumn = styled.div`

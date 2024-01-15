@@ -40,10 +40,13 @@ export const SubpageWrapper = styled.div`
 `;
 
 export const ContactFormWrapper = styled.div`
-  width: 99.1vw;
+
   height: 1150px;
   /* padding-bottom: 120px; */
   background-color: #8BC3C2;
-  /* background-size: cover;
-  background-repeat: no-repeat; */
+   background-size: cover;
+   @media (max-width: ${({ theme }) => theme.breakpoint.galaxyFoldPlus}px) {
+     width: 21rem; 
+  }
+  /* background-repeat: no-repeat;  */
 `;

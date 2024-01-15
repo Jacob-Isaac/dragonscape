@@ -39,10 +39,10 @@ export const Mail = styled.a`
     color: ${({ theme }) => theme.color.mainBlue};
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    font-size: 20px;
+    font-size: 22px;
   }
-  @media (max-width: 400px) {
-    font-size: 14px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.galaxyFoldPlus}px) {
+    font-size: 18px;
   }
 `;
 
@@ -95,7 +95,7 @@ export const Article = styled.article`
   text-align: justify;
   margin-top: 16px;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 `;
 
@@ -119,10 +119,14 @@ export const SocialLink = styled.a`
 export const StyledReCAPTCHA = styled(ReCAPTCHA)`
   margin-top: 30px;
   margin-bottom: 50px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.miniMobile}px) {
+   max-width: 190px;
+  }
+
 `;
 
 export const StyledContactForm = styled.div`
-  width: 400px;
+  max-width: 400px;
   margin-top: 10px;
   form {
     display: flex;
@@ -162,16 +166,30 @@ export const StyledContactForm = styled.div`
     input[type="submit"] {
       margin-top: 2rem;
       cursor: pointer;
-      background: rgb(249, 105, 14);
-      color: white;
+      background: ${({ theme }) => theme.color.dragonRed};
+      color: ${({ theme }) => theme.color.dragonWhite};
       border: none;
+      @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+     width: 50%; 
+     margin: 2rem auto;
+     padding:15px;
+      padding-bottom: 33px;
+      text-align: center;
+  }
+  transition: 1s ease-in-out;
+  &:hover {
+    /* box-shadow: 2px -2px 0px #f1a355, -2px 2px 0px #f1a355, 2px 2px 0px #f1a355,
+      -2px -2px 0px #f1a355; */
+      background: ${({ theme }) => theme.color.dragonOrange};
+      color: ${({ theme }) => theme.color.dragonBlack};
+  }
     }
   }
 `;
 
 export const SuccessMessage = styled.div`
   position: fixed;
-  top: 20px; 
+  top: 80%; 
   right: 20px; 
   background-color: #ffffff;
   border: 1px solid #ccc;
