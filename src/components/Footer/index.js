@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../images/logo.png";
 import {
+  StyledFacebookLogo,
   StyledGithubLogo,
   StyledInstagramLogo,
   StyledLinkedInLogo,
@@ -9,7 +10,8 @@ import {
   FooterContainer,
   FooterContent,
   FooterLinksColumn,
-  Link,
+  StyledLink,
+  ScrollLink,
   LinkSocial,
   FooterLinks,
   FooterLinksSocial,
@@ -18,42 +20,71 @@ import {
   Logo,
   CopyrightText,
 } from "./styled";
+import { NavLink } from "react-router-dom";
+
+import { ContainerFooter } from "../../styledComponents/Container/styled";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+
+  const location = useLocation();
+  const isInMain = location.pathname === "/";
+
   return (
-    <FooterContainer>
+    <ContainerFooter>
       <FooterContent>
         <FooterLinksColumn>
           <FooterLinks>
-            <Link>start</Link>
-            <Link>o nas</Link>
-            <Link>oferta</Link>
-            <Link>kontakt</Link>
+          {isInMain ? (
+          <ScrollLink
+            activeClass="active"
+            to="AboutMeSection"
+            spy={true}
+            smooth={false}
+            offset={-270}
+            duration={750}
+          >
+            start
+          </ScrollLink>
+        ) : (
+          <StyledLink to="/">start</StyledLink>
+        )}
+           
+            <StyledLink to="/aboutUs">o nas</StyledLink>
+            <StyledLink to="/offer">oferta</StyledLink>
+            <StyledLink to="/contact">kontakt</StyledLink>
           </FooterLinks>
           <FooterLinksSocial>
-            <LinkSocial>
-              <StyledGithubLogo style={{ maxWidth: "35px" }} />
+            <LinkSocial href="https://www.facebook.com/TwojaNazwaStrony" target="_blank">
+              <StyledFacebookLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
-            <LinkSocial>
+            <LinkSocial href="https://www.facebook.com/TwojaNazwaStrony" target="_blank">
               <StyledInstagramLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
-            <LinkSocial>
+            <LinkSocial href="https://www.facebook.com/TwojaNazwaStrony" target="_blank">
               <StyledLinkedInLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
-            <LinkSocial>
-              <StyledLinkedInLogo style={{ maxWidth: "35px" }} />
+            <LinkSocial href="https://www.facebook.com/TwojaNazwaStrony" target="_blank">
+              <StyledGithubLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
           </FooterLinksSocial>
-          <PrivacyPolicyLink to="/privacyPolicy">polityka prywatności</PrivacyPolicyLink>
         </FooterLinksColumn>
         <LogoColumn>
-          <Logo src={logo} alt="Your Logo" />
+      
+          <NavLink to="/">
+            <Logo src={logo} alt="Website Logo" />{" "}
+          </NavLink>
+        
+
+          <PrivacyPolicyLink to="/privacyPolicy">
+            Polityka Prywatności
+          </PrivacyPolicyLink>
           <CopyrightText>
-            <span>&copy; 2023 YourWebsiteName. All rights reserved.</span>
+            <span>&copy; 2023 Dragonscape. All rights reserved.</span>
           </CopyrightText>
         </LogoColumn>
       </FooterContent>
-    </FooterContainer>
+    </ContainerFooter>
   );
 };
 

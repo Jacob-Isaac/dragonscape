@@ -21,9 +21,10 @@ export const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
     background-size: cover; 
     /* background-position:center; */
-    
+   
     font-family: 'Montserrat', sans-serif;
     transition: background-image 1s ease-in-out;
+    -webkit-transition: background-image 1s ease-in-out;
     ${({ isBodyOverflowHidden }) => isBodyOverflowHidden && `
       overflow: hidden;
     `}

@@ -36,12 +36,16 @@ export const HeaderCustom = styled.h1`
 `;
 
 export const SubpageWrapper = styled.div`
-  margin-top: 200px;
+ margin-top: 200px;
+ /* margin-bottom: 600px; */
+`;
+export const SubpageWrapper2 = styled.div`
+ margin-top: 60px;
+ margin-bottom: 600px;
 `;
 
 export const ContactFormWrapper = styled.div`
-
-  height: 1150px;
+height: 1250px;
   /* padding-bottom: 120px; */
   background-color: #8BC3C2;
    background-size: cover;

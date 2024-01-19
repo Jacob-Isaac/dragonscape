@@ -24,8 +24,12 @@ function CookieBar() {
           zIndex: 9999,
           color: "white",
           display: "flex",
-          justifyContent: "flex-start",
-          margin: "10px 10px 10px 10px"
+           justifyContent: "flex-start",
+          margin: "10px 10px 10px 10px",
+          '@media (max-width: 600px)': {
+            flexDirection: "column",
+            alignItems: "center",
+          },
         }}
         buttonStyle={{
           color: "#FBF3E3",
@@ -35,7 +39,11 @@ function CookieBar() {
           border: "none",
           paddingBottom: "11px",
           paddingTop: "10px",
-          cursor: "pointer"
+          cursor: "pointer",
+          marginLeft: "10px",
+          '@media (max-width: 600px)': {
+            marginTop: "10px",
+          },
         }}
         expires={150}
       >
@@ -55,25 +63,4 @@ function CookieBar() {
 export default CookieBar;
 
 
-// takich jak nawigacja na
-//         stronie i dostęp do bezpiecznych obszarów strony internetowej. 
-
-// const buttonStyles = {
-//     color: "#FBF3E3",
-//     background: "#D76460",
-//     fontSize: "13px",
-//     borderRadius: "4px",
-//     marginLeft: "150px",
-//   };
-
-//   const mediaQueryStyle = {
-//     '@media (max-width: 768px)': {
-//       marginLeft: "50px", // Adjusted margin for smaller screens
-//     },
-//   };
-
-//   // Merge the styles based on the media query
-//   const mergedStyles = { ...buttonStyles, ...mediaQueryStyle };
-
-//   // In your component's JSX:
-//   <button style={mergedStyles}>Your Button</button>
+// zrobić media query

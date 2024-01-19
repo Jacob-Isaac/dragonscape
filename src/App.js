@@ -16,7 +16,7 @@ import { Element } from "react-scroll";
 import Cast from "./components/Cast/index.js";
 import cast from "./features/Config/cast.json";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
-import { Title, SubpageWrapper, ContactFormWrapper } from "./styled.js";
+import { Title, SubpageWrapper, SubpageWrapper2, ContactFormWrapper } from "./styled.js";
 import Footer from "./components/Footer/index.js";
 import WebPosition from "./components/Offer/OfferList/WebPosition/index.js";
 import Package from "./components/Offer/OfferList/Package/index.js";
@@ -27,47 +27,53 @@ import PrivacyPolicy from "./features/TechnicalTabs/PrivacyPolicy/index.js";
 import useWindowDimensions from "./features/Hooks/useWindowDimensions.js";
 import { selectIsBodyOverflowHidden } from "./features/DataSlice/githubSlice";
 import Navbar from "./components/Navigation/NavigationMobile2/Navbar.js";
+import ScrollToTopHook from "./features/Hooks/ScrollToTop.js";
+import ScrollToTop from "react-scroll-to-top";
+import { ReactComponent as MySVG } from "./images/arrowDown.svg";
 
 function App() {
-
   const isBodyOverflowHidden = useSelector(selectIsBodyOverflowHidden);
   const lightMode = useSelector(selectIsLightMode);
   const dimensions = useWindowDimensions();
   let navigationBar;
   if (dimensions.width < 970) {
-    navigationBar = <Navbar isBodyOverflowHidden={isBodyOverflowHidden}/>; 
+    navigationBar = <Navbar isBodyOverflowHidden={isBodyOverflowHidden} />;
   } else {
     navigationBar = <NavigationBar />;
   }
 
-
   return (
     <ThemeProvider theme={lightMode === true ? lightTheme : darkTheme}>
-      <GlobalStyle isLight={lightMode} isBodyOverflowHidden={isBodyOverflowHidden} />
+      <GlobalStyle
+        isLight={lightMode}
+        isBodyOverflowHidden={isBodyOverflowHidden}
+      />
       <BrowserRouter>
-      {navigationBar}
+        <ScrollToTopHook />
+        {navigationBar}
         <Routes>
-  
           <Route
             path="/"
-            element={<>
-           
-           
-                  
+            element={
+              <>
                 <Container>
                   <Element name="AboutMeSection" className="element">
                     <Intro isLight={lightMode} />
                   </Element>
                   <Element name="WhyUsSection" className="element">
                     <AnimatedOnScroll
-                      animationIn={dimensions.width < 800 ? "zoomIn" : "slideInRight"}
+                      animationIn={
+                        dimensions.width < 800 ? "zoomIn" : "slideInRight"
+                      }
                       // screenOffset={100}
                       animationInDuration={1200}
                     >
                       <Title>Dlaczego my ?</Title>
                     </AnimatedOnScroll>
                     <AnimatedOnScroll
-                      animationIn={dimensions.width < 800 ? "zoomIn" : "slideInLeft"}
+                      animationIn={
+                        dimensions.width < 800 ? "zoomIn" : "slideInLeft"
+                      }
                       // screenOffset={300}
                       animationInDuration={1500}
                     >
@@ -79,95 +85,134 @@ function App() {
                   </Element>
                   <Element name="OfferSection" className="element">
                     <AnimatedOnScroll
-                      animationIn={dimensions.width < 800 ? "zoomIn" : "slideInRight"}
+                      animationIn={
+                        dimensions.width < 800 ? "zoomIn" : "slideInRight"
+                      }
                       screenOffset={300}
                       animationInDuration={1000}
                     >
                       <Offer />
                     </AnimatedOnScroll>
                   </Element>
-                  </Container>
+                </Container>
                 <Element name="contactSection" className="element">
                   <AnimatedOnScroll
-                     animationIn={dimensions.width < 800 ? "zoomIn" : "slideInLeft"}
+                    animationIn={
+                      dimensions.width < 800 ? "zoomIn" : "slideInLeft"
+                    }
                     animationInDuration={1500}
                   >
-                   <ContactFormWrapper>
+                    <ContactFormWrapper>
                       <ContactForm />
-                      </ContactFormWrapper>
+                    </ContactFormWrapper>
                   </AnimatedOnScroll>
                 </Element>
-          
               </>
             }
           />
-          <Route path="/design" element={ <><Design /></>} />
-          <Route path="/webDev" element={ <><Web /></>} />
-          <Route path="/webPosition" element={ <><WebPosition /></>} />
-          <Route path="/fullPackage" element={ <><Package /></>} />
+          <Route
+            path="/design"
+            element={
+              <>
+                <Design />
+              </>
+            }
+          />
+          <Route
+            path="/webDev"
+            element={
+              <>
+                <Web />
+              </>
+            }
+          />
+          <Route
+            path="/webPosition"
+            element={
+              <>
+                <WebPosition />
+              </>
+            }
+          />
+          <Route
+            path="/fullPackage"
+            element={
+              <>
+                <Package />
+              </>
+            }
+          />
           <Route
             path="/offer"
             element={
-         
-     
               <Container>
+              
                 <Offer />
+               
               </Container>
-           
             }
           />
           <Route
             path="/whyUs"
             element={
-              <> 
-          
-              <Container>
-                {" "}
-                <WhyUs
-                  title={"Dowiedz się, co możemy dla Ciebie zrobić ! 🛠️"}
-                  content={skillsList}
-                />
-              </Container>
-              </> 
+              <>
+                <Container>
+                  {" "}
+                  <WhyUs
+                    title={"Dowiedz się, co możemy dla Ciebie zrobić ! 🛠️"}
+                    content={skillsList}
+                  />
+                </Container>
+              </>
             }
           />
           <Route
             path="/contact"
             element={
-              <> 
-          
-              <Container>
-                <SubpageWrapper>
-                  <ContactForm />
-                  </SubpageWrapper>
-              </Container>
-              </> 
+              <>
+                <Container>
+                  <SubpageWrapper2>
+                    <ContactForm />
+                  </SubpageWrapper2>
+                 </Container>
+              </>
             }
           />
           <Route
             path="/aboutUs"
             element={
-              <> 
-           
-              <Container>
-               <SubpageWrapper>
-                  <Cast selectedCast={cast} />
+              <>
+                <Container>
+                  <SubpageWrapper>
+                    <Cast selectedCast={cast} />
                   </SubpageWrapper>
-              </Container>
+                </Container>
+               
               </>
             }
           />
-           <Route
+          <Route
             path="/privacyPolicy"
-            element={<>
-        
-              <PrivacyPolicy/>
+            element={
+              <>
+                <PrivacyPolicy />
               </>
             }
           />
         </Routes>
         <Footer />
-        <CookieBar/>
+        <CookieBar />
+        <ScrollToTop
+          component={<MySVG />}
+          style={{
+            background: "none",
+            boxShadow: "none",
+            transform: "rotate(180deg)",
+            width: "48px",
+            fill: "var(--arrow-color, #3498db)",
+            right: "15px",
+          }}
+        />
       </BrowserRouter>
     </ThemeProvider>
   );

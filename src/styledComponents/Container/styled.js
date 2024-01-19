@@ -1,15 +1,23 @@
 import styled from "styled-components";
 
-export const ContainerFooter = styled.div`
+export const ContainerContact = styled.div`
   padding-top: 160px;
   /* padding-bottom: 1160px; */
   max-width: 1216px;
   margin: auto;
  
-  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.maxContentSize}px) {
     width: 90%;
   }
   margin-bottom: 230px;
+`;
+
+export const ContainerFooter = styled.div`
+  background-color: #F9F5EF;
+  @media (max-width: ${({ theme }) => theme.breakpoint.maxContentSize}px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 `;
 
 export const Container = styled.div`
@@ -19,6 +27,7 @@ export const Container = styled.div`
        margin-right: 20px;
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
 width: 90%;
+margin:auto;
   }
   @media (min-width: ${({ theme }) => theme.breakpoint.maxContentSize}px) {
     margin: auto;

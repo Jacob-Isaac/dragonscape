@@ -126,7 +126,8 @@ export const StyledReCAPTCHA = styled(ReCAPTCHA)`
 `;
 
 export const StyledContactForm = styled.div`
-  max-width: 400px;
+
+  max-width: 550px;
   margin-top: 10px;
   form {
     display: flex;
@@ -149,8 +150,8 @@ export const StyledContactForm = styled.div`
       max-width: 100%;
       min-width: 100%;
       width: 100%;
-      max-height: 100px;
-      min-height: 100px;
+      max-height: 280px;
+      min-height: 160px;
       padding: 7px;
       outline: none;
       border-radius: 5px;

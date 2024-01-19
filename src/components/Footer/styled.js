@@ -1,20 +1,37 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
+
+export const ScrollLink = styled(Link)`
+text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  &:hover {
+    color: ${({ theme }) => theme.color.mainBlue};
+  }
+`;
 
 export const FooterContainer = styled.footer`
-  /* background-color: #F9F5EF; */
-
+  background-color: #F9F5EF;
 `;
 
 export const FooterContent = styled.div`
+min-width: 280px;
   max-width: 1216px;
   padding-top: 60px;
   padding-bottom: 60px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +42,10 @@ export const FooterContent = styled.div`
 export const LogoColumn = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
+   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+    align-items: center;
+  }
 `;
 
 export const Logo = styled.img`
@@ -33,40 +53,48 @@ export const Logo = styled.img`
   margin-bottom: 2px;
   width: 120px;
   height: auto;
+   transition: 0.3s;
+   cursor: pointer;
+  &:hover {
+    scale: 105%;
+  }
 `;
 
 export const FooterLinksColumn = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: left;
   gap: 10px;
+   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+    align-items: center;
+  }
 `;
 
-export const FooterLinks = styled.span`
+export const FooterLinks = styled.div`
   list-style: none;
   gap: 20px;
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
-  margin-left: -20px;
 `;
-export const FooterLinksSocial = styled.span`
-  list-style: none;
+export const FooterLinksSocial = styled.div`
   gap: 20px;
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
-  margin-left: -14px;
 `;
 
-export const Link = styled.li`
+export const StyledLink = styled(NavLink)`
+text-decoration: none;
   color: #333;
   font-size: 14px;
   cursor: pointer;
-  transition: color 0.3s ease;
   margin-bottom: 10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   &:hover {
-    color: #555;
+    color: ${({ theme }) => theme.color.mainBlue};
   }
 `;
 
@@ -82,8 +110,20 @@ export const LinkSocial = styled.a`
 `;
 
 export const PrivacyPolicyLink = styled(NavLink)`
-  list-style: none;
-  margin-left: 14px;
+color: #333;
+text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  &:hover {
+    color: ${({ theme }) => theme.color.mainBlue};
+  }
 `;
 
 export const CopyrightText = styled.p`

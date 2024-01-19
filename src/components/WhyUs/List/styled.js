@@ -6,6 +6,7 @@ export const StyledList = styled.div`
      column-gap: 35px; 
      margin-left: 20px;
        margin-right: 20px;
+       margin-bottom: 100px;
     @media (max-width: ${({ theme }) => theme.breakpoint.tablet}px) {
           display: flex;
           flex-direction: column;

@@ -120,7 +120,7 @@ const NavigationBar = () => {
             to="OfferSection"
             spy={true}
             smooth={false}
-            offset={+400}
+            offset={0}
             duration={750}
           >
             oferta
@@ -146,7 +146,7 @@ const NavigationBar = () => {
             to="contactSection"
             spy={true}
             smooth={false}
-            offset={70}
+            offset={140}
             duration={850}
           >
             kontakt
