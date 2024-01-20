@@ -24,7 +24,7 @@ const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? '#ccc' : '#333'};
+    background-color: ${({ theme }) => theme.color.white}; 
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
@@ -42,6 +42,11 @@ const StyledBurger = styled.div`
       transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
+  ${({ isLight, open }) => isLight && `
+  div {
+    background-color: ${open ? '#F9F4EA' : '#202638'};
+  }
+`}
 `;
 const Wrapper = styled.div`
  -webkit-tap-highlight-color: transparent;
@@ -73,7 +78,7 @@ const siteTheme = useSelector(selectIsLightMode);
   return (
     <>
    
-      <StyledBurger open={open} onClick={handleNavLinkClick}>
+      <StyledBurger open={open} onClick={handleNavLinkClick} isLight={siteTheme}>
         <div />
         <div />
         <div />

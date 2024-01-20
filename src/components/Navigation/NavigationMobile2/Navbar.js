@@ -15,13 +15,13 @@ const Nav = styled.nav`
   } */
 `
 
-const Navbar = () => {
+const Navbar = (isLight) => {
   return (
     <Nav>
       {/* <div className="logo">
         Nav Bar
       </div> */}
-      <Burger />
+      <Burger isLight={isLight} />
     </Nav>
   )
 }

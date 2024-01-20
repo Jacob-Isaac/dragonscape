@@ -37,7 +37,7 @@ function App() {
   const dimensions = useWindowDimensions();
   let navigationBar;
   if (dimensions.width < 970) {
-    navigationBar = <Navbar isBodyOverflowHidden={isBodyOverflowHidden} />;
+    navigationBar = <Navbar isBodyOverflowHidden={isBodyOverflowHidden} isLight={lightMode} />;
   } else {
     navigationBar = <NavigationBar />;
   }
@@ -65,7 +65,7 @@ function App() {
                       animationIn={
                         dimensions.width < 800 ? "zoomIn" : "slideInRight"
                       }
-                      // screenOffset={100}
+                       screenOffset={100}
                       animationInDuration={1200}
                     >
                       <Title>Dlaczego my ?</Title>
@@ -74,7 +74,7 @@ function App() {
                       animationIn={
                         dimensions.width < 800 ? "zoomIn" : "slideInLeft"
                       }
-                      // screenOffset={300}
+                       screenOffset={300}
                       animationInDuration={1500}
                     >
                       <WhyUs

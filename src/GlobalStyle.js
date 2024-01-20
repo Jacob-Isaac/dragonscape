@@ -23,8 +23,10 @@ export const GlobalStyle = createGlobalStyle`
     /* background-position:center; */
    
     font-family: 'Montserrat', sans-serif;
-    transition: background-image 1s ease-in-out;
-    -webkit-transition: background-image 1s ease-in-out;
+    /* transition: background 1s ease-in-out; */
+    transition: background 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
+    /* transition: background-image 1s cubic-bezier(0.69, 0.15, 0.31, 0.85); */
+    /* -webkit-transition: background-image 1s ease-in-out; */
     ${({ isBodyOverflowHidden }) => isBodyOverflowHidden && `
       overflow: hidden;
     `}

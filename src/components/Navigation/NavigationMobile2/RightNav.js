@@ -6,12 +6,12 @@ import { useDispatch } from "react-redux";
 
 const Ul = styled.ul`
   -webkit-tap-highlight-color: transparent;
-padding-top: 270px;
+padding-top: 240px;
 z-index:11;
   list-style: none;
   display: flex;
     flex-flow: column nowrap;
-    background-color: #0D2538;
+    background-color: ${({ theme }) => theme.color.black};
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
     top: -5%;
@@ -30,14 +30,14 @@ const StyledNavLink = styled(NavLink)`
   padding-top: 18px ;
     padding-bottom:18px;
 font-size: 30px;
-    color: #fff;
+color: ${({ theme }) => theme.color.white};
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     `;
 
 export const NavigationLinkRed = styled.a`
 /* font-weight: ${({ theme }) => theme.fontSize.bold}; */
-color: #fff;
+color: ${({ theme }) => theme.color.white};
 text-decoration: none;
 padding-top: 18px ;
     padding-bottom:18px;

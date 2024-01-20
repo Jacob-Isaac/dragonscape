@@ -1,9 +1,33 @@
-import Content from "../../styledComponents/Content/index.js";
 import { TilesPersonSection } from "./styled";
 import TilePerson from "./tilePerson.js";
+import { useSelector, useDispatch } from "react-redux";
+import { selectIsLightMode } from "../../features/DataSlice/githubSlice";
+import { useEffect } from "react";
+import {
+  fetchGithubData,
+  selectLoadingState,
+} from "../../features/DataSlice/githubSlice";
+import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
+import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
 
 const Cast = ({ selectedCast }) => {
-  return (
+
+  const dispatch = useDispatch();
+  const theme = useSelector(selectIsLightMode);
+  const ifLoading = useSelector(selectLoadingState);
+
+  useEffect(() => {
+    dispatch(fetchGithubData());
+  }, []);
+
+  let returned = "";
+
+  switch (ifLoading) {
+    case "loading":
+      returned = <LoadingPage />;
+      break;
+    case "success":
+      returned = (
     <>
     <h1>O nas</h1>
     <br/>
@@ -58,6 +82,15 @@ const Cast = ({ selectedCast }) => {
       </TilesPersonSection>
     </>
   );
+  break;
+  case "error":
+    returned = <ErrorPage />;
+    break;
+  default:
+    returned = <LoadingPage />;
+}
+
+return returned;
 };
 
 export default Cast;
