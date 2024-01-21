@@ -32,6 +32,8 @@ export const lightTheme = {
     dragonBlack: "#202638",
     dragonRed: "#D76460",
     dragonOrange: "#F1A355",
+    dragonBackground: "#FBF3E3",
+    contactBackground: "#8BC3C2",
   },
 
   breakpoint: {
@@ -60,7 +62,7 @@ export const darkTheme = {
     tileHover: "#0366d677",
     linkBorder: "#0366D6",
     titleAndIcons: "#FFFFFF",
-    text: "#FFFFFF",
+    text: "#FBF3E3",
     background: "#252525",
     bodyBackground: "#202638",
     mainBlue: "#0366D6",
@@ -77,6 +79,8 @@ export const darkTheme = {
     pattensBlue: "#D6E4FF",
     scienceBlue: "#0044CC",
     darkModeBackground: "#202638",
+    dragonBackground: "#252525",
+    contactBackground: "black",
   },
 
   breakpoint: {

@@ -4,7 +4,7 @@
 
 // const LoadingPage = () => (
 //     <Container>
-//         <Content 
+//         <Content
 //         body={
 //             <Wrapper>
 //             <StyledLoading/>
@@ -15,14 +15,15 @@
 
 // export default LoadingPage;
 
-import { Div } from './styled'; 
-import { StyledLoading, Wrapper} from "./styled";
-
+import { Div } from "./styled";
+import { StyledLoading, Wrapper } from "./styled";
 
 const LoadingPage = () => (
-    <Div>   <Wrapper>
-                <StyledLoading/>
-                </Wrapper></Div>
-  );
+  <Div>
+    <Wrapper>
+      <StyledLoading />
+    </Wrapper>
+  </Div>
+);
 
 export default LoadingPage;

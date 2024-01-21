@@ -118,9 +118,11 @@ export const Button = styled.button`
 export const DataContainer = styled.div`
   ul {
     list-style-type: none;
+    margin-left: -13px;
     li {
       display: flex;
       align-items: center;
+      font-size: 0.9rem;
       .true {
         color: #34f034;
         font-size: 1rem;

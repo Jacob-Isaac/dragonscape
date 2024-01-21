@@ -1,11 +1,32 @@
 import {
-  Container,
   ContainerPrivacyPolicy,
 } from "../../../styledComponents/Container/styled";
-import { Wrapper } from "./styled";
+import { useSelector, useDispatch } from "react-redux";
+import { selectIsLightMode } from "../../DataSlice/githubSlice";
+import { useEffect } from "react";
+import {
+  fetchGithubData,
+  selectLoadingState} from "../../DataSlice/githubSlice";
+import LoadingPage from "../LoadingPage";
+import ErrorPage from "../ErrorPage";
 
 function PrivacyPolicy() {
-  return (
+  const dispatch = useDispatch();
+  const theme = useSelector(selectIsLightMode);
+  const ifLoading = useSelector(selectLoadingState);
+
+  useEffect(() => {
+    dispatch(fetchGithubData());
+  }, []);
+
+  let returned = "";
+
+  switch (ifLoading) {
+    case "loading":
+      returned = <LoadingPage />;
+      break;
+    case "success":
+      returned = (
     <ContainerPrivacyPolicy>
       <h1 class="h1 text-center">Polityka Prywatności</h1>
       <h2 class="h2 paragraph-title">§ 1 Postanowienia ogólne</h2>
@@ -674,6 +695,15 @@ function PrivacyPolicy() {
       </ol>
     </ContainerPrivacyPolicy>
   );
+  break;
+  case "error":
+    returned = <ErrorPage />;
+    break;
+  default:
+    returned = <LoadingPage />;
 }
+
+return returned;
+};
 
 export default PrivacyPolicy;

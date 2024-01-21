@@ -8,12 +8,14 @@ const Price = () => {
           <div className="pricing-component">
             <Pricing
               data={[
-                { text: "3 new project / month", value: true },
-                { text: "Basic interaction", value: false },
-                { text: "Assets library", value: false },
-                { text: "3 new project / month", value: true },
-                { text: "Basic interaction", value: false },
-                { text: "Assets library", value: false },
+                { text: "2x logo (w 2 wersjach każde)", value: true },
+                { text: "Sygnet, Tagline, Logotyp", value: true },
+                { text: "Warsztat Kreatywny", value: true },
+                { text: "Poprawki - możliwe 3", value: true },
+                { text: "Logo w formacie .png .webp .svg", value: true },
+                // { text: "Logo w dowolnych formatach", value: false },
+                { text: "Księga znaku", value: false },
+                { text: "Pełna identyfikacja wizualna", value: false },
               ]}
               price={400}
               currency="PLN"
@@ -26,12 +28,14 @@ const Price = () => {
           <div className="pricing-component">
             <Pricing
               data={[
-                { text: "3 new project / month", value: true },
-                { text: "Basic interaction", value: true },
-                { text: "Assets library", value: false },
-                { text: "3 new project / month", value: true },
-                { text: "Basic interaction", value: true },
-                { text: "Assets library", value: false },
+                { text: "2x logo (w 3 wersjach każde)", value: true },
+                { text: "Sygnet, Tagline, Logotyp", value: true },
+                { text: "Warsztat Kreatywny", value: true },
+                { text: "Poprawki - bez limitu", value: true },
+                // { text: "Logo w formacie .png .webp .svg", value: true },
+                { text: "Logo w 4 dowolnych formatach", value: true },
+                { text: "Księga znaku - podstawowa", value: true },
+                { text: "Pełna identyfikacja wizualna", value: false },
               ]}
               price={800}
               background="linear-gradient(120deg, #8BC3C2 0%, #32937D 100%)"
@@ -45,12 +49,14 @@ const Price = () => {
           <div className="pricing-component">
             <Pricing
               data={[
-                { text: "3 new project / month", value: true },
-                { text: "Basic interaction", value: true },
-                { text: "Assets library", value: true },
-                { text: "3 new project / month", value: true },
-                { text: "Basic interaction", value: true },
-                { text: "Assets library", value: true },
+                { text: "Wszystko to co poprzednio ", value: true },
+                { text: "Grafiki- Facebook, LinkedIn etc.", value: true },
+                { text: "Wizytówki, materiały reklamowe", value: true },
+                { text: "Banery reklamowe", value: true },
+                // { text: "Logo w formacie .png .webp .svg", value: true },
+                { text: "1x Inny dowolny projekt", value: true },
+                { text: "Księga znaku - rozszerzona", value: true },
+                { text: "Kolorystyka i typografia marki", value: true },
               ]}
               price={1300}
               background="linear-gradient(to left, #F1A355 0%, #D76460 100%);"
