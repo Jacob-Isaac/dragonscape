@@ -1,5 +1,8 @@
+import { keyframes } from "styled-components";
 import styled from "styled-components"
 import { NavLink } from "react-router-dom";
+
+
 
 export const TilesPersonSection = styled.section`
   display: grid;
@@ -28,6 +31,7 @@ export const TilesPersonSection = styled.section`
 
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
+  cursor: default;
   width: 100%;
   color: ${({ theme }) => theme.color.black};
   a:link,
@@ -37,6 +41,8 @@ export const StyledNavLink = styled(NavLink)`
     color: ${({ theme }) => theme.color.black};
   }
 `;
+
+
 export const Wrapper = styled.section`
     display: flex;
     background: ${({ theme }) => theme.color.white};
