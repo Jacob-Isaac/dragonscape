@@ -24,7 +24,7 @@ export const Tiles = styled.div`
   max-width: 586px;
   /* max-height: 350px; */
   background-size: cover;
-  background-color: ${({ theme }) => theme.color.dragonWhite};
+  background-color: ${({ theme }) => theme.color.dragonBackground};
   box-shadow: 10px 10px 10px rgba(9, 10, 51, 0.05),
     0px 16px 58px rgba(9, 10, 51, 0.05);
   border-radius: 8px;
