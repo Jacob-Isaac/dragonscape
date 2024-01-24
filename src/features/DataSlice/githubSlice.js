@@ -23,7 +23,10 @@ const githubSlice = createSlice({
       state.ifLoading = "error";
     },
     changeTheme: (state) => {
-      state.lightMode = !state.lightMode;
+      //  state.lightMode = !state.lightMode;
+    },
+     changeTheme2: (state) => {
+       state.lightMode = !state.lightMode;
     },
     changeFlag: (state) => {
       state.polishMode = !state.polishMode;
@@ -42,6 +45,7 @@ export const {
   setPortfolioList,
   setError,
   changeTheme,
+    changeTheme2,
   changeFlag,
   toggleBodyOverflow,
   toggleBodyOverflow2,
