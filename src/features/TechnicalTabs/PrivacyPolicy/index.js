@@ -12,7 +12,6 @@ import ErrorPage from "../ErrorPage";
 
 function PrivacyPolicy() {
   const dispatch = useDispatch();
-  const theme = useSelector(selectIsLightMode);
   const ifLoading = useSelector(selectLoadingState);
 
   useEffect(() => {
@@ -66,13 +65,7 @@ function PrivacyPolicy() {
           dokładne zapoznanie się z tym dokumentem gdyż określa on zasady oraz
           sposoby przetwarzania i ochrony danych osobowych. Dokument ten określa
           także zasady stosowania plików
-          <a
-            href="https://verseo.pl/pliki-cookies-zmian/"
-            target="blank"
-            rel="noopener norefferer"
-          >
             „Cookies”
-          </a>
           .
         </li>
         <li>
@@ -566,63 +559,7 @@ function PrivacyPolicy() {
           </ul>
         </li>
       </ol>
-      <h2 class="h2 paragraph-title">§ 5 Wtyczki Social Media</h2>
-      <ol>
-        <li>
-          {" "}
-          Wtyczki tak zwane plug-ins portali społecznościowych, mogą znajdować
-          się na naszej stronie.{" "}
-        </li>{" "}
-        <ol class="gpp-list-selectable" start="1">
-          <li class="">
-            <span class="gpp-list-selectable__content">
-              Facebook obsługiwany jest przez Facebook Inc., 1601 S. California
-              Ave, Palo Alto, CA 94304, USA Facebook. Aby zobaczyć wtyczki
-              Facebook przejdź do:{" "}
-              <a
-                href="https://developers.facebook.com/docs/plugins"
-                rel="noreferrer noopner"
-                target="_blank"
-              >
-                https://developers.facebook.com/docs/plugins
-              </a>
-            </span>
-          </li>
-          <li class="">
-            <span class="gpp-list-selectable__content">
-              Twitter obsługiwany jest Twitter Inc., 1355 Market Street, Suite
-              900, San Francisco, CA 94103, USA. Aby zobaczyć wtyczki Twittera
-              przejdź do:{" "}
-              <a
-                href="https://dev.twitter.com/web/tweet-button"
-                rel="noreferrer noopner"
-                target="_blank"
-              >
-                https://dev.twitter.com/web/tweet-button
-              </a>
-            </span>
-          </li>
-        </ol>{" "}
-        <li>
-          {" "}
-          Wtyczka przekazuje jej dostawcy jedynie informację o tym, do których z
-          naszych stron internetowych miałeś dostęp i w jakim czasie. Jeśli
-          podczas oglądania naszej strony bądź przebywania na niej, użytkownik
-          jest zalogowany do swojego konta znajdującego się np. na Facebooku lub
-          Twitterze, dostawca jest w stanie łączyć Twoje zainteresowania,
-          preferencję informacyjne, oraz inne dane, pozyskane np. poprzez
-          kliknięcie przycisku Lubię to czy pozostawienie komentarza, bądź
-          wpisanie nazwy profilu w wyszukiwanych. Taka informacja również
-          zostanie przekazana przez przeglądarkę bezpośrednio do dostawcy.
-        </li>
-        <li>
-          {" "}
-          Aby uniknąć odnotowania wizyty na wybranym koncie użytkownika przez
-          Plug-in na naszej stronie internetowej musisz wylogować się ze swojego
-          konta przed rozpoczęciem przeglądania naszej strony internetowej.
-        </li>
-      </ol>
-      <h2 class="h2 paragraph-title">§ 6 Prawa i obowiązki</h2>
+      <h2 class="h2 paragraph-title">§ 5 Prawa i obowiązki</h2>
       <ol>
         <li>
           {" "}
@@ -700,7 +637,7 @@ function PrivacyPolicy() {
     returned = <ErrorPage />;
     break;
   default:
-    returned = <LoadingPage />;
+    returned = <LoadingPage/>;
 }
 
 return returned;

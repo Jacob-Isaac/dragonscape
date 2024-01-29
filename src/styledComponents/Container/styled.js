@@ -37,13 +37,13 @@ margin:auto;
 
 export const ContainerPrivacyPolicy = styled.div`
 /* background: ${({ theme }) => theme.color.dragonOrange} ; */
-background: #f0f0f0;
+background: #fff9ff;
   max-width: 1216px;
   margin: auto;
   min-width: 280px;
   border-radius: 20px;
   padding: 50px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.maxContentSize}px) {
     width: 90%;
   }
   margin-top: 230px;
@@ -52,5 +52,8 @@ background: #f0f0f0;
     0px 16px 58px rgba(9, 10, 51, 0.05); */
     box-shadow: 0px 0px 5px 5px rgba(9, 10, 51, 0.05),
     0px 16px 58px rgba(9, 10, 51, 0.05);
+     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+   font-size: 14px;
+  }
 `;
 

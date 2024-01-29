@@ -6,9 +6,10 @@ import {
   TextWrapper,
   Image,
   Button,
-  SmoothWrapper,
-  PromujImg
+  PromujImg,
+  Badge
 } from "../styled";
+import { SmoothWrapper } from "../../../../styledComponents/Wrapper/styled";
 import { HeaderCustom } from "../../../../styled";
 import { Container } from "../../../../styledComponents/Container/styled";
 import { useSelector, useDispatch } from "react-redux";
@@ -17,21 +18,27 @@ import { useEffect } from "react";
 import {
   fetchGithubData,
   selectLoadingState,
+  setWeb,
+  selectWeb
 } from "../../../../features/DataSlice/githubSlice";
 import LoadingPage from "../../../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../../../features/TechnicalTabs/ErrorPage";
 import { Link } from "../../../../styledComponents/Tiles/styled";
 import promujSiebie from "../../../../images/promujSiebie.webp";
+import webbadge from "../../../../images/webTopImage.png";
 
 const Web = () => {
   const dispatch = useDispatch();
  
   const ifLoading = useSelector(selectLoadingState);
+ 
 
   useEffect(() => {
     dispatch(fetchGithubData());
+    dispatch(setWeb());
   }, []);
 
+  const route = useSelector(selectWeb);
   let returned = "";
 
   switch (ifLoading) {
@@ -42,20 +49,21 @@ const Web = () => {
       returned = (
         <Container>
           <ImageTextWrapper>
-            
+          <Badge src={webbadge} />
             <TextWrapper>
+            <HeaderCustom>Tworzenie stron internetowych</HeaderCustom><br/>
               <SmoothWrapper>
-                <HeaderCustom>Tworzenie stron internetowych</HeaderCustom>
-                <br/>
+              
                 <p>
-                  Czy chcesz wyróżnić się w gąszczu internetowej konkurencji?
-                  Marzysz o stronie, która nie tylko przyciąga uwagę, ale
+                <h2>Czy chcesz się wyróżnić?</h2>
+                  W gąszczu internetowej konkurencji marzysz o stronie, która nie tylko przyciąga uwagę, ale
                   również konwertuje odwiedzających w lojalnych klientów?
                   Projektowanie stron internetowych to nasza pasja i
                   umiejętność, która przekształca Twoje wizje w rzeczywistość.
                 </p>
+                </SmoothWrapper>
+                <SmoothWrapper>
                 <p>
-                  <br />
                   <h2>Spersonalizowany Design</h2> Każda strona, którą
                   projektujemy, to efekt dogłębnego zrozumienia Twojej marki.
                   Tworzymy spersonalizowane, estetyczne projekty, które oddają
@@ -74,28 +82,26 @@ const Web = () => {
                   odbiorców. Nasze podejście do projektowania stron uwzględnia
                   optymalizację pod kątem wyszukiwarek, co pomaga w osiągnięciu
                   wyższej pozycji w wynikach wyszukiwania.
-                  <br />
-                  <br />
+                 
                 </p>
-              </SmoothWrapper>
+                </SmoothWrapper>
               <Link to="/contact">Napisz do nas!</Link>
             </TextWrapper>
             <Image src={Image1} alt="Dragons Cape" />
           </ImageTextWrapper>
           <ImageTextWrapper>
-           
             <TextWrapper>
+              <div style={{ marginBottom:"-100px" }}></div>
+            <HeaderCustom>Dlaczego my ?</HeaderCustom><br/>
               <SmoothWrapper>
                 <p>
-                  <HeaderCustom>Dlaczego my?</HeaderCustom>
-                  <br/>
                   <h2>Doświadczenie i Pasja:</h2> Nasze doświadczenie wyniesione z różnych branż to lata praktyki i setki
                   zadowolonych klientów. Pasja do tworzenia funkcjonalnych,
                   estetycznych stron jest w naszym DNA.
                   <h2>Indywidualne Podejście:</h2> Nie ma dwóch
                   identycznych projektów. Stawiamy na spersonalizowane podejście
                   do każdego klienta, starając się zrozumieć i oddać wizję
-                  biznesową.
+                  biznesową.   </p></SmoothWrapper><SmoothWrapper><p>
                   <h2>Ile to kosztuje? </h2>Jeden Rabin powie dużo,
                   drugi mało. Mądry smok powie: To zależy! W dzisiejszych
                   czasach strona internetowa jest podstawą działania każdego
@@ -113,12 +119,12 @@ const Web = () => {
                 </p>
                 <p>Napisz do nas lub poszukaj więcej informacji na:</p>
                 <a href="https://www.promujsiebie.pl" target="_blank"><PromujImg src={promujSiebie}/></a>
-              </SmoothWrapper>
+                </SmoothWrapper>
             </TextWrapper>
             <Image src={Image2} alt="Dragon Scape" />
           </ImageTextWrapper>
 
-          <Price />
+          <Price route={route}/>
         </Container>
       );
       break;

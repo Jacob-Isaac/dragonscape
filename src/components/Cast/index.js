@@ -9,6 +9,8 @@ import {
 } from "../../features/DataSlice/githubSlice";
 import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
+import { SmoothWrapper } from "../../styledComponents/Wrapper/styled.js";
+import { NegativeMarginTop } from "../../styledComponents/Wrapper/styled.js";
 
 const Cast = ({ selectedCast }) => {
   const dispatch = useDispatch();
@@ -23,13 +25,14 @@ const Cast = ({ selectedCast }) => {
 
   switch (ifLoading) {
     case "loading":
-      returned = <LoadingPage />;
+      returned = <LoadingPage/>;
       break;
     case "success":
       returned = (
-        <>
-          <h1>O nas</h1>
+        <NegativeMarginTop>
+                  <h1 style={{textAlign:"center"}}>O nas</h1>
           <br />
+        <SmoothWrapper>
           <p>
             Jesteśmy Dragonscape! Zajmujemy się projektowaniem logo i
             identyfikacji wizualnej, a także tworzeniem profesjonalnych stron internetowych
@@ -64,6 +67,7 @@ const Cast = ({ selectedCast }) => {
             konkurencyjne ceny, terminową realizację i gwarancję satysfakcji. Z
             Dragonscape twoja firma zyska nowy wymiar w internecie!
           </p>
+          </SmoothWrapper>
           <TilesPersonSection>
             {selectedCast.map((person) => (
               <TilePerson
@@ -75,14 +79,14 @@ const Cast = ({ selectedCast }) => {
               />
             ))}
           </TilesPersonSection>
-        </>
+        </NegativeMarginTop>
       );
       break;
     case "error":
       returned = <ErrorPage />;
       break;
     default:
-      returned = <LoadingPage />;
+      returned = <LoadingPage/>;
   }
 
   return returned;

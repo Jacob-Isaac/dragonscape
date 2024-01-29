@@ -28,11 +28,16 @@ export const Title = styled.h2`
 `;
 
 export const HeaderCustom = styled.h1`
-  margin-top: 270px;
+
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
-  color: ${({ theme }) => theme.color.dragonRed};
+  margin-top: 100px;
+  color: ${({ theme }) => theme.color.text};
+    @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+    margin-bottom: 40px;
+    text-align: center;
+  }
 `;
 
 export const SubpageWrapper = styled.div`
@@ -47,7 +52,7 @@ export const SubpageWrapper2 = styled.div`
 export const ContactFormWrapper = styled.div`
 height: 1250px;
   /* padding-bottom: 120px; */
-  background-color: #8BC3C2;
+  background-color: ${({ theme }) => theme.color.contactBackground};
    background-size: cover;
    @media (max-width: ${({ theme }) => theme.breakpoint.galaxyFoldPlus}px) {
      width: 21rem; 

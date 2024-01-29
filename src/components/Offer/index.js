@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import {
   fetchGithubData,
-  selectLoadingState,
+  selectLoadingState, selectIsLightMode
 } from "../../features/DataSlice/githubSlice";
 import OfferTiles from "./OfferTiles/OfferTiles";
 import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
@@ -14,14 +14,14 @@ const MainPage = () => {
   const ifLoading = useSelector(selectLoadingState);
 
   useEffect(() => {
-    dispatch(fetchGithubData());
+    dispatch(fetchGithubData(selectIsLightMode));
   }, []);
 
   let returned = "";
 
   switch (ifLoading) {
     case "loading":
-      returned = <LoadingPage />;
+      returned = <LoadingPage/>;
       break;
     case "success":
       returned = (
@@ -34,7 +34,7 @@ const MainPage = () => {
       returned = <ErrorPage />;
       break;
     default:
-      returned = <LoadingPage />;
+      returned = <LoadingPage/>;
   }
   return returned;
 };

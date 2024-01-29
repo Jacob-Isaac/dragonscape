@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import darkBckgrnd from "../src/images/dark-01.webp";
-import lightBckgrnd from "../src/images/daylightt-01.webp";
-
-
+import darkBckgrnd from "../src/images/darkBackground.webp";
+import lightBckgrnd from "../src/images/brightBackground.webp";
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -34,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
           background-size: 1000px; 
   } 
   @media (min-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-         /* background-attachment: fixed; */
+         background-attachment: scroll ;
   } 
   }
   ${({ isLight }) => isLight && `

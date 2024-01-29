@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { ReactComponent as Loading } from "../../../images/loading.svg";
-import lightBckgrnd from "../../../images/daylight.svg"
+import lightBckgrnd from "../../../images/brightBackground.webp";
+import darkBckgrnd from "../../../images/darkBackground.webp"
 
 
 const slideInOut = keyframes`
@@ -62,18 +63,23 @@ export const Div = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: ${({ theme }) => theme.color.dragonBlack}; /* Change the background color as needed */
   opacity: 1;
   z-index: 999999;
   transition: opacity 1s ease-in-out; 
-   background-image: url(${lightBckgrnd});
-    background-color: ${({ theme }) => theme.color.bodyBackground};
-    background-repeat: no-repeat;
-    background-size: cover; 
-    @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-          background-size: 1000px; 
+  background-color: ${({ theme }) => theme.color.bodyBackground};
+  background-repeat: no-repeat;
+  background-size: cover; 
+
+ 
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+    ${(props) => props.isLight && `
+    background-image: url(${lightBckgrnd});
+  `}
+    background-size: 1000px; 
+    background-image: url(${props => (props.isLight ? lightBckgrnd : darkBckgrnd)});
   } 
+
   @media (min-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-         background-attachment: fixed;
-  }  
+    background-attachment: fixed;
+  }
 `;

@@ -17,13 +17,19 @@
 
 import { Div } from "./styled";
 import { StyledLoading, Wrapper } from "./styled";
+import { selectIsLightMode } from "../../DataSlice/githubSlice";
+import { useSelector } from "react-redux";
 
-const LoadingPage = () => (
-  <Div>
+const LoadingPage = () => {
+  const theme = useSelector(selectIsLightMode);
+  return(
+  <Div isLight={theme}>
     <Wrapper>
       <StyledLoading />
     </Wrapper>
   </Div>
-);
+  )
+
+};
 
 export default LoadingPage;

@@ -5,7 +5,7 @@ import { getData } from "../GetData/githubData";
 
 export function* fetchGithubDataWorker() {
   try {
-    yield delay(2000);
+    yield delay(0);
     const data = yield call(getData);
     yield put(setPortfolioList(data));
   } catch (error) {

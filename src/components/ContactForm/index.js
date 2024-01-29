@@ -28,7 +28,6 @@ import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
 function ContactForm() {
 
   const dispatch = useDispatch();
-  const theme = useSelector(selectIsLightMode);
   const ifLoading = useSelector(selectLoadingState);
 
   useEffect(() => {
@@ -74,7 +73,7 @@ function ContactForm() {
     returned = <ErrorPage />;
     break;
   default:
-    returned = <LoadingPage />;
+    returned = <LoadingPage/>;
 }
 
 return returned;
