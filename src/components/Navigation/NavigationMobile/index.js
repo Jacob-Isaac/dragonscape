@@ -45,7 +45,7 @@ const HeaderMobile = ({ contentTitle, isBodyOverflowHidden }) => {
 
   switch (ifLoading) {
     case "loading":
-      returned = <LoadingPage />;
+      returned = <LoadingPage/>;
       break;
     case "success":
       returned = (
@@ -111,7 +111,7 @@ const HeaderMobile = ({ contentTitle, isBodyOverflowHidden }) => {
       returned = <ErrorPage />;
       break;
     default:
-      returned = <LoadingPage />;
+      returned = <LoadingPage/>;
   }
 
   return returned;

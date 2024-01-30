@@ -1,10 +1,13 @@
+import { keyframes } from "styled-components";
 import styled from "styled-components"
 import { NavLink } from "react-router-dom";
+
+
 
 export const TilesPersonSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 100px auto;
+  margin: 200px auto;
   max-width: 1048px;
   padding-left: 24px;
   padding-right: 24px;
@@ -28,6 +31,7 @@ export const TilesPersonSection = styled.section`
 
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
+  cursor: default;
   width: 100%;
   color: ${({ theme }) => theme.color.black};
   a:link,
@@ -37,9 +41,11 @@ export const StyledNavLink = styled(NavLink)`
     color: ${({ theme }) => theme.color.black};
   }
 `;
+
+
 export const Wrapper = styled.section`
     display: flex;
-    background: ${({ theme }) => theme.color.white};
+    background: ${({ theme }) => theme.color.tilesBackground};
     padding: 16px;
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     border-radius: 5px;

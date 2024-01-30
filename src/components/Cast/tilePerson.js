@@ -8,6 +8,7 @@ import {
   StyledPersonIcon,
   Wrapper,
   StyledNavLink,
+  Button,
   PersonRole,
 } from "./styled";
 import Robert from "../../images/robert.webp";
@@ -39,7 +40,7 @@ const TilePerson = ({
   const selectedPoster = getPosterSource();
   return (
     <Wrapper>
-      <StyledNavLink to={`/personDetails/${personId}`}>
+      <StyledNavLink>
         <StyledTilePerson>
           {personProfilePath === null ? (
             <NoPoster>

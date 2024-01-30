@@ -16,8 +16,8 @@ export const lightTheme = {
     mainBlue: "#0366D6",
     borderBottom: "#D1D5DA4D",
     blue: "#0366D6",
-    black: "#000", // nowe
-    white: "#ffffff",
+    black: "#202638", // nowe
+    white: "#F9F4EA",
     grey: "#808080",
     whisper: "#F5F5FA",
     silver: "#C4C4C4",
@@ -32,6 +32,8 @@ export const lightTheme = {
     dragonBlack: "#202638",
     dragonRed: "#D76460",
     dragonOrange: "#F1A355",
+    dragonBackground: "#FBF3E3",
+    contactBackground: "#8BC3C2",
   },
 
   breakpoint: {
@@ -60,15 +62,15 @@ export const darkTheme = {
     tileHover: "#0366d677",
     linkBorder: "#0366D6",
     titleAndIcons: "#FFFFFF",
-    text: "#FFFFFF",
+    text: "#FBF3E3",
     background: "#252525",
-    bodyBackground: "#252525",
+    bodyBackground: "#202638",
     mainBlue: "#0366D6",
     borderBottom: "#D1D5DA4D",
     blue: "#5b96d9",
-    black: "#000", // nowe
+    black: "#202638", // nowe
     dragonWhite: "#F9F4EA",
-    white: "#ffffff",
+    white: "#F9F4EA",
     grey: "#808080",
     whisper: "#F5F5FA",
     silver: "#C4C4C4",
@@ -76,7 +78,9 @@ export const darkTheme = {
     mystic: "#E4E6F0",
     pattensBlue: "#D6E4FF",
     scienceBlue: "#0044CC",
-    darkModeBackground: "#252525",
+    darkModeBackground: "#202638",
+    dragonBackground: "#252525",
+    contactBackground: "black",
   },
 
   breakpoint: {

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 import { Container } from "./styledComponents/Container/styled";
 import WhyUs from "./components/WhyUs/index";
@@ -30,6 +30,7 @@ import Navbar from "./components/Navigation/NavigationMobile2/Navbar.js";
 import ScrollToTopHook from "./features/Hooks/ScrollToTop.js";
 import ScrollToTop from "react-scroll-to-top";
 import { ReactComponent as MySVG } from "./images/arrowDown.svg";
+import { NegativeMarginTop, NegativeTop, SmoothWrapper } from "./styledComponents/Wrapper/styled.js";
 
 function App() {
   const isBodyOverflowHidden = useSelector(selectIsBodyOverflowHidden);
@@ -37,7 +38,7 @@ function App() {
   const dimensions = useWindowDimensions();
   let navigationBar;
   if (dimensions.width < 970) {
-    navigationBar = <Navbar isBodyOverflowHidden={isBodyOverflowHidden} />;
+    navigationBar = <Navbar isBodyOverflowHidden={isBodyOverflowHidden} isLight={lightMode} />;
   } else {
     navigationBar = <NavigationBar />;
   }
@@ -48,7 +49,7 @@ function App() {
         isLight={lightMode}
         isBodyOverflowHidden={isBodyOverflowHidden}
       />
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTopHook />
         {navigationBar}
         <Routes>
@@ -65,7 +66,7 @@ function App() {
                       animationIn={
                         dimensions.width < 800 ? "zoomIn" : "slideInRight"
                       }
-                      // screenOffset={100}
+                       screenOffset={100}
                       animationInDuration={1200}
                     >
                       <Title>Dlaczego my ?</Title>
@@ -74,7 +75,7 @@ function App() {
                       animationIn={
                         dimensions.width < 800 ? "zoomIn" : "slideInLeft"
                       }
-                      // screenOffset={300}
+                       screenOffset={300}
                       animationInDuration={1500}
                     >
                       <WhyUs
@@ -145,11 +146,13 @@ function App() {
           <Route
             path="/offer"
             element={
+              <NegativeTop>
               <Container>
               
                 <Offer />
                
               </Container>
+              </NegativeTop>
             }
           />
           <Route
@@ -169,13 +172,17 @@ function App() {
           <Route
             path="/contact"
             element={
-              <>
-                <Container>
-                  <SubpageWrapper2>
+              // <NegativeMarginTop>
+              //   <Container>
+              //     <SubpageWrapper2>
+               <NegativeMarginTop>
+                  <ContactFormWrapper>
                     <ContactForm />
-                  </SubpageWrapper2>
-                 </Container>
-              </>
+                    </ContactFormWrapper>
+                     </NegativeMarginTop>
+              //     </SubpageWrapper2>
+              //    </Container>
+              // </NegativeMarginTop>
             }
           />
           <Route
@@ -213,7 +220,7 @@ function App() {
             right: "15px",
           }}
         />
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }

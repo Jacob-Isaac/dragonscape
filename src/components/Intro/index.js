@@ -39,7 +39,7 @@ function AboutMe() {
 
   switch (ifLoading) {
     case "loading":
-      returned = <LoadingPage />;
+      returned = <LoadingPage/>;
       break;
     case "success":
       returned = (
@@ -79,7 +79,7 @@ function AboutMe() {
       returned = <ErrorPage />;
       break;
     default:
-      returned = <LoadingPage />;
+      returned = <LoadingPage/>;
   }
 
   return returned;

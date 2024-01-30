@@ -17,6 +17,7 @@ align-items: center;
 
 export const JSXMainContainer = styled.div`
   font-family: 'Montserrat', sans-serif;
+  border-radius: 20px;
   padding: 5px;
   padding-bottom: 15px;
   width: 20rem;
@@ -35,6 +36,7 @@ export const JSXMainContainer = styled.div`
 `;
 
 export const Header = styled.div`
+border-radius: 15px;
   margin: 0.6rem;
   height: 4rem;
   background-color: #ebf3fd;
@@ -94,6 +96,7 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
+ 
 `;
 
 export const Button = styled.button`
@@ -101,7 +104,7 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  border-radius: 0.3rem;
+  border-radius: 0.4rem;
   border: 0.1rem solid #1d3557;
   width: 90%;
   height: 3.5rem;
@@ -118,9 +121,11 @@ export const Button = styled.button`
 export const DataContainer = styled.div`
   ul {
     list-style-type: none;
+    margin-left: -13px;
     li {
       display: flex;
       align-items: center;
+      font-size: ${({ route }) => (route === 'web' ? '0.8rem' : '0.9rem')};
       .true {
         color: #34f034;
         font-size: 1rem;

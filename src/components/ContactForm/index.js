@@ -13,11 +13,35 @@ import {
   SocialLink,
   PhoneWrapper,
 } from "./styled";
-import { ContainerContact, ContainerFooter } from "../../styledComponents/Container/styled";
+import { ContainerContact } from "../../styledComponents/Container/styled";
 import { ContactUs } from "./contact";
+import { useSelector, useDispatch } from "react-redux";
+import { selectIsLightMode } from "../../features/DataSlice/githubSlice";
+import { useEffect } from "react";
+import {
+  fetchGithubData,
+  selectLoadingState,
+} from "../../features/DataSlice/githubSlice";
+import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
+import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
 
 function ContactForm() {
-  return (
+
+  const dispatch = useDispatch();
+  const ifLoading = useSelector(selectLoadingState);
+
+  useEffect(() => {
+    dispatch(fetchGithubData());
+  }, []);
+
+  let returned = "";
+
+  switch (ifLoading) {
+    case "loading":
+      returned = <LoadingPage />;
+      break;
+    case "success":
+      returned = (
     <ContainerContact>
       <IntroBlock>
         <Text>skontaktujmy się !</Text>
@@ -44,6 +68,15 @@ function ContactForm() {
       </IntroBlock>
     </ContainerContact>
   );
+  break;
+  case "error":
+    returned = <ErrorPage />;
+    break;
+  default:
+    returned = <LoadingPage/>;
+}
+
+return returned;
 }
 
 export default ContactForm;

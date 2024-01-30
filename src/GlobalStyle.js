@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import darkBckgrnd from "../src/images/dark.svg";
-import lightBckgrnd from "../src/images/daylight.svg";
-
-
+import darkBckgrnd from "../src/images/darkBackground.webp";
+import lightBckgrnd from "../src/images/brightBackground.webp";
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -19,12 +17,14 @@ export const GlobalStyle = createGlobalStyle`
     background-image: url(${darkBckgrnd});
     background-color: ${({ theme }) => theme.color.bodyBackground};
     background-repeat: no-repeat;
-    background-size: cover; 
+    /* background-size: cover;  */
     /* background-position:center; */
-   
+    background-size: cover; 
     font-family: 'Montserrat', sans-serif;
-    transition: background-image 1s ease-in-out;
-    -webkit-transition: background-image 1s ease-in-out;
+    /* transition: background 1s ease-in-out; */
+    transition: background 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
+    /* transition: background-image 1s cubic-bezier(0.69, 0.15, 0.31, 0.85); */
+    /* -webkit-transition: background-image 1s ease-in-out; */
     ${({ isBodyOverflowHidden }) => isBodyOverflowHidden && `
       overflow: hidden;
     `}
@@ -32,12 +32,13 @@ export const GlobalStyle = createGlobalStyle`
           background-size: 1000px; 
   } 
   @media (min-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-         background-attachment: fixed;
+         background-attachment: scroll ;
   } 
   }
   ${({ isLight }) => isLight && `
-    body {
-      background-image: url(${lightBckgrnd});
-    }
+   body {
+       background-image: url(${lightBckgrnd});
+     }
   `}
 `;
+  

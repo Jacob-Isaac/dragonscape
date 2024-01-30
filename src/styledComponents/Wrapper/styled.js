@@ -22,3 +22,34 @@ export const Wrapper = styled.div`
     ${FlexCenter}
   }
 `;
+
+export const SmoothWrapper= styled.div`
+ background-color: #ffffff;
+ padding-left: 40px;
+ padding-right: 40px;
+ padding-top: 20px;
+ padding-bottom: 30px;
+ box-shadow: 0px 0px 20px rgba(9, 10, 51, 0.02),
+    0px 16px 20px rgba(9, 10, 51, 0.03);
+border-radius: 20px;
+margin-bottom: 30px;
+
+@media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+  width:100%;
+  /* text-align: center; */
+  }
+`;
+
+
+export const NegativeMarginTop = styled.div`
+  
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+margin-top: -100px;
+  }
+`;
+export const NegativeTop = styled.div`
+margin-top: -50px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+margin-top: -160px;
+  }
+`;

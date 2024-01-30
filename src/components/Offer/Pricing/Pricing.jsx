@@ -27,6 +27,7 @@ const Pricing = ({
   subTitle,
   priceText,
   headerText,
+  route
 }) => {
   return (
     <JSXMainContainer shadow={shadow}>
@@ -64,7 +65,7 @@ const Pricing = ({
         </ButtonContainer>
       )}
       {data && (
-        <DataContainer>
+        <DataContainer route={route}>
           <ul>
             {data.map((dt, index) => (
               <li key={index}>
