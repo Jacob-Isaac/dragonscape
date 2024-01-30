@@ -53,7 +53,7 @@ transition: all 0.5s ease;
 }
 `;
 
-const RightNav = ({ open, setOpen }) => {
+const RightNav = ({ open, handleNavLinkClick }) => {
 
   // const dispatch = useDispatch();
   // const handleNavLinkClick = () => {
@@ -64,16 +64,16 @@ const RightNav = ({ open, setOpen }) => {
 
   return (
     <Ul open={open}>
-      <StyledNavLink to="/" onClick={() => setOpen(!open)}>start</StyledNavLink>
-      <StyledNavLink to="/offer"  onClick={() => setOpen(!open)}>oferta</StyledNavLink>
-      <StyledNavLink to="/aboutUs"  onClick={() => setOpen(!open)}>o nas</StyledNavLink>
+      <StyledNavLink to="/" onClick={() => handleNavLinkClick()}>start</StyledNavLink>
+      <StyledNavLink to="/offer"  onClick={() => handleNavLinkClick()}>oferta</StyledNavLink>
+      <StyledNavLink to="/aboutUs"  onClick={() => handleNavLinkClick()}>o nas</StyledNavLink>
       <NavigationLinkRed
           href="mailto:kontakt@dragonscape.pl"
-          onClick={() => setOpen(!open)}
+          
         >
           wycena
         </NavigationLinkRed>
-      <StyledNavLink to="/contact"  onClick={() => setOpen(!open)}>kontakt</StyledNavLink>
+      <StyledNavLink to="/contact"  onClick={() => handleNavLinkClick()}>kontakt</StyledNavLink>
     </Ul>
   )
 }

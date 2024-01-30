@@ -16,6 +16,8 @@ const Nav = styled.nav`
 `
 
 const Navbar = (isLight) => {
+
+
   return (
     <Nav>
       {/* <div className="logo">

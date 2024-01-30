@@ -70,8 +70,8 @@ const Burger = () => {
   const [open, setOpen] = useState(false)
   const dispatch = useDispatch();
 const handleNavLinkClick = () => {
-  dispatch(toggleBodyOverflow());
   setOpen(!open);
+  dispatch(toggleBodyOverflow());
 };
 const siteTheme = useSelector(selectIsLightMode);
   
@@ -93,7 +93,7 @@ const siteTheme = useSelector(selectIsLightMode);
           </IconBody>
         </ModeChange>
         </Wrapper>
-      <RightNav open={open}/>
+      <RightNav open={open} handleNavLinkClick={handleNavLinkClick}/>
    
     </>
   )
