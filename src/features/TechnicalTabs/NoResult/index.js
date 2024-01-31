@@ -4,9 +4,10 @@ import { NoResultContainer, StyledH1 } from "./styled";
 function NoResult({ title, error404 }) {
   return (
     <>
-      <StyledH1>{title}</StyledH1>
+      <StyledH1>Ooops</StyledH1>
       <NoResultContainer>
-        <StyledH1>{error404}</StyledH1>
+        <StyledH1>404<br/>
+        Strona nie istnieje </StyledH1>
       </NoResultContainer>
     </>
   );
