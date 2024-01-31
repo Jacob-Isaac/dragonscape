@@ -7,6 +7,8 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    line-height: 140%;
+  letter-spacing: 0.02em;
   }
   *,
   ::after,
