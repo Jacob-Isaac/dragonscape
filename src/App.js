@@ -31,6 +31,7 @@ import ScrollToTopHook from "./features/Hooks/ScrollToTop.js";
 import ScrollToTop from "react-scroll-to-top";
 import { ReactComponent as MySVG } from "./images/arrowDown.svg";
 import { NegativeMarginTop, NegativeTop, SmoothWrapper } from "./styledComponents/Wrapper/styled.js";
+import NoResult from "./features/TechnicalTabs/NoResult/index.js";
 
 function App() {
   const isBodyOverflowHidden = useSelector(selectIsBodyOverflowHidden);
@@ -203,6 +204,14 @@ function App() {
             element={
               <>
                 <PrivacyPolicy />
+              </>
+            }
+          />
+          <Route
+           path="*"
+            element={
+              <>
+                <NoResult />
               </>
             }
           />
