@@ -55,16 +55,16 @@ const Footer = () => {
             <StyledLink to="/contact">kontakt</StyledLink>
           </FooterLinks>
           <FooterLinksSocial>
-            <LinkSocial href="https://www.facebook.com/TwojaNazwaStrony" target="_blank">
+            <LinkSocial href="https://www.facebook.com/dragonscapePL" target="_blank">
               <StyledFacebookLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
-            <LinkSocial href="https://www.facebook.com/TwojaNazwaStrony" target="_blank">
+            <LinkSocial href="https://www.instagram.com/dragonscapepl/" target="_blank">
               <StyledInstagramLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
-            <LinkSocial href="https://www.facebook.com/TwojaNazwaStrony" target="_blank">
+            <LinkSocial href="https://www.facebook.com/dragonscapePL" target="_blank">
               <StyledLinkedInLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
-            <LinkSocial href="https://www.facebook.com/TwojaNazwaStrony" target="_blank">
+            <LinkSocial href="https://github.com/Jacob-Isaac/dragonscape" target="_blank">
               <StyledGithubLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
           </FooterLinksSocial>
