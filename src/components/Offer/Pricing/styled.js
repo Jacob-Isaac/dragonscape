@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
 
 export const MainContainer = styled.div`
 height: 100vh;
@@ -99,7 +100,7 @@ export const ButtonContainer = styled.div`
  
 `;
 
-export const Button = styled.button`
+export const Button = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,6 +113,8 @@ export const Button = styled.button`
   font-size: 1.2rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
+  text-decoration: none;
+  color: black;
   &:hover {
     background-color: ${({ theme }) => theme.color.dragonBlack};
     color: white;

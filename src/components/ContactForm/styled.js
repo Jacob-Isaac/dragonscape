@@ -26,7 +26,7 @@ export const Mail = styled.a`
   margin-bottom: 20px;
   color: ${({ theme }) => theme.color.titleAndIcons};
   text-decoration: none;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 38px;
   line-height: 46px;
   letter-spacing: 0.05em;
@@ -49,7 +49,7 @@ export const Mail = styled.a`
 export const PhoneWrapper = styled.span`
 
   color: ${({ theme }) => theme.color.titleAndIcons};
-  font-weight: 900;
+  font-weight: 700;
   font-size: 20px;
   line-height: 46px;
   letter-spacing: 0.05em;
@@ -64,7 +64,7 @@ export const PhoneWrapper = styled.span`
 export const Phone = styled.a`
  text-decoration: none;
   color: ${({ theme }) => theme.color.titleAndIcons};
-  font-weight: 900;
+  font-weight: 700;
   font-size: 24px;
   line-height: 46px;
   letter-spacing: 0.05em;
@@ -87,10 +87,7 @@ export const Phone = styled.a`
 `;
 
 export const Article = styled.article`
-  font-weight: 400;
   font-size: 18px;
-  line-height: 140%;
-  letter-spacing: 0.05em;
   color: ${({ theme }) => theme.color.titleAndIcons};
   text-align: justify;
   margin-top: 16px;

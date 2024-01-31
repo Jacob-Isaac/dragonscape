@@ -25,9 +25,6 @@ padding: 60px 60px 60px 60px;
 export const H1 = styled.h1`
 margin: 0 auto;
 margin-bottom: -2px;
-font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 600;
   margin-top: -18px;
    color: ${({ theme }) => theme.color.dragonRed};
       @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
@@ -42,12 +39,7 @@ font-family: 'Montserrat', sans-serif;
 
 export const P = styled.p`
 color: ${({ theme }) => theme.color.text};
-font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 13px;
-  line-height: 160%;
-  letter-spacing: 0.05em;
       @media (max-width: ${({ theme }) => theme.breakpoint.maxContentSize}px) {
         margin-top: 28px;
        font-size: 12px;

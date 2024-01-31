@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     line-height: 140%;
   letter-spacing: 0.02em;
+  font-weight: 400;
   }
   *,
   ::after,

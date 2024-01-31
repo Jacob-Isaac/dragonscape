@@ -81,11 +81,7 @@ export const Name = styled.li`
 
 export const Description = styled.li`
   font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 140%;
-  letter-spacing: 0.05em;
   /* text-align: justify; */
   color: ${({ theme }) => theme.color.text};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
@@ -98,10 +94,7 @@ export const Description = styled.li`
 export const Links = styled.li`
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 140%;
-  letter-spacing: 0.05em;
   color: ${({ theme }) => theme.color.text};
   display: flex;
   flex-direction: column;

@@ -86,7 +86,7 @@ const Design = () => {
               </SmoothWrapper>
               <FigureMobile>
                 <Image src={Image1} alt="Dragons Cape" />
-                {/* <Figcaption>"Dragons Cape"</Figcaption> */}
+                <Figcaption>"Dragons Cape"</Figcaption>
               </FigureMobile>
               <SmoothWrapper>
                 <h2>Indywidualne Logo</h2>

@@ -135,7 +135,7 @@ export const Article = styled.article`
   max-width: 630px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  
   font-size: 16px;
   line-height: 140%;
   letter-spacing: 0.02em;

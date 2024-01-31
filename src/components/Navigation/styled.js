@@ -52,7 +52,7 @@ export const NavigationList = styled.ul`
 
 export const NavigationLink = styled(NavLink)`
   font-size: 19px;
-  font-weight: ${({ theme }) => theme.fontSize.bold};
+  font-weight: 600;
   color: ${(props) => props.fontcolor};
   text-decoration: none;
   display: flex;
@@ -79,7 +79,7 @@ export const NavigationLink = styled(NavLink)`
 
 export const NavigationLinkRed = styled.a`
   font-size: 19px;
-  font-weight: ${({ theme }) => theme.fontSize.bold};
+  font-weight: 600;
   color: ${(props) => props.fontcolor};
   text-decoration: none;
   display: flex;
@@ -104,7 +104,7 @@ export const NavigationLinkRed = styled.a`
 export const NavScrollLink = styled(Link)`
   cursor: pointer;
   font-size: 19px;
-  font-weight: ${({ theme }) => theme.fontSize.bold};
+  font-weight: 600;
   color: ${(props) => props.fontcolor};
   text-decoration: none;
   display: flex;
