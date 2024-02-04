@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export const IntroBlock = styled.div`
+z-index: 870;
   max-height: 404px;
   max-width: 700px;
   display: flex;
@@ -218,4 +219,13 @@ export const SuccessMessage = styled.div`
       transform: translateX(100%);
     }
   }
+`;
+
+export const Kula = styled.img`
+z-index: 900;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  max-width: 500px;
+  max-height: 100%;
 `;

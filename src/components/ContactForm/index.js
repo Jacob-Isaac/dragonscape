@@ -12,6 +12,7 @@ import {
   SocialMedia,
   SocialLink,
   PhoneWrapper,
+  Kula
 } from "./styled";
 import { ContainerContact } from "../../styledComponents/Container/styled";
 import { ContactUs } from "./contact";
@@ -24,6 +25,7 @@ import {
 } from "../../features/DataSlice/githubSlice";
 import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
+import kula from "../../images/dragonBall.webp"
 
 function ContactForm() {
 
@@ -66,6 +68,7 @@ function ContactForm() {
         </Article>
         <ContactUs />
       </IntroBlock>
+      <Kula src={kula}></Kula>
     </ContainerContact>
   );
   break;

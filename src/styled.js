@@ -52,7 +52,7 @@ export const SubpageWrapper2 = styled.div`
 export const ContactFormWrapper = styled.div`
 height: 1250px;
   /* padding-bottom: 120px; */
-  background-color: ${({ theme }) => theme.color.contactBackground};
+  background-color: ${({ theme }) => theme.color.dragonWhite};
    background-size: cover;
    @media (max-width: ${({ theme }) => theme.breakpoint.galaxyFoldPlus}px) {
      width: 21rem; 
