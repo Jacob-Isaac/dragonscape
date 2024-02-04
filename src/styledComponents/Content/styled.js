@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  margin-top: 130px;
+  margin-top: 230px;
   padding-top: 100px;
-  margin-bottom: 130px;
+  margin-bottom: 380px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
+    margin-top: 130px;
+    margin-bottom: 280px;
+  }
 `;
 
 export const Title = styled.div`

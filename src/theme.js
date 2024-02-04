@@ -40,6 +40,7 @@ export const lightTheme = {
     maxContentSize: 1260,
     tablet: 1060,
     mobile: 799,
+    mobilefive: 700,
     miniMobile: 500,
     galaxyFold: 315,
     galaxyFoldPlus: 348,

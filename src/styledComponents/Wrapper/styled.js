@@ -48,8 +48,8 @@ margin-top: -100px;
   }
 `;
 export const NegativeTop = styled.div`
-margin-top: -50px;
+margin-top: -140px;
     @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-margin-top: -160px;
+margin-top: -220px;
   }
 `;

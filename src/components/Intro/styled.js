@@ -189,8 +189,10 @@ export const ArrowDown = styled.img`
   cursor: pointer;
   animation: ${oscillateAnimationSecond} 4s ease-in-out infinite;
   transition: transform 0.3s ease;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    margin-top: 66px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobilefive}px) {
+    margin-top: -30px;
+    margin-left: auto;  
+    margin-right: 50px; 
   }
   &:hover {
     animation: ${shakeAnimation} 0.4s ease-in-out;
