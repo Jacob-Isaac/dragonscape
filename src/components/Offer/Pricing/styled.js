@@ -89,7 +89,10 @@ export const PriceText = styled.div`
   justify-content: center;
   width: 60%;
   text-align: center;
-  font-weight: 100;
+  font-weight: 500;
+  font-size: 13px;
+   line-height: 140%;
+  letter-spacing: 0.02em;
 `;
 
 export const ButtonContainer = styled.div`

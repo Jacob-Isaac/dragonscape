@@ -54,7 +54,7 @@ const Pricing = ({
           )}
           {priceText && (
             <PriceText>
-              <h5>{priceText}</h5>
+              {priceText}
             </PriceText>
           )}
         </PricingContainer>

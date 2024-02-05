@@ -99,7 +99,7 @@ const Price = ({ route }) => {
           currency="PLN"
           buttonContent="Skontaktuj się"
           subTitle={route === "design" ? "Pełna kreacja marki" : "Pełna moc"}
-          priceText={route === "design" ? "Kompletna identyfikacja wizualna." : "Pełny pakiet z możliwością sklepu internetowego"}
+          priceText={route === "design" ? "Kompletna identyfikacja wizualna" : "Pełny pakiet z możliwością sklepu internetowego"}
           headerText={route === "design" ? "pełny" : "plus"}
           route={route}
         />
