@@ -61,7 +61,7 @@ const Footer = () => {
             <LinkSocial href="https://www.instagram.com/dragonscapepl/" target="_blank">
               <StyledInstagramLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
-            <LinkSocial href="https://www.facebook.com/dragonscapePL" target="_blank">
+            <LinkSocial href="https://www.linkedin.com/company/dragonscape/" target="_blank">
               <StyledLinkedInLogo style={{ maxWidth: "35px" }} />
             </LinkSocial>
             <LinkSocial href="https://github.com/Jacob-Isaac/dragonscape" target="_blank">

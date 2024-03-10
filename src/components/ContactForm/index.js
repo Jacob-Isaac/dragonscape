@@ -52,7 +52,7 @@ function ContactForm() {
           <SocialLink href="https://www.facebook.com/dragonscapePL" target="_blank">
             <StyledFacebookLogo />
           </SocialLink>
-          <SocialLink href="https://www.facebook.com/dragonscapePL" target="_blank">
+          <SocialLink href="https://www.linkedin.com/company/dragonscape/" target="_blank">
             <StyledLinkedInLogo />
           </SocialLink>
           <SocialLink href="https://www.instagram.com/dragonscapepl/" target="_blank">
