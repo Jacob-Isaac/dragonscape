@@ -177,10 +177,10 @@ export const IconBody = styled.button`
 `;
 
 export const ModeChange = styled.div`
-display: none;
+/* display: none; */
   margin-right: -20px;
   margin-top: 2px;
-  /* display: flex; */
+  display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;

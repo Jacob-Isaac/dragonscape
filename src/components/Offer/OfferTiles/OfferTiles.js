@@ -3,7 +3,7 @@ import { Wrapper } from "../../../styledComponents/Wrapper/styled";
 import Content from "../../../styledComponents/Content";
 import { StyledGithubLogo } from "./styled";
 
-const OfferTiles = ({ projects }) => {
+const OfferTiles = ({ projects, isLight }) => {
   return (
     <Content
       icon={<StyledGithubLogo />}
@@ -13,7 +13,7 @@ const OfferTiles = ({ projects }) => {
         <>
           <Wrapper>
             {projects.map((project) => (
-              <Tile key={project.id} project={project} />
+              <Tile key={project.id} project={project} isLight={isLight} />
             ))}
           </Wrapper>
         </>

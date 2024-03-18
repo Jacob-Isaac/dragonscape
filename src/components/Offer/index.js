@@ -12,7 +12,8 @@ import OfferList from "../../features/Config/project.json";
 const MainPage = () => {
   const dispatch = useDispatch();
   const ifLoading = useSelector(selectLoadingState);
-
+  const lightMode = useSelector(selectIsLightMode);
+  
   useEffect(() => {
     dispatch(fetchGithubData(selectIsLightMode));
   }, []);
@@ -26,7 +27,7 @@ const MainPage = () => {
     case "success":
       returned = (
         <>
-          <OfferTiles projects={OfferList} />
+          <OfferTiles projects={OfferList} isLight={lightMode} />
         </>
       );
       break;

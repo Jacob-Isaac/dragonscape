@@ -10,8 +10,8 @@ import {
 } from "./styled";
 import dragonLight from "../../images/meLight.svg";
 import dragonDark from "../../images/meDark.svg";
-import text from "../../images/logoWebp.webp";
-import textDark from "../../images/logodark.png";
+import text from "../../images/logoForBright.webp";
+import textDark from "../../images/logoForDark.webp";
 import arrowDown from "../../images/arrowDown.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { selectIsLightMode } from "../../features/DataSlice/githubSlice";
@@ -45,7 +45,7 @@ function AboutMe() {
       returned = (
         <>
           <IntroBlock>
-            <MyPhoto
+          <MyPhoto
               src={theme ? dragonLight : dragonDark}
               alt="My Photo"
               themes={theme}

@@ -24,7 +24,9 @@ export const Wrapper = styled.div`
 `;
 
 export const SmoothWrapper= styled.div`
- background-color: #ffffff;
+ color: ${({ theme }) => theme.color.text};
+transition: 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
+ background-color: ${({ theme }) => theme.color.offerTextBackground};
  padding-left: 40px;
  padding-right: 40px;
  padding-top: 20px;
@@ -42,7 +44,7 @@ margin-bottom: 30px;
 
 
 export const NegativeMarginTop = styled.div`
-  
+   color: ${({ theme }) => theme.color.text};
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
 margin-top: -100px;
   }

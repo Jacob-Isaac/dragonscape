@@ -57,13 +57,13 @@ export const IntroBlock = styled.div`
   @media (min-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 0fr 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "photo mode"
-    "photo txt"
-    "photo myName"
-    "photo article"
-    "photo hireButton";
-    margin-top: 72px;
+    grid-template-areas:
+      "photo mode"
+      "photo txt"
+      "photo myName"
+      "photo article"
+      "photo hireButton";
+    margin-top: 92px;
   }
 `;
 
@@ -102,6 +102,7 @@ export const Text = styled.div`
 `;
 
 export const Name = styled.img`
+
   max-width: 390px;
   grid-area: myName;
   align-self: end;
@@ -118,6 +119,7 @@ export const Name = styled.img`
   }
   @media (min-width: ${({ theme }) => theme.breakpoint.extra}px) {
     font-size: 100px;
+    padding-bottom: 30px;
   }
   @keyframes fadeInAnimation {
     0% {
@@ -130,16 +132,16 @@ export const Name = styled.img`
 `;
 
 export const Article = styled.article`
+transition: 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
   grid-area: article;
   align-self: center;
   max-width: 630px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  
   font-size: 16px;
   line-height: 140%;
   letter-spacing: 0.02em;
-  ${({ theme }) => theme.color.DragonBlack};
+  color: ${({ theme }) => theme.color.text};
   text-align: justify;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 15px;
@@ -166,11 +168,10 @@ export const HireMeButton = styled.a`
 export const StyledButtonImg = styled(ButtonImg)`
   width: 154px;
   height: 49px;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: 0.6s ease-in-out;
   &:hover {
-    box-shadow: 2px -2px 0px #f1a355, -2px 2px 0px #f1a355, 2px 2px 0px #f1a355,
-      -2px -2px 0px #f1a355;
+    box-shadow: 0 0 8px ${({ theme }) => theme.color.buttonShadow};
     cursor: pointer;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
@@ -183,7 +184,6 @@ export const ArrowDown = styled.img`
   display: block;
   margin: 0 auto;
   max-width: 68px;
-
   margin-bottom: 115px;
   margin-top: 70px;
   cursor: pointer;
@@ -191,8 +191,8 @@ export const ArrowDown = styled.img`
   transition: transform 0.3s ease;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobilefive}px) {
     margin-top: -30px;
-    margin-left: auto;  
-    margin-right: 50px; 
+    margin-left: auto;
+    margin-right: 50px;
   }
   &:hover {
     animation: ${shakeAnimation} 0.4s ease-in-out;

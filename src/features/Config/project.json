@@ -6,7 +6,8 @@
     "homepage": "https://www.example.com/project-two",
     "html_url": "https://github.com/example/project-two",
     "routePath": "/design",
-    "imagePath": "one"
+    "imagePath": "one",
+    "imageDarkPath": "three"
   },
   {
     "id": 6,
@@ -15,6 +16,7 @@
     "homepage": "https://www.example.com/project-one",
     "html_url": "https://github.com/example/project-one",
     "routePath": "/webDev",
-    "imagePath": "two"
+    "imagePath": "two",
+    "imageDarkPath": "four"
   }
 ]

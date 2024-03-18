@@ -24,7 +24,7 @@ export const Text = styled.div`
 export const Mail = styled.a`
   margin-top: 20px;
   margin-bottom: 20px;
-  color: ${({ theme }) => theme.color.titleAndIcons};
+  color: ${({ theme }) => theme.color.text};
   text-decoration: none;
   font-weight: 700;
   font-size: 38px;
@@ -48,7 +48,7 @@ export const Mail = styled.a`
 
 export const PhoneWrapper = styled.span`
 
-  color: ${({ theme }) => theme.color.titleAndIcons};
+  color: ${({ theme }) => theme.color.text};
   font-weight: 700;
   font-size: 20px;
   line-height: 46px;
@@ -63,7 +63,7 @@ export const PhoneWrapper = styled.span`
 
 export const Phone = styled.a`
  text-decoration: none;
-  color: ${({ theme }) => theme.color.titleAndIcons};
+  color: ${({ theme }) => theme.color.text};
   font-weight: 700;
   font-size: 24px;
   line-height: 46px;
@@ -88,7 +88,7 @@ export const Phone = styled.a`
 
 export const Article = styled.article`
   font-size: 18px;
-  color: ${({ theme }) => theme.color.titleAndIcons};
+  color: ${({ theme }) => theme.color.text};
   text-align: justify;
   margin-top: 16px;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {

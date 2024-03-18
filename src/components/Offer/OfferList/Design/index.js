@@ -2,7 +2,8 @@ import { Container } from "../../../../styledComponents/Container/styled";
 import { HeaderCustom } from "../../../../styled";
 import Image1 from "../../../../images/dragonsCapeSecond.webp";
 import Image2 from "../../../../images/dragonsCape.webp";
-import Advertise from "../../../../images/advertise-01.svg";
+import Advertise from "../../../../images/advertise.svg";
+import AdvertiseForDark from "../../../../images/advertiseForDark.svg";
 import Price from "../../Pricing";
 import {
   ImageTextWrapper,
@@ -38,6 +39,7 @@ import designbadge from "../../../../images/designTopImage.webp";
 const Design = () => {
   const dispatch = useDispatch();
   const ifLoading = useSelector(selectLoadingState);
+  const theme = useSelector(selectIsLightMode);
   const [isContentVisibleArray, setIsContentVisibleArray] = useState([
     false,
     false,
@@ -123,7 +125,7 @@ const Design = () => {
             </TextWrapper>
             <Figure>
               <Image src={Image1} alt="Dragons Cape" />
-              <figcaption>"Dragons Cape"</figcaption>
+              <Figcaption>"Dragons Cape"</Figcaption>
             </Figure>
           </ImageTextWrapper>
 
@@ -131,7 +133,7 @@ const Design = () => {
               <Position>
             <Figure>
               <Image src={Image2} alt="Dragon Scape" />
-              <figcaption>"Dragon Scape"</figcaption>
+              <Figcaption>"Dragon Scape"</Figcaption>
             </Figure>
             </Position>
             <TextWrapper>
@@ -248,7 +250,7 @@ const Design = () => {
               </RollerWrapper>
             </TextWrapper>
           </ImageTextWrapper>
-          <AdMobile src={Advertise} />
+          <AdMobile  src={theme ? Advertise : AdvertiseForDark}/>
           <AdMobileSecond />
           <Price route={route} />
         </Container>

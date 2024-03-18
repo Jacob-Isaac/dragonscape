@@ -97,6 +97,7 @@ export const Destription = styled.section`
     line-height: 130%;
 `;
 export const PersonNameStyle = styled.div`
+ color: ${({ theme }) => theme.color.text};
     font-weight: ${({ theme }) => theme.fontSize.medium};
     text-align: center;
     line-height: 130%;

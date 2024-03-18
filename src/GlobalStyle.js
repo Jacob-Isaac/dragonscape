@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import darkBckgrnd from "../src/images/darkBackground.webp";
-import lightBckgrnd from "../src/images/brightBackground.webp";
+import darkBckgrnd from "../src/images/jakis-01.webp";
+import lightBckgrnd from "../src/images/dayBackgroundORANGE-01-01-01.webp";
 
 
 export const GlobalStyle = createGlobalStyle`

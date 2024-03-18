@@ -29,6 +29,8 @@ export const PromujImg = styled.img`
 `;
 
 export const TextWrapper = styled.div`
+transition: 0.2s cubic-bezier(0.69, 0.15, 0.31, 0.85);
+color: ${({ theme }) => theme.color.text};
 font-size: 16px;
   line-height: 140%;
   letter-spacing: 0.02em;
@@ -131,6 +133,7 @@ max-width: 450px;
 `;
 
 export const Figcaption = styled.figcaption`
+color: ${({ theme }) => theme.color.text};
 font-size: 15px;
    @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
     font-size:10px;
