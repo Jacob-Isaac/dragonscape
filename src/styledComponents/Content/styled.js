@@ -29,7 +29,7 @@ export const Portfolio = styled.span`
   font-size: 70px;
   line-height: 36px;
   letter-spacing: 0.05em;
-  color: ${({ theme }) => theme.color.titleAndIcons};
+  color: ${({ theme }) => theme.color.text};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 50px;
   }

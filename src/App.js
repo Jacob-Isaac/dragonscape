@@ -93,7 +93,7 @@ function App() {
                       screenOffset={300}
                       animationInDuration={1000}
                     >
-                      <Offer />
+                      <Offer/>
                     </AnimatedOnScroll>
                   </Element>
                 </Container>
@@ -150,7 +150,7 @@ function App() {
               <NegativeTop>
               <Container>
               
-                <Offer />
+                <Offer/>
                
               </Container>
               </NegativeTop>

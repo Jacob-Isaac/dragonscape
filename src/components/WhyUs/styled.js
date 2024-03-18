@@ -5,7 +5,7 @@ text-align: center;
 max-width: 380px;
 height: 290px;
 margin: 0 auto;
-border: 1px solid ${({ theme }) => theme.color.dragonBlack};
+border: 1px solid ${({ theme }) => theme.color.whyUsBorder};
 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 &:hover {
     background-color: ${({ theme }) => theme.color.dragonRed};

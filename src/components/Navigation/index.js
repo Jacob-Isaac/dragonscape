@@ -17,8 +17,8 @@ import {
   DarkMode,
   StyledSunIcon,
 } from "./styled";
-import logoTransparent from "../../images/logo.png";
-import logo from "../../images/logodark.png";
+import logoTransparent from "../../images/logoForBright.webp";
+import logo from "../../images/logoForDark.webp";
 import { useSelector, useDispatch } from "react-redux";
 import { changeTheme } from "../../features/DataSlice/githubSlice";
 import {
@@ -56,7 +56,7 @@ const NavigationBar = () => {
     if (prevScrollpos <= 320 && siteTheme) {
       return "#202638";
     } else {
-      return "#FBF3E3";
+      return "#CCCCCC";
     }
   };
 
@@ -78,21 +78,25 @@ const NavigationBar = () => {
             <NavigationLogo>
               {prevScrollpos <= 320 ? (
                 // Image to display when scroll position is at the top or close to it
-                <Dragon src={siteTheme ? logoTransparent : logo} width="220" />
+                <Dragon src={siteTheme ? logoTransparent : logo} width="210" />
               ) : (
                 // Image to display when scrolled down
-                <Dragon src={logo} width="220" />
+                <Dragon src={logo} width="210" />
               )}
+               
             </NavigationLogo>
           </NavigationLogoScrollLink>
         ) : (
           <NavigationLogoLink to="/">
-            <NavigationLogo>
+           <NavigationLogo>
               {prevScrollpos <= 320 ? (
-                <Dragon src={logoTransparent} width="220" />
+                // Image to display when scroll position is at the top or close to it
+                <Dragon src={siteTheme ? logoTransparent : logo} width="210" />
               ) : (
-                <Dragon src={logo} width="220" />
+                // Image to display when scrolled down
+                <Dragon src={logo} width="210" />
               )}
+               
             </NavigationLogo>
           </NavigationLogoLink>
         )}
@@ -156,12 +160,12 @@ const NavigationBar = () => {
             kontakt
           </NavigationLink>
         )}
-        <ModeChange>
+        {/* <ModeChange>
           <DarkMode></DarkMode>
           <FlagIconBody>
             <StyledFlagToggle $themes={siteTheme} />
           </FlagIconBody>
-        </ModeChange>
+        </ModeChange> */}
         <ModeChange>
           <DarkMode></DarkMode>
           <IconBody onClick={() => dispatch(changeTheme())}>

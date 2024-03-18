@@ -8,12 +8,16 @@ import {
   Badge,
 } from "./styled";
 
-const Tile = ({ project }) => (
+const Tile = ({ project, isLight }) => (
   <>
     <Tiles>
-      <Badge image={project.imagePath} />
+       {isLight ? (
+        <Badge image={project.imagePath} />
+      ) : (
+        <Badge image={project.imageDarkPath} />
+      )}
       <StyledUl>
-        <Name>{project.name}</Name>
+      <Name>{project.name}</Name>
         <Description>{project.description}</Description>
         <Links>
           <Link to={project.routePath}>Sprawdź</Link>

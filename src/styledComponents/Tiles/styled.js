@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import firstBckgrnd from "../../images/designTopImage.webp";
 import secondBckgrnd from "../../images/webTopImage.png";
-import thirdBckgrnd from "../../images/icodragon.svg";
-import fourthBckgrnd from "../../images/icodragon.svg";
+import thirdBckgrnd from "../../images/designTopImageDark.webp";
+import fourthBckgrnd from "../../images/webTopImageDark.webp";
 
 const getImageUrl = (image) => {
   switch (image) {
@@ -73,7 +73,7 @@ export const Name = styled.li`
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 0.05em;
-  color: ${({ theme }) => theme.color.dragonBlack};
+  color: ${({ theme }) => theme.color.text};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 16px;
   }
@@ -117,8 +117,10 @@ export const Link = styled(NavLink)`
   margin: 0 auto;
   transition: 0.6s ease-in-out;
   &:hover {
-    box-shadow: 2px -2px 0px #f1a355, -2px 2px 0px #f1a355, 2px 2px 0px #f1a355,
-      -2px -2px 0px #f1a355;
+    box-shadow: 2px -2px 0px ${({ theme }) => theme.color.buttonShadow},
+      -2px 2px 0px ${({ theme }) => theme.color.buttonShadow},
+      2px 2px 0px ${({ theme }) => theme.color.buttonShadow},
+      -2px -2px 0px ${({ theme }) => theme.color.buttonShadow};
     cursor: pointer;
   }
 `;

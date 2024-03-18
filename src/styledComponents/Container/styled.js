@@ -13,11 +13,12 @@ export const ContainerContact = styled.div`
 `;
 
 export const ContainerFooter = styled.div`
-  background-color: #F9F5EF;
+  background-color: ${({ theme }) => theme.color.bodyBackground};
   @media (max-width: ${({ theme }) => theme.breakpoint.maxContentSize}px) {
     margin-left: 20px;
     margin-right: 20px;
   }
+  transition: 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
 `;
 
 export const Container = styled.div`
@@ -53,7 +54,14 @@ background: #fff9ff;
     box-shadow: 0px 0px 5px 5px rgba(9, 10, 51, 0.05),
     0px 16px 58px rgba(9, 10, 51, 0.05);
      @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-   font-size: 14px;
+   font-size: 12px;
+    padding: 30px;
+      margin-top: 160px;
+  margin-bottom: 100px;
+  }
+   @media (max-width: ${({ theme }) => theme.breakpoint.miniMobile}px) {
+   font-size: 11px;
+    padding: 17px;
   }
 `;
 
