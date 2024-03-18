@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 export const ScrollLink = styled(Link)`
 text-decoration: none;
-  color: #333;
+color: ${({ theme }) => theme.color.text};
   font-size: 14px;
   cursor: pointer;
   margin-bottom: 10px;
@@ -16,10 +16,6 @@ text-decoration: none;
   &:hover {
     color: ${({ theme }) => theme.color.mainBlue};
   }
-`;
-
-export const FooterContainer = styled.footer`
-  background-color: #F9F5EF;
 `;
 
 export const FooterContent = styled.div`
@@ -84,7 +80,7 @@ export const FooterLinksSocial = styled.div`
 
 export const StyledLink = styled(NavLink)`
 text-decoration: none;
-  color: #333;
+color: ${({ theme }) => theme.color.text};
   font-size: 14px;
   cursor: pointer;
   margin-bottom: 10px;
@@ -110,7 +106,7 @@ export const LinkSocial = styled.a`
 `;
 
 export const PrivacyPolicyLink = styled(NavLink)`
-color: #333;
+color:  ${({ theme }) => theme.color.text};
 text-decoration: none;
   font-size: 12px;
   cursor: pointer;
@@ -119,14 +115,14 @@ text-decoration: none;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  margin-top: 10px;
-  margin-bottom: -5px;
+  margin-top: 9px;
+  margin-bottom: -4px;
   &:hover {
     color: ${({ theme }) => theme.color.mainBlue};
   }
 `;
 
 export const CopyrightText = styled.p`
-  color: #555;
+  color: ${({ theme }) => theme.color.text};
   font-size: 12px;
 `;

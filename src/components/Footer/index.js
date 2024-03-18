@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../../images/logo.png";
+import logo from "../../images/logoForBright.webp";
+import logoDarkMode from "../../images/logoForDark.webp"
 import {
   StyledFacebookLogo,
   StyledGithubLogo,
@@ -7,7 +8,6 @@ import {
   StyledLinkedInLogo,
 } from "../../styledComponents/StyledLogos/styled";
 import {
-  FooterContainer,
   FooterContent,
   FooterLinksColumn,
   StyledLink,
@@ -21,14 +21,16 @@ import {
   CopyrightText,
 } from "./styled";
 import { NavLink } from "react-router-dom";
-
+import { selectIsLightMode } from "../../features/DataSlice/githubSlice";
 import { ContainerFooter } from "../../styledComponents/Container/styled";
 import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
 
   const location = useLocation();
   const isInMain = location.pathname === "/";
+  const theme = useSelector(selectIsLightMode);
 
   return (
     <ContainerFooter>
@@ -72,7 +74,7 @@ const Footer = () => {
         <LogoColumn>
       
           <NavLink to="/">
-            <Logo src={logo} alt="Website Logo" />{" "}
+            <Logo   src={theme ? logo : logoDarkMode} alt="Website Logo" />{" "}
           </NavLink>
         
 

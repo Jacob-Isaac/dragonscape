@@ -129,15 +129,15 @@ function PrivacyPolicy() {
           <ol class="gpp-list-selectable list-type-latin" start="1">
             <li class="active">
               <span class="gpp-list-selectable__content">
-                <span>art. 6 ust. 1 lit. a</span>
+                <span>art. 6 ust. 1 lit. a) </span>
                 osoba, której dane dotyczą wyraziła zgodę na przetwarzanie
-                swoich danych osobowych w jednym lub większej liczbieokreślonych
+                swoich danych osobowych w jednym lub większej liczbie określonych
                 celów
               </span>
             </li>
             <li class="active">
               <span class="gpp-list-selectable__content">
-                <span>art. 6 ust. 1 lit. b</span> przetwarzanie jest niezbędne
+                <span>art. 6 ust. 1 lit. b)</span> przetwarzanie jest niezbędne
                 do wykonania umowy, której stroną jest osoba, której dane
                 dotyczą, lub do podjęcia działań na żądanie osoby, której dane
                 dotyczą, przed zawarciem umowy
@@ -145,21 +145,21 @@ function PrivacyPolicy() {
             </li>
             <li class="active">
               <span class="gpp-list-selectable__content">
-                <span>art. 6 ust. 1 lit. c</span> przetwarzanie jest niezbędne
+                <span>art. 6 ust. 1 lit. c)</span> przetwarzanie jest niezbędne
                 do wypełnienia obowiązku prawnego ciążącego na administratorze
               </span>
             </li>
             <li class="active">
               {" "}
               <span class="gpp-list-selectable__content">
-                <span>art. 6 ust. 1 lit. d</span>
+                <span>art. 6 ust. 1 lit. d) </span>
                 przetwarzanie jest niezbędne do ochrony żywotnych interesów
                 osoby, której dane dotyczą, lub innej osoby fizycznej
               </span>
             </li>
             <li class="active">
               <span class="gpp-list-selectable__content">
-                <span>art. 6 ust. 1 lit. e</span> przetwarzanie jest niezbędne
+                <span>art. 6 ust. 1 lit. e)</span> przetwarzanie jest niezbędne
                 do wykonania zadania realizowanego w interesie publicznym lub w
                 ramach sprawowania władzy publicznej powierzonej
                 administratorowi
@@ -167,7 +167,7 @@ function PrivacyPolicy() {
             </li>
             <li class="active">
               <span class="gpp-list-selectable__content">
-                <span>art. 6 ust. 1 lit. f</span> przetwarzanie jest niezbędne
+                <span>art. 6 ust. 1 lit. f)</span> przetwarzanie jest niezbędne
                 do celów wynikających z prawnie uzasadnionych interesów
                 realizowanych przez administratora lub przez stronę trzecią
               </span>
@@ -205,11 +205,11 @@ function PrivacyPolicy() {
         <li>
           {" "}
           Jeżeli uważasz, że Twoje dane osobowe są przetwarzane niezgodnie z
-          prawem, możecie wnieść skargę do organu nadzorczego (Urząd Ochrony
+          prawem, możesz wnieść skargę do organu nadzorczego (Urząd Ochrony
           Danych Osobowych, ul. Stawki 2, Warszawa). Jeśli potrzebujesz
           dodatkowych informacji związanych z ochroną danych osobowych lub
           chcesz skorzystać z przysługujących praw, skontaktuj się z nami
-          listownie na adres korespondencyjny.{" "}
+          poprzez adres e-mail.{" "}
         </li>
         <li>
           {" "}
@@ -249,23 +249,6 @@ function PrivacyPolicy() {
             <li class="active">
               <span class="gpp-list-selectable__content">imię i nazwisko,</span>
             </li>
-            <li class="">
-              {" "}
-              <span class="gpp-list-selectable__content">
-                adres zamieszkania,
-              </span>
-            </li>
-            <li class="">
-              {" "}
-              <span class="gpp-list-selectable__content">
-                adres do doręczeń (jeśli jest inny niż adres zamieszkania),
-              </span>
-            </li>
-            <li class="">
-              <span class="gpp-list-selectable__content">
-                numer identyfikacji podatkowej (NIP),
-              </span>
-            </li>
             <li class="active">
               <span class="gpp-list-selectable__content">
                 adres poczty elektronicznej (e-mail),
@@ -287,6 +270,26 @@ function PrivacyPolicy() {
               </span>
             </li>
           </ol>{" "}
+          Oraz w przypadku podpisania umowy:
+          <ol class="gpp-list-selectable list-type-latin" start="1">
+          <li class="">
+              {" "}
+              <span class="gpp-list-selectable__content">
+                adres zamieszkania,
+              </span>
+            </li>
+            <li class="">
+              {" "}
+              <span class="gpp-list-selectable__content">
+                adres do doręczeń (jeśli jest inny niż adres zamieszkania),
+              </span>
+            </li>
+            <li class="">
+              <span class="gpp-list-selectable__content">
+                numer identyfikacji podatkowej (NIP),
+              </span>
+            </li>
+            </ol>
         </li>
       </ol>
       <ol start="3">
@@ -296,7 +299,7 @@ function PrivacyPolicy() {
           niezbędne do pełnej realizacji usług.{" "}
         </li>
         <li class="active-text inactive-text">
-          Możemy przesyłać dane osobowe do serwerów znajdujących się poza krajem
+          W niektórych sytuacjach możemy przesyłać wybrane dane osobowe do serwerów znajdujących się poza krajem
           Twojego zamieszkania lub do podmiotów powiązanych, stron trzecich z
           siedzibą w innych krajach w tym krajach z obszaru EOG (Europejski
           Obszar Gospodarczy, EOG ang. European Economic Area, EEA – strefa
@@ -309,7 +312,7 @@ function PrivacyPolicy() {
         </li>
         <li>
           {" "}
-          Dostęp do Twoich danych mogą posiadać podmioty świadczące dla usługi
+          Dostęp do Twoich danych mogą posiadać podmioty świadczące usługi
           niezbędne do prowadzenia serwisu tj.:
           <ol class="gpp-list-selectable list-type-latin" start="1">
             <li class="active">
@@ -330,12 +333,12 @@ function PrivacyPolicy() {
               {" "}
               <span class="gpp-list-selectable__content">
                 Firmy serwisowe i wsparcia IT dokonujące konserwacji lub
-                odpowiedzialne za utrzymanie infrastruktury IT
+                odpowiedzialne za utrzymanie infrastruktury IT (obecnie nie dotyczy)
               </span>
             </li>
             <li class="active">
               <span class="gpp-list-selectable__content">
-                Firmy pośredniczące w płatnościach on-line za towaru lub usługi
+                Firmy pośredniczące w płatnościach on-line za towary lub usługi
                 oferowane w ramach Serwisu (w przypadku dokonywania transakcji
                 zakupu w Serwisie)
               </span>
@@ -343,7 +346,7 @@ function PrivacyPolicy() {
             <li class="">
               {" "}
               <span class="gpp-list-selectable__content">
-                Firmy pośredniczące w płatnościach mobilnych za towaru lub
+                Firmy pośredniczące w płatnościach mobilnych za towary lub
                 usługi oferowane w ramach Serwisu (w przypadku dokonywania
                 transakcji zakupu w Serwisie)
               </span>
@@ -370,7 +373,7 @@ function PrivacyPolicy() {
       <ol>
         <li>
           {" "}
-          Stosuje pliki cookie lub podobne technologie (zwane dalej łącznie:
+          Stosujemy pliki cookie lub podobne technologie (zwane dalej łącznie:
           „plikami cookie”) poprzez które należy rozumieć dane informatyczne, w
           szczególności pliki tekstowe, przeznaczone do korzystania ze strony
           internetowej i przechowywane w urządzeniach końcowych Użytkowników
@@ -404,7 +407,7 @@ function PrivacyPolicy() {
                 zewnętrznych, które mogą umieszczać pliki Cookies na
                 Urządzeniach Użytkownika zostały świadomie umieszczone w
                 Serwisie poprzez skrypty i usługi udostępnione i zainstalowane w
-                Serwisie
+                Serwisie (np. Google reCAPTCHA ).
               </span>
             </li>
             <li class="">
@@ -470,7 +473,7 @@ function PrivacyPolicy() {
             <li class="">
               <span class="gpp-list-selectable__content">
                 reklamowe pliki cookie, umożliwiające dostarczanie użytkownikom
-                treści reklamowych dostosowanych do ich zainteresowań.{" "}
+                treści reklamowych dostosowanych do ich zainteresowań. (obecnie nie dotyczy - brak reklam){" "}
               </span>
             </li>
           </ol>{" "}
@@ -495,10 +498,10 @@ function PrivacyPolicy() {
         </li>
         <li>
           {" "}
-          Korzystanie ze strony internetowej, bez zmiany ustawień w zakresie
+          Korzystanie ze strony internetowej bez zmiany ustawień w zakresie
           plików cookie, oznacza wyrażenie zgody na zapisywanie plików cookie.
-          Klienta zawsze może wycofać zgodę poprzez zmianę ustawień dotyczących
-          plików cookie.Informacje w jaki sposób dokonać konfiguracji ustawień
+          Klient zawsze może wycofać zgodę poprzez zmianę ustawień dotyczących
+          plików cookie we własnej przeglądarce. Informacje w jaki sposób dokonać konfiguracji ustawień
           plików cookie w przykładowych przeglądarkach internetowych Użytkownik
           może znaleźć tutaj:{" "}
           <ul class="list">
@@ -547,15 +550,6 @@ function PrivacyPolicy() {
                 Safari
               </a>
             </li>
-            <li>
-              <a
-                href="https://windows.microsoft.com/pl-pl/internet-explorer/delete-manage-cookies#ie=ie-11"
-                rel="noopener norefferer"
-                target="_blank"
-              >
-                Internet Explorer 11
-              </a>
-            </li>
           </ul>
         </li>
       </ol>
@@ -574,56 +568,52 @@ function PrivacyPolicy() {
           Użytkownik ma prawo do:{" "}
           <ol class="list-type-latin list-span-strong">
             <li>
-              <span>dostępu do danych osobowych</span>Użytkownikowi przysługuje
+              <strong>dostępu do danych osobowych. </strong>Użytkownikowi przysługuje
               prawo uzyskania dostępu do swoich danych osobowych, realizowane na
-              żądanie złożone do Administratora
+              żądanie złożone do Administratora.
             </li>
             <li>
-              <span>sprostowania danych osobowych</span>Użytkownikowi
+              <strong>sprostowania danych osobowych. </strong>Użytkownikowi
               przysługuje prawo żądania od Administratora niezwłocznego
               sprostowania danych osobowych, które są nieprawidłowe lub / oraz
               uzupełnienia niekompletnych danych osobowych, realizowane na
-              żądanie złożone do Administratora
+              żądanie złożone do Administratora.
             </li>
             <li>
-              <strong>usunięcia danych osobowych</strong>Użytkownikowi
+              <strong>usunięcia danych osobowych. </strong>Użytkownikowi
               przysługuje prawo żądania od Administratora niezwłocznego
               usunięcia danych osobowych, realizowane na żądanie złożone do
-              Administratora W przypadku kont użytkowników, usunięcie danych
+              Administratora. W przypadku kont użytkowników, usunięcie danych
               polega na anonimizacji danych umożliwiających identyfikację
               Użytkownika. Administrator zastrzega sobie prawo wstrzymania
               realizacji żądania usunięcia danych w celu ochrony prawnie
-              uzasadnionego interesu Administratora (np. w gdy Użytkownik
-              dopuścił się naruszenia Regulaminu czy dane zostały pozyskane
+              uzasadnionego interesu Administratora (np. gdy Użytkownik
+              dopuścił się naruszenia Regulaminu, lub gdy dane zostały pozyskane
               wskutek prowadzonej korespondencji). W przypadku usługi
-              Newsletter, Użytkownik ma możliwość samodzielnego usunięcia swoich
+              Newsletter, użytkownik ma możliwość samodzielnego usunięcia swoich
               danych osobowych korzystając z odnośnika umieszczonego w każdej
               przesyłanej wiadomości e-mail.
             </li>
             <li>
-              <span>ograniczenia przetwarzania danych osobowych</span>
+              <strong>ograniczenia przetwarzania danych osobowych. </strong>
               Użytkownikowi przysługuje prawo ograniczenia przetwarzania danych
               osobowych w przypadkach wskazanych w art. 18 RODO, m.in.
               kwestionowania prawidłowość danych osobowych, realizowane na
-              żądanie złożone do Administratora
+              żądanie złożone do Administratora.
             </li>
             <li>
-              <span>przenoszenia danych osobowych</span>Użytkownikowi
+              <strong>przenoszenia danych osobowych. </strong>Użytkownikowi
               przysługuje prawo uzyskania od Administratora, danych osobowych
               dotyczących Użytkownika w ustrukturyzowanym, powszechnie używanym
               formacie nadającym się do odczytu maszynowego, realizowane na
-              żądanie złożone do Administratora
+              żądanie złożone do Administratora.
             </li>
-            <li>
-              <span>
-                wniesienia sprzeciwu wobec przetwarzania danych osobowych
-              </span>
-              Użytkownikowi przysługuje prawo wniesienia sprzeciwu wobec
+            <li><strong>wniesienia sprzeciwu wobec przetwarzania danych osobowych. </strong>Użytkownikowi przysługuje prawo wniesienia sprzeciwu wobec
               przetwarzania jego danych osobowych w przypadkach określonych w
-              art. 21 RODO, realizowane na żądanie złożone do Administratora
+              art. 21 RODO, realizowane na żądanie złożone do Administratora.
             </li>
             <li>
-              <span>wniesienia skargi</span>Użytkownikowi przysługuje prawo
+              <strong>wniesienia skargi. </strong>Użytkownikowi przysługuje prawo
               wniesienia skargi do organu nadzorczego zajmującego się ochroną
               danych osobowych.
             </li>
