@@ -144,6 +144,9 @@ export const StyledContactForm = styled.div`
       }
     }
     textarea {
+      @media (max-width: ${({ theme }) => theme.breakpoint.mobilefive}px) {
+ resize: none;
+  }
       max-width: 100%;
       min-width: 100%;
       width: 100%;
@@ -174,12 +177,10 @@ export const StyledContactForm = styled.div`
       padding-bottom: 33px;
       text-align: center;
   }
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
   &:hover {
-    /* box-shadow: 2px -2px 0px #f1a355, -2px 2px 0px #f1a355, 2px 2px 0px #f1a355,
-      -2px -2px 0px #f1a355; */
-      background: ${({ theme }) => theme.color.dragonOrange};
-      color: ${({ theme }) => theme.color.dragonBlack};
+    box-shadow: 0 0 10px ${({ theme }) => theme.color.buttonShadow};
+    cursor: pointer;
   }
     }
   }
@@ -218,4 +219,16 @@ export const SuccessMessage = styled.div`
       transform: translateX(100%);
     }
   }
+`;
+
+export const CaptchaMessage = styled.div`
+z-index: 1;
+margin-top: -30px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-width: 200px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
