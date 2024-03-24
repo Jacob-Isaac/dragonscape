@@ -16,12 +16,12 @@ import {
 import { ContainerContact } from "../../styledComponents/Container/styled";
 import { ContactUs } from "./contact";
 import { useSelector, useDispatch } from "react-redux";
-import { selectIsLightMode } from "../../features/DataSlice/githubSlice";
+import { selectIsLightMode } from "../../features/DataSlice/dataSlice";
 import { useEffect } from "react";
 import {
   fetchGithubData,
   selectLoadingState,
-} from "../../features/DataSlice/githubSlice";
+} from "../../features/DataSlice/dataSlice";
 import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
 

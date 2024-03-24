@@ -14,16 +14,16 @@ import text from "../../images/logoForBright.webp";
 import textDark from "../../images/logoForDark.webp";
 import arrowDown from "../../images/arrowDown.svg";
 import { useSelector, useDispatch } from "react-redux";
-import { selectIsLightMode } from "../../features/DataSlice/githubSlice";
+import { selectIsLightMode } from "../../features/DataSlice/dataSlice";
 import { Link } from "react-scroll";
 import { useEffect } from "react";
 import {
   fetchGithubData,
   selectLoadingState,
-} from "../../features/DataSlice/githubSlice";
+} from "../../features/DataSlice/dataSlice";
 import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
-import { toggleBodyOverflow2 } from "../../features/DataSlice/githubSlice";
+import { toggleBodyOverflow2 } from "../../features/DataSlice/dataSlice";
 
 function AboutMe() {
   const dispatch = useDispatch();

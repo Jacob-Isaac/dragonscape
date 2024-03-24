@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import RightNav from './RightNav';
 import { useDispatch } from 'react-redux';
-import { toggleBodyOverflow } from '../../../features/DataSlice/githubSlice';
+import { toggleBodyOverflow } from '../../../features/DataSlice/dataSlice';
 import { FlagIconBody, ModeChange, DarkMode, Body, IconBody, StyledSunIcon } from '../styled';
-import { changeTheme } from "../../../features/DataSlice/githubSlice";
+import { changeTheme } from "../../../features/DataSlice/dataSlice";
 import { useSelector } from 'react-redux';
 import {
   selectIsLightMode,
-} from "../../../features/DataSlice/githubSlice";
+} from "../../../features/DataSlice/dataSlice";
 
 const StyledBurger = styled.div`
   -webkit-tap-highlight-color: transparent;

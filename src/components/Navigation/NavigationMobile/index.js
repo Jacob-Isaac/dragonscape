@@ -16,12 +16,12 @@ import {
   Span,
   StyledNavLink,
 } from "./styled.js";
-import { fetchGithubData, selectIsBodyOverflowHidden, toggleBodyOverflow } from "../../../features/DataSlice/githubSlice";
+import { fetchGithubData, selectIsBodyOverflowHidden, toggleBodyOverflow } from "../../../features/DataSlice/dataSlice";
 import { useDispatch } from "react-redux";
 import LoadingPage from "../../../features/TechnicalTabs/LoadingPage/index.js";
 import ErrorPage from "../../../features/TechnicalTabs/ErrorPage/index.js";
 import { useSelector } from "react-redux";
-import { selectLoadingState } from "../../../features/DataSlice/githubSlice";
+import { selectLoadingState } from "../../../features/DataSlice/dataSlice";
 
 
 

@@ -25,14 +25,14 @@ import {
 } from "../styled";
 import { SmoothWrapper } from "../../../../styledComponents/Wrapper/styled";
 import { useSelector, useDispatch } from "react-redux";
-import { selectIsLightMode } from "../../../../features/DataSlice/githubSlice";
+import { selectIsLightMode } from "../../../../features/DataSlice/dataSlice";
 import { useEffect, useState } from "react";
 import {
   fetchGithubData,
   selectLoadingState,
   setDesign,
   selectDesign,
-} from "../../../../features/DataSlice/githubSlice";
+} from "../../../../features/DataSlice/dataSlice";
 import LoadingPage from "../../../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../../../features/TechnicalTabs/ErrorPage";
 import { Link } from "../../../../styledComponents/Tiles/styled";

@@ -1,12 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { saveThemeInLocalStorage,getThemeFromLocalStorage } from "../Saga/localStorage";
+import { getThemeFromLocalStorage } from "../Saga/localStorage";
 
-// const initialLightMode = getThemeFromLocalStorage() === null ? true : getThemeFromLocalStorage();
 
-const githubSlice = createSlice({
-  name: "portfolioList",
+const dataSlice = createSlice({
+  name: "data",
   initialState: {
-    portfolioList: [],
+    data: [],
     ifLoading: "",
     lightMode: getThemeFromLocalStorage(),
     polishMode: true,
@@ -18,8 +17,8 @@ const githubSlice = createSlice({
       state.ifLoading = "loading";
  
     },
-    setPortfolioList: (state, { payload: data }) => {
-      state.portfolioList = data;
+    setdata: (state, { payload: data }) => {
+      state.data = data;
       state.ifLoading = "success";
       
     },
@@ -29,7 +28,7 @@ const githubSlice = createSlice({
     changeTheme: (state) => {
       //state.lightMode = !state.lightMode;
     },
-     changeTheme2: (state) => {
+     changeThemeAfterDelay: (state) => {
        state.lightMode = !state.lightMode;
 
     },
@@ -53,23 +52,23 @@ const githubSlice = createSlice({
 
 export const {
   fetchGithubData,
-  setPortfolioList,
+  setdata,
   setError,
   changeTheme,
-    changeTheme2,
+    changeThemeAfterDelay,
   changeFlag,
   toggleBodyOverflow,
   toggleBodyOverflow2,
   setWeb,
   setDesign
-} = githubSlice.actions;
+} = dataSlice.actions;
 
-export const selectPortfolioList = (state) => state.portfolioList.portfolioList;
-export const selectLoadingState = (state) => state.portfolioList.ifLoading;
-export const selectIsLightMode = (state) => state.portfolioList.lightMode;
-export const selectIsPolishMode = (state) => state.portfolioList.polishMode;
-export const selectIsBodyOverflowHidden = (state) => state.portfolioList.isBodyOverflowHidden;
-export const selectWeb = (state) => state.portfolioList.routeName;
-export const selectDesign = (state) => state.portfolioList.routeName;
+export const selectdata = (state) => state.data.data;
+export const selectLoadingState = (state) => state.data.ifLoading;
+export const selectIsLightMode = (state) => state.data.lightMode;
+export const selectIsPolishMode = (state) => state.data.polishMode;
+export const selectIsBodyOverflowHidden = (state) => state.data.isBodyOverflowHidden;
+export const selectWeb = (state) => state.data.routeName;
+export const selectDesign = (state) => state.data.routeName;
 
-export default githubSlice.reducer;
+export default dataSlice.reducer;

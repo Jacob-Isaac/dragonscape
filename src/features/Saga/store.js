@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import githubSliceReducer from "../DataSlice/githubSlice";
+import dataSliceReducer from "../DataSlice/dataSlice";
 import createSagaMiddleware from "@redux-saga/core";
 import rootSaga from "./rootSaga";
 
@@ -7,7 +7,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 export const store = configureStore({
   reducer: {
-    portfolioList: githubSliceReducer,
+    data: dataSliceReducer,
   },
   middleware: [sagaMiddleware],
 });

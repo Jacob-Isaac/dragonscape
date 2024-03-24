@@ -20,10 +20,10 @@ import {
 import logoTransparent from "../../images/logoForBright.webp";
 import logo from "../../images/logoForDark.webp";
 import { useSelector, useDispatch } from "react-redux";
-import { changeTheme } from "../../features/DataSlice/githubSlice";
+import { changeTheme } from "../../features/DataSlice/dataSlice";
 import {
   selectIsLightMode,
-} from "../../features/DataSlice/githubSlice";
+} from "../../features/DataSlice/dataSlice";
 import { useLocation } from "react-router-dom";
 
 const NavigationBar = () => {

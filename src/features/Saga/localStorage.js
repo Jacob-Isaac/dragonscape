@@ -1,4 +1,4 @@
-const localStorageKey = "portfolioList";
+const localStorageKey = "data";
 
 export const saveThemeInLocalStorage = (lightMode) =>
 localStorage.setItem(localStorageKey, JSON.stringify(lightMode));

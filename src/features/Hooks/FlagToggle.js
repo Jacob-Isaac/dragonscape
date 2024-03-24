@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { changeFlag } from "../../features/DataSlice/githubSlice";
+import { changeFlag } from "../DataSlice/dataSlice";
 
 const FlagToggle = () => {
   const dispatch = useDispatch();
