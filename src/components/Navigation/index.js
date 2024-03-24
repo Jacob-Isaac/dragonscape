@@ -32,6 +32,7 @@ const NavigationBar = () => {
   const dispatch = useDispatch();
   const siteTheme = useSelector(selectIsLightMode);
   const [prevScrollpos, setPrevScrollpos] = useState(window.scrollY);
+  const [scrolledBeyond3px, setScrolledBeyond3px] = useState(false);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -44,6 +45,7 @@ const NavigationBar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollpos]);
+
   const getBackgroundColor = () => {
     if (prevScrollpos <= 320) {
       return "transparent"; // Set to transparent when at the top

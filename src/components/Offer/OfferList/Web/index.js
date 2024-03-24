@@ -1,5 +1,7 @@
-import Image1 from "../../../../images/webOfferDragon.svg";
-import Image2 from "../../../../images/webOfferDragonSecond.png";
+import imageOne from "../../../../images/webOfferDragon.svg";
+import imageTwo from "../../../../images/webOfferDragonSecond.webp";
+import imageOneForDark from "../../../../images/webOfferDragonForDark.svg";
+import imageTwoForDark from "../../../../images/webOfferDragonSecondForDark.webp";
 import Price from "../../Pricing";
 import {
   ImageTextWrapper,
@@ -25,11 +27,13 @@ import LoadingPage from "../../../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../../../features/TechnicalTabs/ErrorPage";
 import { Link } from "../../../../styledComponents/Tiles/styled";
 import promujSiebie from "../../../../images/promujSiebie.webp";
+import promujSiebieForDark from "../../../../images/promujSiebieForDark.webp";
 import webbadge from "../../../../images/webTopImage.png";
+import webbadgeForDark from "../../../../images/webTopImageDark.webp";
 
 const Web = () => {
   const dispatch = useDispatch();
- 
+  const theme = useSelector(selectIsLightMode);
   const ifLoading = useSelector(selectLoadingState);
  
 
@@ -49,7 +53,7 @@ const Web = () => {
       returned = (
         <Container>
           <ImageTextWrapper>
-          <Badge src={webbadge} />
+          <Badge src={theme ? webbadge : webbadgeForDark} />
             <TextWrapper>
             <HeaderCustom>Tworzenie stron internetowych</HeaderCustom><br/>
               <SmoothWrapper>
@@ -87,7 +91,7 @@ const Web = () => {
                 </SmoothWrapper>
               <Link to="/contact">Napisz do nas!</Link>
             </TextWrapper>
-            <Image src={Image1} alt="Dragons Cape" />
+            <Image src={theme ? imageOne : imageOneForDark} alt="Dragons Cape" />
           </ImageTextWrapper>
           <ImageTextWrapper>
             <TextWrapper>
@@ -118,10 +122,10 @@ const Web = () => {
                   uwagę Twoich potencjalnych klientów.
                 </p>
                 <p>Napisz do nas lub poszukaj więcej informacji na:</p>
-                <a href="https://www.promujsiebie.pl" target="_blank"><PromujImg src={promujSiebie}/></a>
+                <a href="https://www.promujsiebie.pl" target="_blank"><PromujImg src={theme ? promujSiebie : promujSiebieForDark} /></a>
                 </SmoothWrapper>
             </TextWrapper>
-            <Image src={Image2} alt="Dragon Scape" />
+            <Image src={theme ? imageTwo : imageTwoForDark}  alt="Dragon Scape" />
           </ImageTextWrapper>
 
           <Price route={route}/>
