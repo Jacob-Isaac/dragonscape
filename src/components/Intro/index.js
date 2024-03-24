@@ -51,7 +51,7 @@ function AboutMe() {
               themes={theme}
             />
             <Text>TO JEST</Text>
-            <Name src={theme === false ? textDark : text} />
+            <Name src={theme ? text : textDark} />
             <Article>
               Design, logo, banery, wizytówki, a nawet projektowanie i tworzenie
               stron internetowych – to nasza specjalność! W smoczej krainie

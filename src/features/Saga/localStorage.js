@@ -12,8 +12,13 @@ export const getThemeFromLocalStorage = () => {
     const item = localStorage.getItem(localStorageKey);
         try {
             const parsedItem = JSON.parse(item);
-            return parsedItem;
-        } catch (error) {
-            return false; // Returning true if parsing fails or getItem returns null/undefined
+            if (typeof parsedItem === 'boolean') {
+                return parsedItem;
+            } else {
+            return true; // Returning true if parsing fails or getItem returns null/undefined
         }
+    }
+    catch (error) {
+        return true; // Returning true if parsing fails or getItem returns null/undefined
+    }
 };
