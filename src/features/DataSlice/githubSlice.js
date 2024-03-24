@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { saveThemeInLocalStorage,getThemeFromLocalStorage } from "../Saga/localStorage";
+
+// const initialLightMode = getThemeFromLocalStorage() === null ? true : getThemeFromLocalStorage();
 
 const githubSlice = createSlice({
   name: "portfolioList",
   initialState: {
     portfolioList: [],
     ifLoading: "",
-    lightMode: true,
+    lightMode: getThemeFromLocalStorage(),
     polishMode: true,
     isBodyOverflowHidden: false,
     routeName: "design",
@@ -24,10 +27,11 @@ const githubSlice = createSlice({
       state.ifLoading = "error";
     },
     changeTheme: (state) => {
-      //  state.lightMode = !state.lightMode;
+      //state.lightMode = !state.lightMode;
     },
      changeTheme2: (state) => {
        state.lightMode = !state.lightMode;
+
     },
     changeFlag: (state) => {
       state.polishMode = !state.polishMode;

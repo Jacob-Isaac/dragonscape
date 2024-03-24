@@ -1,6 +1,7 @@
-import { call, delay, put, takeLatest, take, throttle} from "redux-saga/effects";
-import { fetchGithubData, setPortfolioList, setError, changeTheme, changeTheme2 } from "../DataSlice/githubSlice";
+import { call, delay, put, takeLatest, select, throttle} from "redux-saga/effects";
+import { fetchGithubData, setPortfolioList, setError, changeTheme, changeTheme2, selectIsLightMode } from "../DataSlice/githubSlice";
 import { getData } from "../GetData/githubData";
+import { saveThemeInLocalStorage, getThemeFromLocalStorage } from "./localStorage";
 
 
 export function* fetchGithubDataWorker() {
@@ -12,10 +13,18 @@ export function* fetchGithubDataWorker() {
     yield put(setError());
   }
 }
-export function* fetchGithubDataWorker2() {
+export function* changeThemeWorker() {
   try {
-    // yield delay(0);
     yield put(changeTheme2());
+  } catch (error) {
+    yield put(setError());
+  }
+}
+
+export function* saveThemeInLocalStorageWorker() {
+  try {
+    const lightMode = yield select(selectIsLightMode);
+    yield call(saveThemeInLocalStorage, lightMode);
   } catch (error) {
     yield put(setError());
   }
@@ -23,7 +32,8 @@ export function* fetchGithubDataWorker2() {
 
 export function* githubSaga() {
   yield takeLatest(fetchGithubData.type, fetchGithubDataWorker);
-  yield throttle(1100, changeTheme.type, fetchGithubDataWorker2);
+  yield throttle(1100, changeTheme.type, changeThemeWorker);
+  yield takeLatest(changeTheme2.type, saveThemeInLocalStorageWorker);
 }
 
 
