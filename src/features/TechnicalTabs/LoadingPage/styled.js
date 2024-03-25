@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 import { ReactComponent as Loading } from "../../../images/loading.svg";
+import { ReactComponent as LoadingForDark } from "../../../images/loadingForDark.svg"; // Assuming this is your dark loading SVG
 import lightBckgrnd from "../../../images/brightBackground.webp";
-import darkBckgrnd from "../../../images/darkBackground.webp"
-
+import darkBckgrnd from "../../../images/darkBackground.webp";
 
 const slideInOut = keyframes`
   0% {
@@ -13,8 +13,9 @@ const slideInOut = keyframes`
   }
 `;
 
-
-export const StyledLoading = styled(Loading)`
+export const StyledLoading = styled(({ isLight, ...props }) =>
+  isLight ? <Loading {...props} /> : <LoadingForDark {...props} />
+)`
   display: flex;
   align-items: center;
   height: 121px;

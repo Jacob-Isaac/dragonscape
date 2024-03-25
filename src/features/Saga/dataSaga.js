@@ -35,7 +35,7 @@ export function* saveThemeInLocalStorageWorker() {
 
 function* setBackgroundWorker() {
   const currentHour = yield call(getCurrentHour);
-  const isDayTime = currentHour >= 10 && currentHour < 19;
+  const isDayTime = currentHour >= 14 && currentHour < 19;
   console.log(currentHour)
   console.log("isDayTime: " + isDayTime)
   yield put(timeUpdate2(isDayTime));

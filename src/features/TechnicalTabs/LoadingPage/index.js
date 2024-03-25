@@ -25,7 +25,7 @@ const LoadingPage = () => {
   return(
   <Div isLight={theme}>
     <Wrapper>
-      <StyledLoading />
+      <StyledLoading isLight={theme} />
     </Wrapper>
   </Div>
   )

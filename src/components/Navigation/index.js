@@ -25,6 +25,7 @@ import {
   selectIsLightMode,
 } from "../../features/DataSlice/dataSlice";
 import { useLocation } from "react-router-dom";
+import { selectIsNoonMode } from "../../features/DataSlice/dataSlice";
 
 const NavigationBar = () => {
   const location = useLocation();
@@ -34,6 +35,7 @@ const NavigationBar = () => {
   const [prevScrollpos, setPrevScrollpos] = useState(window.scrollY);
   const [scrolledBeyond3px, setScrolledBeyond3px] = useState(false);
   const [visible, setVisible] = useState(true);
+  const noonMode = useSelector(selectIsNoonMode);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +49,7 @@ const NavigationBar = () => {
   }, [prevScrollpos]);
 
   const getBackgroundColor = () => {
-    if (prevScrollpos <= 320) {
+    if (prevScrollpos <= 140) {
       return "transparent"; // Set to transparent when at the top
     } else {
       return "#1A1F28"; // Set to black when scrolled down
@@ -111,11 +113,12 @@ const NavigationBar = () => {
             smooth={false}
             offset={-270}
             duration={750}
+            isNoon={noonMode}
           >
             start
           </NavScrollLink>
         ) : (
-          <NavigationLink to="/" fontcolor={getFontColor()}>
+          <NavigationLink to="/" fontcolor={getFontColor()} isNoon={noonMode}>
             start
           </NavigationLink>
         )}
@@ -128,11 +131,12 @@ const NavigationBar = () => {
             smooth={false}
             offset={-70}
             duration={750}
+            isNoon={noonMode}
           >
             oferta
           </NavScrollLink>
         ) : (
-          <NavigationLink fontcolor={getFontColor()} to="/offer">
+          <NavigationLink fontcolor={getFontColor()} to="/offer" isNoon={noonMode}>
             oferta
           </NavigationLink>
         )}
@@ -142,7 +146,7 @@ const NavigationBar = () => {
         >
           wycena
         </NavigationLinkRed>
-        <NavigationLink fontcolor={getFontColor()} to="/aboutUs">
+        <NavigationLink fontcolor={getFontColor()} to="/aboutUs" isNoon={noonMode}>
           o nas
         </NavigationLink>
         {isInMain ? (
@@ -154,11 +158,12 @@ const NavigationBar = () => {
             smooth={false}
             offset={140}
             duration={850}
+            isNoon={noonMode}
           >
             kontakt
           </NavScrollLink>
         ) : (
-          <NavigationLink fontcolor={getFontColor()} to="/contact">
+          <NavigationLink fontcolor={getFontColor()} to="/contact" isNoon={noonMode}>
             kontakt
           </NavigationLink>
         )}
