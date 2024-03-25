@@ -1,5 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import React from "react";
+import React, {useEffect} from "react";
+import { useDispatch } from "react-redux";
 import { Container } from "./styledComponents/Container/styled";
 import WhyUs from "./components/WhyUs/index";
 import Intro from "./components/Intro";
@@ -8,7 +9,7 @@ import Offer from "./components/Offer";
 import ContactForm from "./components/ContactForm/index.js";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
-import { selectIsLightMode } from "./features/DataSlice/dataSlice.js";
+import { selectIsLightMode, selectIsNoonMode } from "./features/DataSlice/dataSlice.js";
 import { useSelector } from "react-redux";
 import { GlobalStyle } from "./GlobalStyle";
 import NavigationBar from "./components/Navigation/index.js";
@@ -32,11 +33,20 @@ import ScrollToTop from "react-scroll-to-top";
 import { ReactComponent as MySVG } from "./images/arrowDown.svg";
 import { NegativeMarginTop, NegativeTop, SmoothWrapper } from "./styledComponents/Wrapper/styled.js";
 import NoResult from "./features/TechnicalTabs/NoResult/index.js";
+import { timeUpdate } from "../src/features/DataSlice/dataSlice.js";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(timeUpdate());
+    console.log(noonMode);
+  }, [dispatch]);
   const isBodyOverflowHidden = useSelector(selectIsBodyOverflowHidden);
   const lightMode = useSelector(selectIsLightMode);
+  const noonMode = useSelector(selectIsNoonMode);
   const dimensions = useWindowDimensions();
+
+
   let navigationBar;
   if (dimensions.width < 970) {
     navigationBar = <Navbar isBodyOverflowHidden={isBodyOverflowHidden} isLight={lightMode} />;
@@ -48,6 +58,7 @@ function App() {
     <ThemeProvider theme={lightMode === true ? lightTheme : darkTheme}>
       <GlobalStyle
         isLight={lightMode}
+        isNoon={noonMode}
         isBodyOverflowHidden={isBodyOverflowHidden}
       />
       <HashRouter>

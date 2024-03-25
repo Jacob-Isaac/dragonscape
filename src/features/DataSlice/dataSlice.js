@@ -15,12 +15,10 @@ const dataSlice = createSlice({
   reducers: {
     fetchGithubData: (state) => {
       state.ifLoading = "loading";
- 
     },
     setdata: (state, { payload: data }) => {
       state.data = data;
       state.ifLoading = "success";
-      
     },
     setError: (state) => {
       state.ifLoading = "error";
@@ -47,6 +45,14 @@ const dataSlice = createSlice({
     setDesign: (state) => {
       state.routeName = "design";
     },
+    timeUpdate: (state) => {
+      console.log(state.isNoon);
+    },
+    timeUpdate2: (state, { payload: isDayTime }) => {
+      state.isNoon = isDayTime;
+      console.log(isDayTime);
+      console.log(state.isNoon);
+    },
   },
 });
 
@@ -60,7 +66,9 @@ export const {
   toggleBodyOverflow,
   toggleBodyOverflow2,
   setWeb,
-  setDesign
+  setDesign,
+  timeUpdate,
+  timeUpdate2
 } = dataSlice.actions;
 
 export const selectdata = (state) => state.data.data;
@@ -70,5 +78,6 @@ export const selectIsPolishMode = (state) => state.data.polishMode;
 export const selectIsBodyOverflowHidden = (state) => state.data.isBodyOverflowHidden;
 export const selectWeb = (state) => state.data.routeName;
 export const selectDesign = (state) => state.data.routeName;
+export const selectIsNoonMode = (state) => state.data.isNoon;
 
 export default dataSlice.reducer;
