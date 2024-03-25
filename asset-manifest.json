@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.a2ec0d39.js",
-    "static/js/787.6e5d2a44.chunk.js": "/static/js/787.6e5d2a44.chunk.js",
-    "static/media/webOfferDragonSecond.png": "/static/media/webOfferDragonSecond.099ad34402b5511913e7.png",
+    "main.js": "/static/js/main.2777e20f.js",
+    "static/js/787.ebd8aa2c.chunk.js": "/static/js/787.ebd8aa2c.chunk.js",
     "static/media/dragonsCape.webp": "/static/media/dragonsCape.a9372d170e35e91420fa.webp",
     "static/media/webTopImage.png": "/static/media/webTopImage.1e22ed12544c83738410.png",
     "static/media/robert.webp": "/static/media/robert.e04a23e8a43ed3c73016.webp",
@@ -16,19 +15,25 @@
     "static/media/advertise.svg": "/static/media/advertise.8f056d9941a7ba011023c8d036407eb3.svg",
     "static/media/advertiseForDark.svg": "/static/media/advertiseForDark.8db874768f1bb1a4a65f9a430b8ade93.svg",
     "static/media/jakis-01.webp": "/static/media/jakis-01.14d4ad53cea686dc91c6.webp",
+    "static/media/webOfferDragonSecond.webp": "/static/media/webOfferDragonSecond.945d8624245640f199d5.webp",
     "static/media/letterLong-01.webp": "/static/media/letterLong-01.f23cca413ef4467afd50.webp",
     "static/media/adMobileFirst.svg": "/static/media/adMobileFirst.6fcb0dc971c7e80d58c6ed778957e045.svg",
+    "static/media/adMobileFirstForDark.svg": "/static/media/adMobileFirstForDark.abc5bf07c8071df899245e8fefcec838.svg",
     "static/media/letter.webp": "/static/media/letter.c8d9a33a89632b88ff52.webp",
     "static/media/designTopImageDark.webp": "/static/media/designTopImageDark.e2df15e827015ad57782.webp",
     "static/media/designTopImage.webp": "/static/media/designTopImage.8bdf2876ec7480478418.webp",
+    "static/media/webOfferDragonSecondForDark.webp": "/static/media/webOfferDragonSecondForDark.be08be8f3c15d1b4d5ee.webp",
     "static/media/meLight.svg": "/static/media/meLight.18369a2547d965deef0c6c73004661cf.svg",
     "static/media/meDark.svg": "/static/media/meDark.b8c4cbadfbff8a77f58664a06b90264c.svg",
     "static/media/logoForBright.webp": "/static/media/logoForBright.46831504c2ba551ed5c0.webp",
     "static/media/webTopImageDark.webp": "/static/media/webTopImageDark.9ffd0eec7fc2a691eb9b.webp",
     "static/media/logoForDark.webp": "/static/media/logoForDark.c92b6a4c2976899998a1.webp",
     "static/media/webOfferDragon.svg": "/static/media/webOfferDragon.b2f20c130ad89075a59126d63bbdb995.svg",
+    "static/media/webOfferDragonForDark.svg": "/static/media/webOfferDragonForDark.7ddc4475b4aaad5615eafe1b026360ed.svg",
     "static/media/promujSiebie.webp": "/static/media/promujSiebie.5a72ba32d0a39cb4f975.webp",
+    "static/media/adMobileSecondForDark.svg": "/static/media/adMobileSecondForDark.38742d46bc1bc94dc03c56ca202c9a92.svg",
     "static/media/adMobileSecond.svg": "/static/media/adMobileSecond.8f1a7b814e47dd48a7514f617e14f958.svg",
+    "static/media/promujSiebieForDark.webp": "/static/media/promujSiebieForDark.1c4e778da30f2350ca62.webp",
     "static/media/contactUs.svg": "/static/media/contactUs.f191f847838071b53e085ca1e0fcadb0.svg",
     "static/media/icodragon.svg": "/static/media/icodragon.2f9ad41be88a47936404d4780c4420da.svg",
     "static/media/instagram.svg": "/static/media/instagram.7abe3c0a71d87a4cdb9fa6a2f0270d6a.svg",
@@ -38,12 +43,13 @@
     "index.html": "/index.html",
     "static/media/error.svg": "/static/media/error.1d5161794562659fe8646d83e342022b.svg",
     "static/media/linkedIn.svg": "/static/media/linkedIn.a9ffaa9303e3ac52437bc836caffbd47.svg",
+    "static/media/loadingForDark.svg": "/static/media/loadingForDark.47bf18774d466461e1159fdbecdea93c.svg",
     "static/media/facebook.svg": "/static/media/facebook.03c444f26f30233e40bd46d0179eff87.svg",
     "static/media/loading.svg": "/static/media/loading.f90caff338e75f9b6556e0c74ef1cc46.svg",
-    "main.a2ec0d39.js.map": "/static/js/main.a2ec0d39.js.map",
-    "787.6e5d2a44.chunk.js.map": "/static/js/787.6e5d2a44.chunk.js.map"
+    "main.2777e20f.js.map": "/static/js/main.2777e20f.js.map",
+    "787.ebd8aa2c.chunk.js.map": "/static/js/787.ebd8aa2c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.a2ec0d39.js"
+    "static/js/main.2777e20f.js"
   ]
 }
