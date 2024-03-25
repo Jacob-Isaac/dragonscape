@@ -27,7 +27,7 @@ import CookieBar from "./features/TechnicalTabs/CookieBar/index.js";
 import PrivacyPolicy from "./features/TechnicalTabs/PrivacyPolicy/index.js";
 import useWindowDimensions from "./features/Hooks/useWindowDimensions.js";
 import { selectIsBodyOverflowHidden } from "./features/DataSlice/dataSlice.js";
-import Navbar from "./components/Navigation/NavigationMobile2/Navbar.js";
+import Navbar from "./components/Navigation/NavigationMobile/Navbar.js";
 import ScrollToTopHook from "./features/Hooks/ScrollToTop.js";
 import ScrollToTop from "react-scroll-to-top";
 import { ReactComponent as MySVG } from "./images/arrowDown.svg";
