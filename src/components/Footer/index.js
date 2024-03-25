@@ -21,7 +21,7 @@ import {
   CopyrightText,
 } from "./styled";
 import { NavLink } from "react-router-dom";
-import { selectIsLightMode } from "../../features/DataSlice/githubSlice";
+import { selectIsLightMode } from "../../features/DataSlice/dataSlice";
 import { ContainerFooter } from "../../styledComponents/Container/styled";
 import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";

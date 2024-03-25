@@ -2,11 +2,11 @@ import {
   ContainerPrivacyPolicy,
 } from "../../../styledComponents/Container/styled";
 import { useSelector, useDispatch } from "react-redux";
-import { selectIsLightMode } from "../../DataSlice/githubSlice";
+import { selectIsLightMode } from "../../DataSlice/dataSlice";
 import { useEffect } from "react";
 import {
   fetchGithubData,
-  selectLoadingState} from "../../DataSlice/githubSlice";
+  selectLoadingState} from "../../DataSlice/dataSlice";
 import LoadingPage from "../LoadingPage";
 import ErrorPage from "../ErrorPage";
 
@@ -27,8 +27,8 @@ function PrivacyPolicy() {
     case "success":
       returned = (
     <ContainerPrivacyPolicy>
-      <h1 class="h1 text-center">Polityka Prywatności</h1>
-      <h2 class="h2 paragraph-title">§ 1 Postanowienia ogólne</h2>
+      <h1 className="h1 text-center">Polityka Prywatności</h1>
+      <h2 className="h2 paragraph-title">§ 1 Postanowienia ogólne</h2>
       <ol>
         <li>
           Niniejsza polityka dotyczy Serwisu www, funkcjonującego pod adresem:{" "}
@@ -40,15 +40,15 @@ function PrivacyPolicy() {
         {" "}
           <span
             data-v-cf3b444f=""
-            class="gpp-text-highlight preview empty"
+            className="gpp-text-highlight preview empty"
           ></span>
           . Z{" "}
-          <span data-v-cf3b444f="" class="gpp-text-highlight preview">
+          <span data-v-cf3b444f="" className="gpp-text-highlight preview">
             "Dragonscape" Jakub Nowakowski
           </span>{" "}
           można kontaktować się telefonicznie na numer telefonu: (+48) 732 491 732
           lub drogą e-mailową na adres:{" "}
-          <span data-v-cf3b444f="" class="gpp-text-highlight preview">
+          <span data-v-cf3b444f="" className="gpp-text-highlight preview">
             kontakt@dragonscape.pl
           </span>
         </li>
@@ -88,7 +88,7 @@ function PrivacyPolicy() {
           instytucjach, z którymi należy się skontaktować w razie wątpliwości.{" "}
         </li>
       </ol>
-      <h2 class="h2 paragraph-title">§ 2 Zasady prywatności</h2>
+      <h2 className="h2 paragraph-title">§ 2 Zasady prywatności</h2>
       <ol>
         <li>
           {" "}
@@ -126,47 +126,47 @@ function PrivacyPolicy() {
         <li>
           {" "}
           Podstawą prawną przetwarzania Twoich danych osobowych jest:
-          <ol class="gpp-list-selectable list-type-latin" start="1">
-            <li class="active">
-              <span class="gpp-list-selectable__content">
+          <ol className="gpp-list-selectable list-type-latin" start="1">
+            <li className="active">
+              <span className="gpp-list-selectable__content">
                 <span>art. 6 ust. 1 lit. a) </span>
                 osoba, której dane dotyczą wyraziła zgodę na przetwarzanie
                 swoich danych osobowych w jednym lub większej liczbie określonych
                 celów
               </span>
             </li>
-            <li class="active">
-              <span class="gpp-list-selectable__content">
+            <li className="active">
+              <span className="gpp-list-selectable__content">
                 <span>art. 6 ust. 1 lit. b)</span> przetwarzanie jest niezbędne
                 do wykonania umowy, której stroną jest osoba, której dane
                 dotyczą, lub do podjęcia działań na żądanie osoby, której dane
                 dotyczą, przed zawarciem umowy
               </span>
             </li>
-            <li class="active">
-              <span class="gpp-list-selectable__content">
+            <li className="active">
+              <span className="gpp-list-selectable__content">
                 <span>art. 6 ust. 1 lit. c)</span> przetwarzanie jest niezbędne
                 do wypełnienia obowiązku prawnego ciążącego na administratorze
               </span>
             </li>
-            <li class="active">
+            <li className="active">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 <span>art. 6 ust. 1 lit. d) </span>
                 przetwarzanie jest niezbędne do ochrony żywotnych interesów
                 osoby, której dane dotyczą, lub innej osoby fizycznej
               </span>
             </li>
-            <li class="active">
-              <span class="gpp-list-selectable__content">
+            <li className="active">
+              <span className="gpp-list-selectable__content">
                 <span>art. 6 ust. 1 lit. e)</span> przetwarzanie jest niezbędne
                 do wykonania zadania realizowanego w interesie publicznym lub w
                 ramach sprawowania władzy publicznej powierzonej
                 administratorowi
               </span>
             </li>
-            <li class="active">
-              <span class="gpp-list-selectable__content">
+            <li className="active">
+              <span className="gpp-list-selectable__content">
                 <span>art. 6 ust. 1 lit. f)</span> przetwarzanie jest niezbędne
                 do celów wynikających z prawnie uzasadnionych interesów
                 realizowanych przez administratora lub przez stronę trzecią
@@ -233,7 +233,7 @@ function PrivacyPolicy() {
           informacji, prosimy o podanie imienia i nazwiska.{" "}
         </li>
       </ol>
-      <h2 class="h2 paragraph-title">
+      <h2 className="h2 paragraph-title">
         § 3 Zakres i cel zbierania danych osobowych
       </h2>
       <ol>
@@ -245,47 +245,47 @@ function PrivacyPolicy() {
         <li>
           {" "}
           Zbieramy, przetwarzamy i przechowujemy następujące dane użytkowników:{" "}
-          <ol class="gpp-list-selectable list-type-latin" start="1">
-            <li class="active">
-              <span class="gpp-list-selectable__content">imię i nazwisko,</span>
+          <ol className="gpp-list-selectable list-type-latin" start="1">
+            <li className="active">
+              <span className="gpp-list-selectable__content">imię i nazwisko,</span>
             </li>
-            <li class="active">
-              <span class="gpp-list-selectable__content">
+            <li className="active">
+              <span className="gpp-list-selectable__content">
                 adres poczty elektronicznej (e-mail),
               </span>
             </li>
-            <li class="active">
-              <span class="gpp-list-selectable__content">
+            <li className="active">
+              <span className="gpp-list-selectable__content">
                 numer telefonu (komórkowy, stacjonarny),
               </span>
             </li>
-            <li class="">
-              <span class="gpp-list-selectable__content">
+            <li className="">
+              <span className="gpp-list-selectable__content">
                 informacje o używanej przeglądarce internetowej,
               </span>
             </li>
-            <li class="active">
-              <span class="gpp-list-selectable__content">
+            <li className="active">
+              <span className="gpp-list-selectable__content">
                 inne dobrowolnie przekazane nam dane osobowe.
               </span>
             </li>
           </ol>{" "}
           Oraz w przypadku podpisania umowy:
-          <ol class="gpp-list-selectable list-type-latin" start="1">
-          <li class="">
+          <ol className="gpp-list-selectable list-type-latin" start="1">
+          <li className="">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 adres zamieszkania,
               </span>
             </li>
-            <li class="">
+            <li className="">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 adres do doręczeń (jeśli jest inny niż adres zamieszkania),
               </span>
             </li>
-            <li class="">
-              <span class="gpp-list-selectable__content">
+            <li className="">
+              <span className="gpp-list-selectable__content">
                 numer identyfikacji podatkowej (NIP),
               </span>
             </li>
@@ -298,7 +298,7 @@ function PrivacyPolicy() {
           Podanie powyższych danych przez jest całkowicie dobrowolne ale także i
           niezbędne do pełnej realizacji usług.{" "}
         </li>
-        <li class="active-text inactive-text">
+        <li className="active-text inactive-text">
           W niektórych sytuacjach możemy przesyłać wybrane dane osobowe do serwerów znajdujących się poza krajem
           Twojego zamieszkania lub do podmiotów powiązanych, stron trzecich z
           siedzibą w innych krajach w tym krajach z obszaru EOG (Europejski
@@ -314,53 +314,53 @@ function PrivacyPolicy() {
           {" "}
           Dostęp do Twoich danych mogą posiadać podmioty świadczące usługi
           niezbędne do prowadzenia serwisu tj.:
-          <ol class="gpp-list-selectable list-type-latin" start="1">
-            <li class="active">
+          <ol className="gpp-list-selectable list-type-latin" start="1">
+            <li className="active">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 Firmy hostingowe, świadczące usługi hostingu lub usług
                 pokrewnych dla Administratora
               </span>
             </li>
-            <li class="active">
+            <li className="active">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 Firmy, za pośrednictwem których świadczona jest usługa
                 Newslettera
               </span>
             </li>
-            <li class="">
+            <li className="">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 Firmy serwisowe i wsparcia IT dokonujące konserwacji lub
                 odpowiedzialne za utrzymanie infrastruktury IT (obecnie nie dotyczy)
               </span>
             </li>
-            <li class="active">
-              <span class="gpp-list-selectable__content">
+            <li className="active">
+              <span className="gpp-list-selectable__content">
                 Firmy pośredniczące w płatnościach on-line za towary lub usługi
                 oferowane w ramach Serwisu (w przypadku dokonywania transakcji
                 zakupu w Serwisie)
               </span>
             </li>
-            <li class="">
+            <li className="">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 Firmy pośredniczące w płatnościach mobilnych za towary lub
                 usługi oferowane w ramach Serwisu (w przypadku dokonywania
                 transakcji zakupu w Serwisie)
               </span>
             </li>
-            <li class="">
+            <li className="">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 Firmy odpowiedzialne za prowadzenie księgowości Administratora
                 (w przypadku dokonywania transakcji zakupu w Serwisie)
               </span>
             </li>
-            <li class="active">
+            <li className="active">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 Firmy odpowiedzialne za dostarczanie produktów fizycznych do
                 Użytkownika (usługi pocztowe / kurierskie w przypadku
                 dokonywania transakcji zakupu w Serwisie)
@@ -369,7 +369,7 @@ function PrivacyPolicy() {
           </ol>{" "}
         </li>
       </ol>
-      <h2 class="h2 paragraph-title">§ 4 Pliki Cookie</h2>
+      <h2 className="h2 paragraph-title">§ 4 Pliki Cookie</h2>
       <ol>
         <li>
           {" "}
@@ -389,18 +389,18 @@ function PrivacyPolicy() {
         <li>
           {" "}
           Na naszej stronie stosujemy pliki cookie:
-          <ol class="gpp-list-selectable list-type-latin" start="1">
-            <li class="active">
+          <ol className="gpp-list-selectable list-type-latin" start="1">
+            <li className="active">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 <strong>Cookies wewnętrzne</strong> - pliki zamieszczane i
                 odczytywane z Urządzenia Użytkownika przez system
                 teleinformatyczny Serwisu
               </span>
             </li>
-            <li class="active">
+            <li className="active">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 <strong>Cookies zewnętrzne</strong> - pliki zamieszczane i
                 odczytywane z Urządzenia Użytkownika przez systemy
                 teleinformatyczne Serwisów zewnętrznych. Skrypty Serwisów
@@ -410,18 +410,18 @@ function PrivacyPolicy() {
                 Serwisie (np. Google reCAPTCHA ).
               </span>
             </li>
-            <li class="">
+            <li className="">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 <strong>Cookies sesyjne</strong> - pliki zamieszczane i
                 odczytywane z Urządzenia Użytkownika przez Serwis podczas jednej
                 sesji danego Urządzenia. Po zakończeniu sesji pliki są usuwane z
                 Urządzenia Użytkownika.
               </span>
             </li>
-            <li class="">
+            <li className="">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 <strong>Cookies trwałe</strong> - pliki zamieszczane i
                 odczytywane z Urządzenia Użytkownika przez Serwis do momentu ich
                 ręcznego usunięcia. Pliki nie są usuwane automatycznie po
@@ -438,40 +438,40 @@ function PrivacyPolicy() {
           {" "}
           W ramach naszej strony internetowej, stosowane są następujące rodzaje
           plików cookie ze względu na niezbędność do realizacji usług:{" "}
-          <ol class="gpp-list-selectable list-type-latin" start="1">
-            <li class="active">
-              <span class="gpp-list-selectable__content">
+          <ol className="gpp-list-selectable list-type-latin" start="1">
+            <li className="active">
+              <span className="gpp-list-selectable__content">
                 niezbędne pliki cookie, umożliwiające korzystanie z usług
                 dostępnych w ramach strony internetowej, w szczególności
                 uwierzytelniające pliki cookie wykorzystywane do usług
                 wymagających uwierzytelnienia;
               </span>
             </li>
-            <li class="active">
+            <li className="active">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 pliki cookie służące do zapewnienia bezpieczeństwa, w
                 szczególności wykorzystywane do wykrywania nadużyć w zakresie
                 uwierzytelniania;
               </span>
             </li>
-            <li class="">
+            <li className="">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 wydajnościowe pliki cookie, umożliwiające zbieranie informacji o
                 sposobie korzystania ze stron internetowych;
               </span>
             </li>
-            <li class="">
+            <li className="">
               {" "}
-              <span class="gpp-list-selectable__content">
+              <span className="gpp-list-selectable__content">
                 funkcjonalne pliki cookie, umożliwiające „zapamiętanie”
                 wybranych przez użytkownika ustawień i personalizację interfejsu
                 użytkownika;
               </span>
             </li>
-            <li class="">
-              <span class="gpp-list-selectable__content">
+            <li className="">
+              <span className="gpp-list-selectable__content">
                 reklamowe pliki cookie, umożliwiające dostarczanie użytkownikom
                 treści reklamowych dostosowanych do ich zainteresowań. (obecnie nie dotyczy - brak reklam){" "}
               </span>
@@ -504,7 +504,7 @@ function PrivacyPolicy() {
           plików cookie we własnej przeglądarce. Informacje w jaki sposób dokonać konfiguracji ustawień
           plików cookie w przykładowych przeglądarkach internetowych Użytkownik
           może znaleźć tutaj:{" "}
-          <ul class="list">
+          <ul className="list">
             <li>
               <a
                 href="https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&amp;hl=pl"
@@ -553,7 +553,7 @@ function PrivacyPolicy() {
           </ul>
         </li>
       </ol>
-      <h2 class="h2 paragraph-title">§ 5 Prawa i obowiązki</h2>
+      <h2 className="h2 paragraph-title">§ 5 Prawa i obowiązki</h2>
       <ol>
         <li>
           {" "}
@@ -566,7 +566,7 @@ function PrivacyPolicy() {
         <li>
           {" "}
           Użytkownik ma prawo do:{" "}
-          <ol class="list-type-latin list-span-strong">
+          <ol className="list-type-latin list-span-strong">
             <li>
               <strong>dostępu do danych osobowych. </strong>Użytkownikowi przysługuje
               prawo uzyskania dostępu do swoich danych osobowych, realizowane na

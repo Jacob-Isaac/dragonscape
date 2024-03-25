@@ -1,12 +1,12 @@
 import { TilesPersonSection } from "./styled";
 import TilePerson from "./tilePerson.js";
 import { useSelector, useDispatch } from "react-redux";
-import { selectIsLightMode } from "../../features/DataSlice/githubSlice";
+import { selectIsLightMode } from "../../features/DataSlice/dataSlice.js";
 import { useEffect } from "react";
 import {
   fetchGithubData,
   selectLoadingState,
-} from "../../features/DataSlice/githubSlice";
+} from "../../features/DataSlice/dataSlice.js";
 import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
 import { SmoothWrapper } from "../../styledComponents/Wrapper/styled.js";

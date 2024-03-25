@@ -4,6 +4,8 @@ import Image1 from "../../../../images/dragonsCapeSecond.webp";
 import Image2 from "../../../../images/dragonsCape.webp";
 import Advertise from "../../../../images/advertise.svg";
 import AdvertiseForDark from "../../../../images/advertiseForDark.svg";
+import AdvMobile from "../../../../images/adMobileSecond.svg";
+import AdvMobileForDark from "../../../../images/adMobileSecondForDark.svg";
 import Price from "../../Pricing";
 import {
   ImageTextWrapper,
@@ -23,18 +25,19 @@ import {
 } from "../styled";
 import { SmoothWrapper } from "../../../../styledComponents/Wrapper/styled";
 import { useSelector, useDispatch } from "react-redux";
-import { selectIsLightMode } from "../../../../features/DataSlice/githubSlice";
+import { selectIsLightMode } from "../../../../features/DataSlice/dataSlice";
 import { useEffect, useState } from "react";
 import {
   fetchGithubData,
   selectLoadingState,
   setDesign,
   selectDesign,
-} from "../../../../features/DataSlice/githubSlice";
+} from "../../../../features/DataSlice/dataSlice";
 import LoadingPage from "../../../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../../../features/TechnicalTabs/ErrorPage";
 import { Link } from "../../../../styledComponents/Tiles/styled";
 import designbadge from "../../../../images/designTopImage.webp";
+import designbadgeForDark from "../../../../images/designTopImageDark.webp";
 
 const Design = () => {
   const dispatch = useDispatch();
@@ -70,7 +73,7 @@ const Design = () => {
       returned = (
         <Container>
           <ImageTextWrapper>
-            <Badge src={designbadge} />
+            <Badge src={theme ? designbadge : designbadgeForDark} />
             <TextWrapper>
               <HeaderCustom>
                 Identyfikacja wizualna
@@ -132,7 +135,7 @@ const Design = () => {
           <ImageTextWrapper>
               <Position>
             <Figure>
-              <Image src={Image2} alt="Dragon Scape" />
+            <Image src={Image2} alt="Dragon Scape" />
               <Figcaption>"Dragon Scape"</Figcaption>
             </Figure>
             </Position>
@@ -193,7 +196,7 @@ const Design = () => {
                         Księga znaku, to nic innego, jak instrukcja obsługi
                         logo, stworzona przez autora po to, by ułatwić
                         prawidłowe używanie go przez inne osoby. Określa, którą
-                        wersję logo stosować w konkretnych syutacjach, np. na
+                        wersję logo stosować w konkretnych sytuacjach, np. na
                         ciemnym tle, jaka jest kolorystyka logo, jego minimalne
                         rozmiary, oraz jak i kiedy nie korzystać z logo lub
                         jakie są niedozwolone modyfikacje. Ma to na celu
@@ -239,7 +242,7 @@ const Design = () => {
                       posiadać nowoczesnego i spójnego logo! Błędna komunikacja
                       wizualna odpowiada za większość porażek w próbach
                       przyciągnięcia nowych klientów. Gdy chcesz stworzyć
-                      luksusową markę z niechlujnym logiem pozbawiasz się połowy
+                      luksusową markę z niechlujnym logo pozbawiasz się połowy
                       potencjalnych klientów, to samo działa w drugą stronę:
                       przyjazna i otwarta firma to nie miejsce na posępny,
                       oficjalny design!
@@ -250,8 +253,8 @@ const Design = () => {
               </RollerWrapper>
             </TextWrapper>
           </ImageTextWrapper>
-          <AdMobile  src={theme ? Advertise : AdvertiseForDark}/>
-          <AdMobileSecond />
+          <AdMobile  src={theme ? Advertise : AdvertiseForDark} brightTheme={theme}/>
+          <AdMobileSecond src={theme ? AdvMobile : AdvMobileForDark}/>
           <Price route={route} />
         </Container>
       );

@@ -17,7 +17,7 @@
 
 import { Div } from "./styled";
 import { StyledLoading, Wrapper } from "./styled";
-import { selectIsLightMode } from "../../DataSlice/githubSlice";
+import { selectIsLightMode } from "../../DataSlice/dataSlice";
 import { useSelector } from "react-redux";
 
 const LoadingPage = () => {
@@ -25,7 +25,7 @@ const LoadingPage = () => {
   return(
   <Div isLight={theme}>
     <Wrapper>
-      <StyledLoading />
+      <StyledLoading isLight={theme} />
     </Wrapper>
   </Div>
   )

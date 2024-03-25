@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import {
   fetchGithubData,
   selectLoadingState, selectIsLightMode
-} from "../../features/DataSlice/githubSlice";
+} from "../../features/DataSlice/dataSlice";
 import OfferTiles from "./OfferTiles/OfferTiles";
 import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../features/TechnicalTabs/ErrorPage";

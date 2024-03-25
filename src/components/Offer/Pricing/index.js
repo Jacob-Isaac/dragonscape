@@ -33,7 +33,7 @@ const Price = ({ route }) => {
           currency="PLN"
           buttonContent="Skontaktuj się"
           subTitle="Świetne na początek"
-          priceText={route === "design" ? "Projekt logo z podstawową funkcjonalnością" : "Strona www z podstawową funkcjonalnością"}
+          priceText={route === "design" ? "Projekt logo z podstawową funkcjonalnością" : "Strona www: podstawowa funkcjonalność"}
           headerText={route === "design" ? "podstawowy" : "starter"}
           route={route}
         />

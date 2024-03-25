@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import adMobileFirst from "../../../images/adMobileFirst.svg";
-import adMobileSecond from "../../../images/adMobileSecond.svg";
+import adMobileFirstDark from "../../../images/adMobileFirstForDark.svg";
 import letter from "../../../images/letter.webp";
 import letterLong from "../../../images/letterLong-01.webp";
 
@@ -62,14 +62,13 @@ export const AdMobile = styled.img`
   min-width: 450px;
   max-width: 450px; */
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-    content: url(${adMobileFirst});
+    content: url(${({ brightTheme }) => brightTheme ? adMobileFirst : adMobileFirstDark});
   }
 `;
 export const AdMobileSecond = styled.img`
  /* margin-top: 100px;
   min-width: 450px;
   max-width: 450px; */
-  content: url(${adMobileSecond});
   @media (min-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
     display: none;
   }

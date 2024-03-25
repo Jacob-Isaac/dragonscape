@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { toggleBodyOverflow } from "../../../features/DataSlice/githubSlice";
+import { toggleBodyOverflow } from "../../../features/DataSlice/dataSlice";
 import { useDispatch } from "react-redux";
 
 const Ul = styled.ul`

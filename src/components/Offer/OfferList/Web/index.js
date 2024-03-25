@@ -1,5 +1,7 @@
-import Image1 from "../../../../images/webOfferDragon.svg";
-import Image2 from "../../../../images/webOfferDragonSecond.png";
+import imageOne from "../../../../images/webOfferDragon.svg";
+import imageTwo from "../../../../images/webOfferDragonSecond.webp";
+import imageOneForDark from "../../../../images/webOfferDragonForDark.svg";
+import imageTwoForDark from "../../../../images/webOfferDragonSecondForDark.webp";
 import Price from "../../Pricing";
 import {
   ImageTextWrapper,
@@ -13,23 +15,25 @@ import { SmoothWrapper } from "../../../../styledComponents/Wrapper/styled";
 import { HeaderCustom } from "../../../../styled";
 import { Container } from "../../../../styledComponents/Container/styled";
 import { useSelector, useDispatch } from "react-redux";
-import { selectIsLightMode } from "../../../../features/DataSlice/githubSlice";
+import { selectIsLightMode } from "../../../../features/DataSlice/dataSlice";
 import { useEffect } from "react";
 import {
   fetchGithubData,
   selectLoadingState,
   setWeb,
   selectWeb
-} from "../../../../features/DataSlice/githubSlice";
+} from "../../../../features/DataSlice/dataSlice";
 import LoadingPage from "../../../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../../../features/TechnicalTabs/ErrorPage";
 import { Link } from "../../../../styledComponents/Tiles/styled";
 import promujSiebie from "../../../../images/promujSiebie.webp";
+import promujSiebieForDark from "../../../../images/promujSiebieForDark.webp";
 import webbadge from "../../../../images/webTopImage.png";
+import webbadgeForDark from "../../../../images/webTopImageDark.webp";
 
 const Web = () => {
   const dispatch = useDispatch();
- 
+  const theme = useSelector(selectIsLightMode);
   const ifLoading = useSelector(selectLoadingState);
  
 
@@ -49,13 +53,14 @@ const Web = () => {
       returned = (
         <Container>
           <ImageTextWrapper>
-          <Badge src={webbadge} />
+          <Badge src={theme ? webbadge : webbadgeForDark} />
             <TextWrapper>
             <HeaderCustom>Tworzenie stron internetowych</HeaderCustom><br/>
               <SmoothWrapper>
               
-                <p>
+               
                 <h2>Czy chcesz się wyróżnić?</h2>
+                <p>
                   W gąszczu internetowej konkurencji marzysz o stronie, która nie tylko przyciąga uwagę, ale
                   również konwertuje odwiedzających w lojalnych klientów?
                   Projektowanie stron internetowych to nasza pasja i
@@ -63,8 +68,8 @@ const Web = () => {
                 </p>
                 </SmoothWrapper>
                 <SmoothWrapper>
-                <p>
-                  <h2>Spersonalizowany Design</h2> Każda strona, którą
+              
+                  <h2>Spersonalizowany Design</h2>  Każda strona, którą
                   projektujemy, to efekt dogłębnego zrozumienia Twojej marki.
                   Tworzymy spersonalizowane, estetyczne projekty, które oddają
                   esencję Twojego biznesu.
@@ -83,25 +88,25 @@ const Web = () => {
                   optymalizację pod kątem wyszukiwarek, co pomaga w osiągnięciu
                   wyższej pozycji w wynikach wyszukiwania.
                  
-                </p>
+              
                 </SmoothWrapper>
               <Link to="/contact">Napisz do nas!</Link>
             </TextWrapper>
-            <Image src={Image1} alt="Dragons Cape" />
+            <Image src={theme ? imageOne : imageOneForDark} alt="Dragons Cape" />
           </ImageTextWrapper>
           <ImageTextWrapper>
             <TextWrapper>
               <div style={{ marginBottom:"-100px" }}></div>
             <HeaderCustom>Dlaczego my ?</HeaderCustom><br/>
               <SmoothWrapper>
-                <p>
+               
                   <h2>Doświadczenie i Pasja:</h2> Nasze doświadczenie wyniesione z różnych branż to lata praktyki i setki
                   zadowolonych klientów. Pasja do tworzenia funkcjonalnych,
                   estetycznych stron jest w naszym DNA.
                   <h2>Indywidualne Podejście:</h2> Nie ma dwóch
                   identycznych projektów. Stawiamy na spersonalizowane podejście
                   do każdego klienta, starając się zrozumieć i oddać wizję
-                  biznesową.   </p></SmoothWrapper><SmoothWrapper><p>
+                  biznesową.   </SmoothWrapper><SmoothWrapper>
                   <h2>Ile to kosztuje? </h2>Jeden Rabin powie dużo,
                   drugi mało. Mądry smok powie: To zależy! W dzisiejszych
                   czasach strona internetowa jest podstawą działania każdego
@@ -116,12 +121,12 @@ const Web = () => {
                   Skontaktuj się z nami już dziś, a razem stworzymy stronę
                   internetową, która zapiera dech w piersiach i przyciągnie
                   uwagę Twoich potencjalnych klientów.
-                </p>
+               
                 <p>Napisz do nas lub poszukaj więcej informacji na:</p>
-                <a href="https://www.promujsiebie.pl" target="_blank"><PromujImg src={promujSiebie}/></a>
+                <a href="https://www.promujsiebie.pl" target="_blank"><PromujImg src={theme ? promujSiebie : promujSiebieForDark} /></a>
                 </SmoothWrapper>
             </TextWrapper>
-            <Image src={Image2} alt="Dragon Scape" />
+            <Image src={theme ? imageTwo : imageTwoForDark}  alt="Dragon Scape" />
           </ImageTextWrapper>
 
           <Price route={route}/>

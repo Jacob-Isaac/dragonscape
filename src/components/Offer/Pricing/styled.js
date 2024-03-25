@@ -32,7 +32,7 @@ export const JSXMainContainer = styled.div`
   transition: 0.4s ease-in-out;
   &:hover {
     box-shadow: 0 8px 26px -6px ${(props) => props.shadow};
-    margin-bottom: 0.4rem;
+    transform: scale(1.005);
   }
 `;
 

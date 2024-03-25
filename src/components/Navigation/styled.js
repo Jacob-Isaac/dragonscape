@@ -11,7 +11,7 @@ export const NavigationBackground = styled.div`
   min-width: 320px;
   position: fixed;
   top: ${(props) => (props.visible ? "0" : "-120px")};
-  transition: top 0.3s, background-color 0.4s ease;
+  transition: top 0.3s, background-color 0.6s ease;
 `;
 
 
@@ -67,7 +67,7 @@ export const NavigationLink = styled(NavLink)`
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   &:hover {
-    color: ${({ theme }) => theme.color.dragonOrange};
+    color: ${({ theme, isNoon }) => (isNoon ? theme.color.dragonOrange : theme.color.dragonGreen)};
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
    font-size: 15px;
@@ -119,7 +119,7 @@ export const NavScrollLink = styled(Link)`
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   &:hover {
-    color: ${({ theme }) => theme.color.dragonOrange};
+    color: ${({ theme, isNoon }) => (isNoon ? theme.color.dragonOrange : theme.color.dragonGreen)};
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
    font-size: 15px;
