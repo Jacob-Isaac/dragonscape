@@ -66,14 +66,11 @@ export const NavigationLink = styled(NavLink)`
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  &:hover {
-    color: ${({ theme, isNoon }) => (isNoon ? theme.color.dragonOrange : theme.color.dragonGreen)};
-  }
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
    font-size: 15px;
-   /* padding: 0px 14px;
-   height: 34px;
-    margin-top: -1px; */
+  }
+  &:hover {
+    color: ${({ theme, isNoon }) => (isNoon ? theme.color.dragonOrange : theme.color.dragonGreen)};
   }
 `;
 
@@ -93,11 +90,11 @@ export const NavigationLinkRed = styled.a`
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  &:hover {
-    color: ${({ theme }) => theme.color.dragonRed};
-  }
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
    font-size: 15px;
+  }
+  &:hover {
+    color: ${({ theme }) => theme.color.dragonRed};
   }
 `;
 

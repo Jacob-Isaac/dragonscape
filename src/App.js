@@ -17,7 +17,7 @@ import { Element } from "react-scroll";
 import Cast from "./components/Cast/index.js";
 import cast from "./features/Config/cast.json";
 import { AnimatedOnScroll } from "react-animated-css-onscroll";
-import { Title, SubpageWrapper, SubpageWrapper2, ContactFormWrapper } from "./styled.js";
+import { Title, SubpageWrapper, ContactFormWrapper } from "./styled.js";
 import Footer from "./components/Footer/index.js";
 import WebPosition from "./components/Offer/OfferList/WebPosition/index.js";
 import Package from "./components/Offer/OfferList/Package/index.js";
@@ -31,15 +31,13 @@ import Navbar from "./components/Navigation/NavigationMobile/Navbar.js";
 import ScrollToTopHook from "./features/Hooks/ScrollToTop.js";
 import ScrollToTop from "react-scroll-to-top";
 import { ReactComponent as MySVG } from "./images/arrowDown.svg";
-import { NegativeMarginTop, NegativeTop, SmoothWrapper } from "./styledComponents/Wrapper/styled.js";
+import { NegativeMarginTop, NegativeTop } from "./styledComponents/Wrapper/styled.js";
 import NoResult from "./features/TechnicalTabs/NoResult/index.js";
-import { timeUpdate } from "../src/features/DataSlice/dataSlice.js";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(timeUpdate());
-    console.log(noonMode);
+    dispatch({ type: "TIME_UPDATE" });
   }, [dispatch]);
   const isBodyOverflowHidden = useSelector(selectIsBodyOverflowHidden);
   const lightMode = useSelector(selectIsLightMode);

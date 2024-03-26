@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import adMobileFirst from "../../../images/adMobileFirst.svg";
 import adMobileFirstDark from "../../../images/adMobileFirstForDark.svg";
-import letter from "../../../images/letter.webp";
-import letterLong from "../../../images/letterLong-01.webp";
 
 export const ImageTextWrapper = styled.div`
   display: flex;
@@ -86,24 +84,6 @@ export const Button = styled.button`
   :hover {
     color: ${({ theme }) => theme.color.dragonBlack};
   }
-`;
-
-
-
-export const LetterPaperContainer = styled.div`
-padding: 40px;
- background: url(${letter});
- width: 600px;
-   background-size: contain;
-   background-repeat: no-repeat;
-    @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-  width: 1000px;
-  height: 100px;
-   background: url(${letterLong});
-  }
- /* background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center; */
 `;
 
 export const Badge = styled.img`

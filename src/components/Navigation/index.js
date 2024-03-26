@@ -20,10 +20,7 @@ import {
 import logoTransparent from "../../images/logoForBright.webp";
 import logo from "../../images/logoForDark.webp";
 import { useSelector, useDispatch } from "react-redux";
-import { changeTheme } from "../../features/DataSlice/dataSlice";
-import {
-  selectIsLightMode,
-} from "../../features/DataSlice/dataSlice";
+import { selectIsLightMode } from "../../features/DataSlice/dataSlice";
 import { useLocation } from "react-router-dom";
 import { selectIsNoonMode } from "../../features/DataSlice/dataSlice";
 
@@ -33,7 +30,6 @@ const NavigationBar = () => {
   const dispatch = useDispatch();
   const siteTheme = useSelector(selectIsLightMode);
   const [prevScrollpos, setPrevScrollpos] = useState(window.scrollY);
-  const [scrolledBeyond3px, setScrolledBeyond3px] = useState(false);
   const [visible, setVisible] = useState(true);
   const noonMode = useSelector(selectIsNoonMode);
 
@@ -87,12 +83,11 @@ const NavigationBar = () => {
                 // Image to display when scrolled down
                 <Dragon src={logo} width="210" />
               )}
-               
             </NavigationLogo>
           </NavigationLogoScrollLink>
         ) : (
           <NavigationLogoLink to="/">
-           <NavigationLogo>
+            <NavigationLogo>
               {prevScrollpos <= 320 ? (
                 // Image to display when scroll position is at the top or close to it
                 <Dragon src={siteTheme ? logoTransparent : logo} width="210" />
@@ -100,7 +95,6 @@ const NavigationBar = () => {
                 // Image to display when scrolled down
                 <Dragon src={logo} width="210" />
               )}
-               
             </NavigationLogo>
           </NavigationLogoLink>
         )}
@@ -136,7 +130,11 @@ const NavigationBar = () => {
             oferta
           </NavScrollLink>
         ) : (
-          <NavigationLink fontcolor={getFontColor()} to="/offer" isNoon={noonMode}>
+          <NavigationLink
+            fontcolor={getFontColor()}
+            to="/offer"
+            isNoon={noonMode}
+          >
             oferta
           </NavigationLink>
         )}
@@ -146,7 +144,11 @@ const NavigationBar = () => {
         >
           wycena
         </NavigationLinkRed>
-        <NavigationLink fontcolor={getFontColor()} to="/aboutUs" isNoon={noonMode}>
+        <NavigationLink
+          fontcolor={getFontColor()}
+          to="/aboutUs"
+          isNoon={noonMode}
+        >
           o nas
         </NavigationLink>
         {isInMain ? (
@@ -163,7 +165,11 @@ const NavigationBar = () => {
             kontakt
           </NavScrollLink>
         ) : (
-          <NavigationLink fontcolor={getFontColor()} to="/contact" isNoon={noonMode}>
+          <NavigationLink
+            fontcolor={getFontColor()}
+            to="/contact"
+            isNoon={noonMode}
+          >
             kontakt
           </NavigationLink>
         )}
@@ -175,7 +181,7 @@ const NavigationBar = () => {
         </ModeChange> */}
         <ModeChange>
           <DarkMode></DarkMode>
-          <IconBody onClick={() => dispatch(changeTheme())}>
+          <IconBody onClick={() => dispatch({ type: "CHANGE_THEME" })}>
             <Body>
               <StyledSunIcon $themes={siteTheme} />
             </Body>

@@ -3,6 +3,7 @@ import { ReactComponent as Loading } from "../../../images/loading.svg";
 import { ReactComponent as LoadingForDark } from "../../../images/loadingForDark.svg"; // Assuming this is your dark loading SVG
 import lightBckgrnd from "../../../images/brightBackground.webp";
 import darkBckgrnd from "../../../images/darkBackground.webp";
+import afternoonBckgrnd from "../../../images/dayBackgroundOrange.webp";
 
 const slideInOut = keyframes`
   0% {
@@ -69,15 +70,15 @@ export const Div = styled.div`
   transition: opacity 1s ease-in-out; 
   background-color: ${({ theme }) => theme.color.bodyBackground};
   background-repeat: no-repeat;
-  background-size: cover; 
-
- 
+  background-size: cover;
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-    ${(props) => props.isLight && `
-    background-image: url(${lightBckgrnd});
-  `}
     background-size: 1000px; 
-    background-image: url(${props => (props.isLight ? lightBckgrnd : darkBckgrnd)});
+    background-image: url(${darkBckgrnd});
+    ${({ isLight, isNoon }) => isLight && (isNoon ? `
+       background-image: url(${lightBckgrnd});
+` : `
+       background-image: url(${afternoonBckgrnd});
+`)}
   } 
 
   @media (min-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
