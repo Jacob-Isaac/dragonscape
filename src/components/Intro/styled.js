@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { ReactComponent as ButtonImg } from "../../images/contactUs.svg";
+import { Link } from "react-scroll";
 
 const oscillateAnimation = keyframes`
   0%, 100% {
@@ -156,7 +157,7 @@ transition: 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
   }
 `;
 
-export const HireMeButton = styled.a`
+export const HireMeButton = styled(Link)`
   grid-area: hireButton;
   padding-top: 35px;
   width: 154px;

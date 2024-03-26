@@ -58,7 +58,13 @@ function AboutMe() {
               tworzymy rozwiązania,  które pomogą Tobie stać się smokiem biznesu!
               Sprawdź co dla Ciebie przygotowaliśmy !
             </Article>
-            <HireMeButton href="mailto:kontakt@dragonscape.pl">
+            <HireMeButton 
+            activeClass="active"
+            to="contactSection"
+            spy={true}
+            smooth={false}
+            offset={160}
+            duration={850}>
               <StyledButtonImg />
             </HireMeButton>
           </IntroBlock>
