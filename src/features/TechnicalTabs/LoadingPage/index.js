@@ -1,31 +1,16 @@
-// import { Container } from "../../../styledComponents/Container/styled";
-// import Content from "../../../styledComponents/Content";
-// import { StyledLoading, Wrapper} from "./styled";
-
-// const LoadingPage = () => (
-//     <Container>
-//         <Content
-//         body={
-//             <Wrapper>
-//             <StyledLoading/>
-//             </Wrapper>
-//         }/>
-//     </Container>
-// );
-
-// export default LoadingPage;
-
 import { Div } from "./styled";
 import { StyledLoading, Wrapper } from "./styled";
-import { selectIsLightMode } from "../../DataSlice/dataSlice";
+import { selectIsLightMode, selectIsNoonMode } from "../../DataSlice/dataSlice";
 import { useSelector } from "react-redux";
 
 const LoadingPage = () => {
   const theme = useSelector(selectIsLightMode);
+  const noonMode = useSelector(selectIsNoonMode);
+
   return(
-  <Div isLight={theme}>
+  <Div isLight={theme}  isNoon={noonMode} >
     <Wrapper>
-      <StyledLoading isLight={theme} />
+      <StyledLoading isLight={theme}/>
     </Wrapper>
   </Div>
   )
