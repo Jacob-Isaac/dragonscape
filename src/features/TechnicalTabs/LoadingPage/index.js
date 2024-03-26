@@ -8,7 +8,7 @@ const LoadingPage = () => {
   const noonMode = useSelector(selectIsNoonMode);
 
   return(
-  <Div isLight={theme}  isNoon={noonMode} >
+  <Div isLight={theme} isNoon={noonMode} >
     <Wrapper>
       <StyledLoading isLight={theme}/>
     </Wrapper>

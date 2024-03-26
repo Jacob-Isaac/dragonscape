@@ -23,7 +23,7 @@ import {
 } from "../../features/DataSlice/dataSlice";
 import LoadingPage from "../../features/TechnicalTabs/LoadingPage";
 import ErrorPage from "../../features/TechnicalTabs/ErrorPage";
-import { toggleBodyOverflow2 } from "../../features/DataSlice/dataSlice";
+import { toggleBodyOverflowToFalse } from "../../features/DataSlice/dataSlice";
 
 function AboutMe() {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ function AboutMe() {
 
   useEffect(() => {
     dispatch(fetchGithubData());
-    dispatch(toggleBodyOverflow2());
+    dispatch(toggleBodyOverflowToFalse());
   }, []);
 
   let returned = "";

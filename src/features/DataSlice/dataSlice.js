@@ -23,9 +23,6 @@ const dataSlice = createSlice({
     setError: (state) => {
       state.ifLoading = "error";
     },
-    changeTheme: (state) => {
-      //state.lightMode = !state.lightMode;
-    },
      changeThemeAfterDelay: (state) => {
        state.lightMode = !state.lightMode;
 
@@ -36,7 +33,7 @@ const dataSlice = createSlice({
     toggleBodyOverflow: (state) => {
       state.isBodyOverflowHidden = !state.isBodyOverflowHidden;
     },
-    toggleBodyOverflow2: (state) => {
+    toggleBodyOverflowToFalse: (state) => {
       state.isBodyOverflowHidden = false;
     },
     setWeb: (state) => {
@@ -45,13 +42,8 @@ const dataSlice = createSlice({
     setDesign: (state) => {
       state.routeName = "design";
     },
-    timeUpdate: (state) => {
-      console.log(state.isNoon);
-    },
-    timeUpdate2: (state, { payload: isDayTime }) => {
+    timeUpdate: (state, { payload: isDayTime }) => {
       state.isNoon = isDayTime;
-      console.log(isDayTime);
-      console.log(state.isNoon);
     },
   },
 });
@@ -60,15 +52,13 @@ export const {
   fetchGithubData,
   setdata,
   setError,
-  changeTheme,
-    changeThemeAfterDelay,
+  changeThemeAfterDelay,
   changeFlag,
   toggleBodyOverflow,
-  toggleBodyOverflow2,
+  toggleBodyOverflowToFalse,
   setWeb,
   setDesign,
-  timeUpdate,
-  timeUpdate2
+  timeUpdate
 } = dataSlice.actions;
 
 export const selectdata = (state) => state.data.data;

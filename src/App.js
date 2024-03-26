@@ -33,13 +33,11 @@ import ScrollToTop from "react-scroll-to-top";
 import { ReactComponent as MySVG } from "./images/arrowDown.svg";
 import { NegativeMarginTop, NegativeTop, SmoothWrapper } from "./styledComponents/Wrapper/styled.js";
 import NoResult from "./features/TechnicalTabs/NoResult/index.js";
-import { timeUpdate } from "../src/features/DataSlice/dataSlice.js";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(timeUpdate());
-    console.log(noonMode);
+    dispatch({ type: "TIME_UPDATE" });
   }, [dispatch]);
   const isBodyOverflowHidden = useSelector(selectIsBodyOverflowHidden);
   const lightMode = useSelector(selectIsLightMode);

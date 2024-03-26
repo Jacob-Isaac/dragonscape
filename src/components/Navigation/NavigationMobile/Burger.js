@@ -4,7 +4,6 @@ import RightNav from './RightNav';
 import { useDispatch } from 'react-redux';
 import { toggleBodyOverflow } from '../../../features/DataSlice/dataSlice';
 import { FlagIconBody, ModeChange, DarkMode, Body, IconBody, StyledSunIcon } from '../styled';
-import { changeTheme } from "../../../features/DataSlice/dataSlice";
 import { useSelector } from 'react-redux';
 import {
   selectIsLightMode,
@@ -86,7 +85,7 @@ const siteTheme = useSelector(selectIsLightMode);
       <Wrapper>
       <ModeChange>
           <DarkMode></DarkMode>
-          <IconBody onClick={() => dispatch(changeTheme())}>
+          <IconBody onClick={() => dispatch({ type: "CHANGE_THEME" })}>
             <Body>
               <StyledSunIcon $themes={siteTheme} />
             </Body>

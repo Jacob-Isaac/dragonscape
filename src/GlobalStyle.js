@@ -5,7 +5,6 @@ import afternoonBckgrnd from "../src/images/dayBackgroundOrange.webp";
 
 
 export const GlobalStyle = createGlobalStyle`
-  ${({ isNoon }) => console.log("isNoon:", isNoon)}
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
