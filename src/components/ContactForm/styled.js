@@ -187,6 +187,7 @@ export const StyledContactForm = styled.div`
 `;
 
 export const SuccessMessage = styled.div`
+color: ${({ theme }) => theme.color.dragonBlack};
   position: fixed;
   top: 80%; 
   right: 20px; 
@@ -222,7 +223,8 @@ export const SuccessMessage = styled.div`
 `;
 
 export const CaptchaMessage = styled.div`
-z-index: 1;
+color: ${({ theme }) => theme.color.dragonBlack};
+position: relative;
 margin-top: -30px;
   background-color: #ffffff;
   border: 1px solid #ccc;

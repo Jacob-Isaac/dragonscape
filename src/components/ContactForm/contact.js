@@ -25,9 +25,6 @@ export const ContactUs = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          console.log("Wiadomość Wysłana !");
-          console.log("Message Sent !");
           recaptchaRef.current.reset();
         },
         (error) => {
@@ -44,7 +41,7 @@ export const ContactUs = () => {
     setErrorMessage("");
     setCapVal(null);
     form.current.reset();
-    setSubmitButtonClicked(false); // Reset submit button click state
+    setSubmitButtonClicked(false);
     // StyledReCAPTCHA.reset();
   };
 
@@ -57,11 +54,9 @@ export const ContactUs = () => {
     }
   };
 
-    const [value, setValue] = useState('');
 
     const handleChange = (event) => {
-        setValue(event.target.value);
-        // Auto grow the textarea
+  
         if (window.innerWidth <= 700) {
           event.target.style.height = 'auto';
           event.target.style.height = event.target.scrollHeight + 'px';
@@ -85,7 +80,6 @@ export const ContactUs = () => {
           maxLength={charLimit}
           placeholder={`Napisz do nas :) (limitowane do ${charLimit} znaków)`}
           name="message"
-          value={value}
           onChange={handleChange}
           required
         />
