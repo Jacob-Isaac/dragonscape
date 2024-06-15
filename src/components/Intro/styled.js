@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { ReactComponent as ButtonImg } from "../../images/contactUs.svg";
+import contactUsSvg from "../../images/contactUsSvg.js";
 import { Link } from "react-scroll";
 
 const oscillateAnimation = keyframes`
@@ -166,7 +166,7 @@ export const HireMeButton = styled(Link)`
   }
 `;
 
-export const StyledButtonImg = styled(ButtonImg)`
+export const StyledButtonImg = styled(contactUsSvg)`
   width: 154px;
   height: 49px;
   border-radius: 8px;
