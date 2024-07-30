@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, {useEffect} from "react";
 import { useDispatch } from "react-redux";
 import { Container } from "./styledComponents/Container/styled";
@@ -59,7 +59,7 @@ function App() {
         isNoon={noonMode}
         isBodyOverflowHidden={isBodyOverflowHidden}
       />
-      <HashRouter>
+      <BrowserRouter>
         <ScrollToTopHook />
         {navigationBar}
         <Routes>
@@ -238,7 +238,7 @@ function App() {
             right: "15px",
           }}
         />
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
