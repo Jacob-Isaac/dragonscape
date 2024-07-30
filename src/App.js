@@ -79,7 +79,7 @@ function App() {
                        screenOffset={100}
                       animationInDuration={1200}
                     >
-                      <Title>Dlaczego my ?</Title>
+                
                     </AnimatedOnScroll>
                     <AnimatedOnScroll
                       animationIn={
