@@ -132,7 +132,7 @@ const NavigationBar = () => {
         ) : (
           <NavigationLink
             fontcolor={getFontColor()}
-            to="/offer"
+            to="/oferta"
             isNoon={noonMode}
           >
             oferta
@@ -146,7 +146,7 @@ const NavigationBar = () => {
         </NavigationLinkRed>
         <NavigationLink
           fontcolor={getFontColor()}
-          to="/aboutUs"
+          to="/o-nas"
           isNoon={noonMode}
         >
           o nas
@@ -167,7 +167,7 @@ const NavigationBar = () => {
         ) : (
           <NavigationLink
             fontcolor={getFontColor()}
-            to="/contact"
+            to="/kontakt"
             isNoon={noonMode}
           >
             kontakt

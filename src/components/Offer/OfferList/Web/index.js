@@ -90,7 +90,7 @@ const Web = () => {
                  
               
                 </SmoothWrapper>
-              <Link to="/contact">Napisz do nas!</Link>
+              <Link to="/kontakt">Napisz do nas!</Link>
             </TextWrapper>
             <Image src={theme ? imageOne : imageOneForDark} alt="Dragons Cape" />
           </ImageTextWrapper>

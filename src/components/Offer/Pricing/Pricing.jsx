@@ -61,7 +61,7 @@ const Pricing = ({
       )}
       {buttonContent && (
         <ButtonContainer>
-          <Button to="/contact">{buttonContent}</Button>
+          <Button to="/kontakt">{buttonContent}</Button>
         </ButtonContainer>
       )}
       {data && (

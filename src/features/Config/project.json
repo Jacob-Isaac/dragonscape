@@ -15,7 +15,7 @@
     "description": "Tworzymy szybkie i przejrzyste witryny internetowe. Posiadanie strony jest dziś jednym z najskuteczniejszych sposobów na dotarcie do nowych klientów.",
     "homepage": "https://www.example.com/project-one",
     "html_url": "https://github.com/example/project-one",
-    "routePath": "/webDev",
+    "routePath": "/tworzenie-stron",
     "imagePath": "two",
     "imageDarkPath": "four"
   }

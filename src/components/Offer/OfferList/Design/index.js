@@ -124,7 +124,7 @@ const Design = () => {
                   wizualną dla Twojego biznesu.
                 </p>
               </SmoothWrapper>
-              <Link to="/contact">Napisz do nas!</Link>
+              <Link to="/kontakt">Napisz do nas!</Link>
             </TextWrapper>
             <Figure>
               <Image src={Image1} alt="Dragons Cape" />

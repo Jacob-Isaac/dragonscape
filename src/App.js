@@ -130,7 +130,7 @@ function App() {
             }
           />
           <Route
-            path="/webDev"
+            path="/tworzenie-stron"
             element={
               <>
                 <Web />
@@ -154,7 +154,7 @@ function App() {
             }
           />
           <Route
-            path="/offer"
+            path="/oferta"
             element={
               <NegativeTop>
               <Container>
@@ -180,7 +180,7 @@ function App() {
             }
           />
           <Route
-            path="/contact"
+            path="/kontakt"
             element={
               // <NegativeMarginTop>
               //   <Container>
@@ -196,7 +196,7 @@ function App() {
             }
           />
           <Route
-            path="/aboutUs"
+            path="/o-nas"
             element={
               <>
                 <Container>
@@ -209,7 +209,7 @@ function App() {
             }
           />
           <Route
-            path="/privacyPolicy"
+            path="/polityka"
             element={
               <>
                 <PrivacyPolicy />

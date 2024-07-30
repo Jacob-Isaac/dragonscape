@@ -63,15 +63,15 @@ const RightNav = ({ open, handleNavLinkClick }) => {
   return (
     <Ul open={open}>
       <StyledNavLink to="/" onClick={() => handleNavLinkClick()}>start</StyledNavLink>
-      <StyledNavLink to="/offer"  onClick={() => handleNavLinkClick()}>oferta</StyledNavLink>
-      <StyledNavLink to="/aboutUs"  onClick={() => handleNavLinkClick()}>o nas</StyledNavLink>
+      <StyledNavLink to="/oferta"  onClick={() => handleNavLinkClick()}>oferta</StyledNavLink>
+      <StyledNavLink to="/o-nas"  onClick={() => handleNavLinkClick()}>o nas</StyledNavLink>
       <NavigationLinkRed
           href="mailto:kontakt@dragonscape.pl"
           
         >
           wycena
         </NavigationLinkRed>
-      <StyledNavLink to="/contact"  onClick={() => handleNavLinkClick()}>kontakt</StyledNavLink>
+      <StyledNavLink to="/kontakt"  onClick={() => handleNavLinkClick()}>kontakt</StyledNavLink>
     </Ul>
   )
 }

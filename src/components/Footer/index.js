@@ -52,9 +52,9 @@ const Footer = () => {
           <StyledLink to="/">start</StyledLink>
         )}
            
-            <StyledLink to="/aboutUs">o nas</StyledLink>
-            <StyledLink to="/offer">oferta</StyledLink>
-            <StyledLink to="/contact">kontakt</StyledLink>
+            <StyledLink to="/o-nas">o nas</StyledLink>
+            <StyledLink to="/oferta">oferta</StyledLink>
+            <StyledLink to="/kontakt">kontakt</StyledLink>
           </FooterLinks>
           <FooterLinksSocial>
             <LinkSocial href="https://www.facebook.com/dragonscapePL" target="_blank">
@@ -78,7 +78,7 @@ const Footer = () => {
           </NavLink>
         
 
-          <PrivacyPolicyLink to="/privacyPolicy">
+          <PrivacyPolicyLink to="/polityka">
             Polityka Prywatności
           </PrivacyPolicyLink>
           <CopyrightText>
