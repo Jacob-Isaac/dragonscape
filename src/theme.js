@@ -11,7 +11,6 @@ export const lightTheme = {
     // text: "#697784",
     text: "#202638",
     background: "#E5E5E5",
-    // bodyBackground: "#FBFBFE",
     bodyBackground: "#F9F5EF",
     mainBlue: "#0366D6",
     borderBottom: "#D1D5DA4D",

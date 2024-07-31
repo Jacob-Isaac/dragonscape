@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  margin-top: 230px;
+  margin-top: 180px;
   padding-top: 100px;
-  margin-bottom: 380px;
+  margin-bottom: 280px;
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletMax}px) {
-    margin-top: 130px;
-    margin-bottom: 280px;
+    margin-top: -50px;
+    margin-bottom: 80px;
   }
 `;
 

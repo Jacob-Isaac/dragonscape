@@ -70,10 +70,10 @@ function AboutMe() {
           </IntroBlock>
           <Link
             activeClass="active"
-            to="WhyUsSection"
+            to="VideoSection"
             spy={true}
             smooth={false}
-            offset={-190}
+            offset={-140}
             duration={850}
           >
             <ArrowDown src={arrowDown}></ArrowDown>

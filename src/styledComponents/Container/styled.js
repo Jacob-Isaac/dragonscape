@@ -2,10 +2,8 @@ import styled from "styled-components";
 
 export const ContainerContact = styled.div`
   padding-top: 160px;
-  /* padding-bottom: 1160px; */
   max-width: 1216px;
   margin: auto;
- 
   @media (max-width: ${({ theme }) => theme.breakpoint.maxContentSize}px) {
     width: 90%;
   }

@@ -33,6 +33,7 @@ import ScrollToTop from "react-scroll-to-top";
 import { ReactComponent as MySVG } from "./images/arrowDown.svg";
 import { NegativeMarginTop, NegativeTop } from "./styledComponents/Wrapper/styled.js";
 import NoResult from "./features/TechnicalTabs/NoResult/index.js";
+import Video from "./components/Video/index.js";
 
 function App() {
   const dispatch = useDispatch();
@@ -71,6 +72,17 @@ function App() {
                   <Element name="AboutMeSection" className="element">
                     <Intro isLight={lightMode} />
                   </Element>
+                  <Element name="VideoSection" className="element">
+                    <AnimatedOnScroll
+                      animationIn={
+                        dimensions.width < 800 ? "zoomIn" : "slideInLeft"
+                      }
+                       screenOffset={300}
+                      animationInDuration={1500}
+                    >
+                      <Video/>
+                    </AnimatedOnScroll>
+                  </Element>
                   <Element name="WhyUsSection" className="element">
                     <AnimatedOnScroll
                       animationIn={
@@ -85,7 +97,7 @@ function App() {
                       animationIn={
                         dimensions.width < 800 ? "zoomIn" : "slideInLeft"
                       }
-                       screenOffset={300}
+                       screenOffset={200}
                       animationInDuration={1500}
                     >
                       <WhyUs
@@ -99,7 +111,7 @@ function App() {
                       animationIn={
                         dimensions.width < 800 ? "zoomIn" : "slideInRight"
                       }
-                      screenOffset={300}
+                      screenOffset={250}
                       animationInDuration={1000}
                     >
                       <Offer/>

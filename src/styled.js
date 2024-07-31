@@ -13,7 +13,11 @@ export const Title = styled.h2`
   animation-fill-mode: forwards;
   padding-bottom: 8px;
   margin-bottom: 130px;
-  margin-top: 330px;
+  margin-top: 270px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    }
   @keyframes fadeInAnimation {
     0% {
       opacity: 0;
